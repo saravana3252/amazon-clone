@@ -22,7 +22,7 @@ function scrollRight(){
 }
 
 useEffect(()=>{
-  fetch("https://amazon-clone-backend-mxip.onrender.comz/featuredElectronics").then((response)=>response.json()).then((data)=>{
+  fetch("https://amazon-clone-backend-mxip.onrender.com/featuredElectronics").then((response)=>response.json()).then((data)=>{
     setProducts(data)
     console.log(data)
   }).catch((err)=>{

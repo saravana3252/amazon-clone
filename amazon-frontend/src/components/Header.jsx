@@ -31,7 +31,7 @@ function Header(props) {
     if (inpSearchName != "") {
       document.getElementById("searchDataDiv").style.display = "block";
       document.getElementById("searchDataDiv1").style.display = "block";
-      fetch(`https://amazon-clone-backend-mxip.onrender.comz/search/${inpSearchName}`)
+      fetch(`https://amazon-clone-backend-mxip.onrender.com/search/${inpSearchName}`)
         .then((res) => res.json())
         .then((data) => {
           setInpSearchData(data);
