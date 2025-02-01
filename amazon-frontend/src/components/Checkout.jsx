@@ -87,7 +87,7 @@ function Checkout({cartData}){
         })
         }
         else if(paymentMethod === "ONLINE"){
-          fetch("https://amazon-qe0t.onrender.com/create-checkout-session", {
+          fetch("https://amazon-clone-backend-mxip.onrender.com/create-checkout-session", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
