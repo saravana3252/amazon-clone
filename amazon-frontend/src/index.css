@@ -21,21 +21,26 @@
 
 
 
-/* @media (max-width:791px){
+@media (max-width:460px){
   #bannerProdInfo{
-      top: 510px;
-  }
-} */
-
-@media (max-width:400px){
-  #bannerProdInfo{
-      top: 430px;
+      top: 480px;
   }
 }
 
+@media (max-width:400px){
+  #bannerProdInfo{
+      top: 435px;
+  }
+}
+
+@media (max-width:460px){
+  #featuredHomeProd{
+      padding-top: 280px;
+  }
+}
 
 @media (max-width:400px){
   #featuredHomeProd{
-      padding-top: 270px;
+      padding-top: 250px;
   }
 }

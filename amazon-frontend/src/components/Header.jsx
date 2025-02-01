@@ -112,7 +112,7 @@ function Header(props) {
             </div>
          </div>
          <div className="font-medium  text-white p-2 mt-3">
-          <p className="text-center">ORDERS</p>
+          <p className="text-center"><Link to="/orders">ORDERS</Link></p>
          </div>
          <div className="font-medium  text-white mt-5 flex justify-center">
             <p>
@@ -222,7 +222,7 @@ function Header(props) {
             <p className="font-medium">Accounts & Lists</p>
           </div>
           <div>
-            <p>ORDERS</p>
+            <p><Link to="/orders">ORDERS</Link></p>
           </div>
           <div>
             <p>

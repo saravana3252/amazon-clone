@@ -439,7 +439,14 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   res.status(200).send("Webhook received.");
 }); 
 
-
+app.get("/orders/:id",(req,res)=>{
+  let userId = req.params.id
+  checkoutModel.find({userId:userId}).then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    res.send(err)
+  })
+})
 
 mongoose.connect(process.env.MONGODB_URL).then(()=>{
     console.log("db connected")
