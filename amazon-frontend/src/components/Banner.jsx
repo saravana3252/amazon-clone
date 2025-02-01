@@ -9,6 +9,8 @@ function Banner(props){
     const[DealOfTheDayProd,setDealOfTheDayProd]=useState([])
     const [currentIndex,setcurrentIndex]=useState(0)
     const images = ["./banner1.jpg","./banner2.jpg","./banner3.jpg","./banner4.jpg"]
+    const mobileImgs = ["./mobile-banner2.jpg","./mobile-banner1.jpg","./mobile-banner3.jpg","./mobile-banner4.jpg"]
+    const isMobile = window.innerWidth < 1024
 
     const navigate =useNavigate()
 
@@ -22,6 +24,17 @@ function Banner(props){
              return (previndex - 1 + images.length) % images.length
         })
     }
+
+    useEffect(()=>{
+        if(isMobile){
+            const interval = setInterval(()=>{
+                setcurrentIndex((previndex)=>{
+                    return (previndex + 1) % mobileImgs.length
+                })
+            },4000)
+            return ()=>clearInterval(interval)
+        }
+    },[isMobile])
  
     useEffect(()=>{
         fetch("https://amazon-clone-backend-mxip.onrender.com/DealOfTheDay").then((response)=>response.json()).then((data)=>{
@@ -35,21 +48,39 @@ function Banner(props){
     return (
         <>
         <div className="w-full z-10 lg:h-[500px] h-auto relative bg-amber-100 overflow-hidden">
-            <div className="absolute transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[20px] lg:top-[130px] left-2 lg:left-8 cursor-pointer" onClick={()=>{
+            <div className="absolute hidden lg:block transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[140px] lg:top-[130px] left-2 lg:left-8 cursor-pointer" onClick={()=>{
                 handleSlide("prev")
             }}><FontAwesomeIcon icon={faLessThan} className='text-white text-5xl sm:text-4xl md:text-5xl lg:text-8xl' /></div>
-            <div className="absolute transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[20px] lg:top-[130px] right-2 lg:right-8 cursor-pointer" onClick={()=>{
+            <div className="absolute hidden lg:block transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[140px] lg:top-[130px] right-2 lg:right-8 cursor-pointer" onClick={()=>{
                 handleSlide("next")
             }}><FontAwesomeIcon icon={faGreaterThan}  className='text-white text-5xl sm:text-4xl md:text-5xl lg:text-8xl' /></div>
-        <div className="w-full flex transition-all duration-700" style={{transform:`translateX(-${currentIndex * 100}%)`}}>
+            <div className='absolute z-10 bottom-20 lg:hidden flex justify-center  w-full  gap-5'>
+                  {
+                    mobileImgs.map((_,index)=>{
+                        return (
+                            <>
+                            <div className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-gray-800" : "bg-white"}`} ></div>
+                            </>
+                        )
+                    })
+                  }
+            </div>
+        <div className="w-full lg:flex transition-all duration-700 hidden" style={{transform:`translateX(-${currentIndex * 100}%)`}}>
             {
                 images.map((img,index)=>{
                     return  <img key={index} className="w-screen" src={img} alt="bannerImg"></img>
                 })
             }
         </div>
+        <div className="w-full lg:hidden transition-all duration-700 flex" style={{transform:`translateX(-${currentIndex * 100}%)`}}>
+            {
+                mobileImgs.map((img,index)=>{
+                    return  <img key={index} className="w-screen" src={img} alt="bannerImg"></img>
+                })
+            }
         </div>
-        <div className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[350px] top-[240px] lg:top-[420px] px-4'>
+        </div>
+        <div id="bannerProdInfo" className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[850px] top-[450px] lg:top-[420px] px-4'>
             <div className='bg-white min-w-[200px] shrink-0 p-3'>
                 <p className='font-bold text-xl mb-2'>Get your game on</p>
                 <img className='h-36 lg:h-56' src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg' alt='gaming-banner-img'></img>
