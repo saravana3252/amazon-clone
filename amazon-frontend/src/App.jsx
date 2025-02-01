@@ -60,7 +60,7 @@ function searchNameFunc(name){
    console.log(searchName)
    console.log(searchData)
    
-   fetch(`http://localhost:8000/search/${searchName}`).then((res)=>res.json()).then((data)=>{
+   fetch(`https://amazon-clone-backend-mxip.onrender.com/search/${searchName}`).then((res)=>res.json()).then((data)=>{
     setSearchData(data)
    }).catch((err)=>{
     console.log(err)

@@ -20,7 +20,7 @@ function scrollRight(){
 }
 
 useEffect(()=>{
-  fetch("http://localhost:8000/featuredClothingProducts").then((response)=>response.json()).then((data)=>{
+  fetch("https://amazon-clone-backend-mxip.onrender.com/featuredClothingProducts").then((response)=>response.json()).then((data)=>{
     setProducts(data)
     console.log(data)
   }).catch((err)=>{

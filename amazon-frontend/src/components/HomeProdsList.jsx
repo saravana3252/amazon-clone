@@ -25,21 +25,21 @@ let products = [...originalProds]
 
   useEffect(() => {
     if(filterData){
-      fetch(`http://localhost:8000/filter/homeProducts/${filterData}`).then((response)=>response.json()).then((data)=>{
+      fetch(`https://amazon-clone-backend-mxip.onrender.com/filter/homeProducts/${filterData}`).then((response)=>response.json()).then((data)=>{
         setProds(data)
       }).catch((err)=>{
         console.log(err)
       })
     }
     else if(filterRatingData){
-      fetch(`http://localhost:8000/filterRating/homeProducts/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
+      fetch(`https://amazon-clone-backend-mxip.onrender.com/filterRating/homeProducts/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
         setProds(data)
       }).catch((err)=>{
         console.log(err)
       })
     }
     else{    
-    fetch("http://localhost:8000/homeProducts")
+    fetch("https://amazon-clone-backend-mxip.onrender.com/homeProducts")
       .then((response) => 
         response.json()
       )

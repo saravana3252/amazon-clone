@@ -25,21 +25,21 @@ let products = [...originalProds]
 
   useEffect(() => {
     if(filterData){
-      fetch(`http://localhost:8000/filter/gamingProducts/${filterData}`).then((response)=>response.json()).then((data)=>{
+      fetch(`https://amazon-clone-backend-mxip.onrender.com/filter/gamingProducts/${filterData}`).then((response)=>response.json()).then((data)=>{
         setProds(data)
       }).catch((err)=>{
         console.log(err)
       })
     }
     else if(filterRatingData){
-      fetch(`http://localhost:8000/filterRating/gamingProducts/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
+      fetch(`https://amazon-clone-backend-mxip.onrender.com/filterRating/gamingProducts/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
         setProds(data)
       }).catch((err)=>{
         console.log(err)
       })
     }
     else{    
-    fetch("http://localhost:8000/gamingProducts")
+    fetch("https://amazon-clone-backend-mxip.onrender.com/gamingProducts")
       .then((response) => 
         response.json()
       )
