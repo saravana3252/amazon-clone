@@ -54,12 +54,12 @@ function Banner(props){
             <div className="absolute hidden lg:block transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[140px] lg:top-[130px] right-2 lg:right-8 cursor-pointer" onClick={()=>{
                 handleSlide("next")
             }}><FontAwesomeIcon icon={faGreaterThan}  className='text-white text-5xl sm:text-4xl md:text-5xl lg:text-8xl' /></div>
-            <div className='absolute z-10 bottom-20 lg:hidden flex justify-center  w-full  gap-5'>
+            <div className='absolute z-10 bottom-[60px] lg:hidden flex justify-center  w-full  gap-5'>
                   {
                     mobileImgs.map((_,index)=>{
                         return (
                             <>
-                            <div className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-gray-800" : "bg-white"}`} ></div>
+                            <div className={`w-2.5 h-2.5 rounded-full ${currentIndex === index ? "bg-gray-700" : "bg-white"}`} ></div>
                             </>
                         )
                     })
@@ -80,7 +80,7 @@ function Banner(props){
             }
         </div>
         </div>
-        <div id="bannerProdInfo" className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[850px] top-[450px] lg:top-[420px] px-4'>
+        <div id="bannerProdInfo" className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[850px] top-[520px] lg:top-[420px] px-4'>
             <div className='bg-white min-w-[200px] shrink-0 p-3'>
                 <p className='font-bold text-xl mb-2'>Get your game on</p>
                 <img className='h-36 lg:h-56' src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg' alt='gaming-banner-img'></img>
