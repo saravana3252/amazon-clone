@@ -79,11 +79,10 @@ function Checkout({cartData}){
             }
            }).then((response)=>response.json()).then(()=>{
             toast.success("Order placed successfully with Cash on Delivery!")
-            setShippingAddress({
-                name:"",address:"",city:"",zipCode:"",country:""
-            })
         }).catch((err)=>{
             toast.error("Failed to place order: " + err)
+        }).finally(()=>{
+          setIsLoading(false)
         })
         }
         else if(paymentMethod === "ONLINE"){
@@ -156,7 +155,7 @@ function Checkout({cartData}){
                     </div>
                 </div>
                 <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>prev</button>
+                    <button className="bg-gray-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>Prev</button>
                 </div>
                 <div className="mt-6">
                     <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={nextStep}>Next</button>
@@ -182,10 +181,10 @@ function Checkout({cartData}){
                     <h3 className="font-semibold">Shipping address</h3>
                     <p>{shippingAddress.name},{shippingAddress.address},{shippingAddress.city},{shippingAddress.zipCode},{shippingAddress.country}</p>
                 <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>prev</button>
+                    <button className="bg-gray-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>prev</button>
                 </div>
                 <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" >{isLoading ? "LOADING..." : "Confirm & Pay" }</button>
+                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" >{isLoading ? "LOADING..." : "Place Order" }</button>
                 </div>
                 </div>
                   </>
