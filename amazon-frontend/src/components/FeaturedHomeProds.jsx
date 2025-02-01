@@ -31,7 +31,7 @@ useEffect(()=>{
 
     return (
         <>
-        <div className="bg-gray-200  w-full lg:pt-[150px] pt-[230px] px-4">
+        <div className="bg-gray-200  w-full lg:pt-[150px] pt-[250px] px-4">
             <div className="bg-white relative w-full px-3 py-2 group">
                 <h1 className="font-bold lg:text-2xl text-xl">Popular products in Home</h1>
                 <div className="absolute top-1/2 left-5 bg-white/90 transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer" onClick={scrollLeft}><FontAwesomeIcon icon={faLessThan} size='3x' className='text-black p-2' /></div>

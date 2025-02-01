@@ -61,7 +61,7 @@ function Header(props) {
     <>
       <div className="h-20 w-full bg-gray-900 flex justify-between ">
         <div className="lg:w-[15%] w-[35%]  h-20 flex justify-center items-center">
-          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[85%] ml-3 lg:ml-0 lg:w-[78%]">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[90%] ml-3 lg:ml-0 lg:w-[78%]">
             <img
               src="./amazon-logo.png"
               className="h-full w-full lg:w-[98%]"

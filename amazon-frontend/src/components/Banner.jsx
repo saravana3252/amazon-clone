@@ -49,7 +49,7 @@ function Banner(props){
             }
         </div>
         </div>
-        <div className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[350px] top-[260px] lg:top-[420px] px-4'>
+        <div className='lg:grid lg:grid-cols-4  flex h-[250px] lg:h-auto overflow-y-hidden overflow-x-auto scrollbar-hide scroll-smooth gap-5 w-full z-20 absolute md:top-[350px] top-[240px] lg:top-[420px] px-4'>
             <div className='bg-white min-w-[200px] shrink-0 p-3'>
                 <p className='font-bold text-xl mb-2'>Get your game on</p>
                 <img className='h-36 lg:h-56' src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg' alt='gaming-banner-img'></img>
