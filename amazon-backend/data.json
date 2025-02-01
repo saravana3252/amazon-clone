@@ -1,0 +1,992 @@
+[
+    {
+        "id": 1,
+        "name": "Sony PS4 Slim 1 TB Console",
+        "price": 33000,
+        "category": "Gaming",
+        "description": "Experience incredible games and endless entertainment with the all-new, lighter, slimmer PS4 1TB hard drive, offering the greatest games, TV, music, and more.",
+        "imageurl": "https://m.media-amazon.com/images/I/51t0bPwu8uL._SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":22300,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Incredible gaming experience with endless entertainment.",
+          "The PS4 Slim is lighter and faster than ever before."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Sony PlayStation DualShock 4 Controller - Glacier White",
+        "price": 4000,
+        "category": "Gaming",
+        "description": "The PlayStation 4 controller offers enhanced precision control with improved analog sticks and trigger buttons. The Share button allows easy sharing of gameplay moments, while the touch pad, light bar, and built-in speaker provide unique ways to interact with games. It also features a 35mm audio jack for private listening and can be efficiently charged via the PlayStation 4 system or any micro-USB charger. For support, contact Sony Careline at 0203 538 2665.",
+        "imageurl": "https://m.media-amazon.com/images/I/51PkqE9Kb6L._SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":1200,
+        "isNewArrival": false,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "The controller feels great in hand and offers smooth gameplay.",
+          "Perfect precision for every game, with responsive buttons."
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Grand Theft Auto V Playstation 4",
+        "price": 1299,
+        "category": "Gaming",
+        "description": "Grand Theft Auto V features the largest, most detailed open world, blending storytelling and gameplay as players switch between three lead characters. It also includes Grand Theft Auto Online, an ever-evolving multiplayer universe for players to explore.",
+        "imageurl": "https://m.media-amazon.com/images/I/81htlTqEckL._SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":33500,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "A thrilling and immersive open world game with endless possibilities.",
+          "GTA V keeps evolving, always exciting with new updates."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Nintendo Switch™ - Mario Kart™ 8 Deluxe Bundle",
+        "price": 38000,
+        "category": "Gaming",
+        "description": "Grand Theft Auto V features the largest, most detailed open world, blending storytelling and gameplay as players switch between three lead characters. It also includes Grand Theft Auto Online, an ever-evolving multiplayer universe for players to explore.",
+        "imageurl": "https://m.media-amazon.com/images/I/71SzulcJI4L._SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+        "ratingNum":3,
+        "ratingCount":4300,
+        "isNewArrival": false,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "The perfect bundle for Mario Kart fans, fun for all ages.",
+          "Mario Kart 8 Deluxe on the Switch is an absolute blast to play."
+        ]
+      },
+        {
+          "id": 5,
+          "name": "The Crew 2 (PS4)",
+          "price": 1400,
+          "category": "Gaming",
+          "description": "Experience the thrill of motorsports across a wide range of disciplines in The Crew 2. Compete in street racing, off-road events, and more in an open-world setting.",
+          "imageurl": "https://m.media-amazon.com/images/I/91aI00z5SrL._SX522_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐",
+          "ratingNum":4,
+          "ratingCount":5600,
+          "isNewArrival": false,
+          "isBestSeller": false,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The graphics and variety of vehicles are amazing!",
+            "An exciting game for motorsport enthusiasts."
+          ]
+        },
+        {
+          "id": 6,
+          "name": "God of War Hits - PlayStation 4",
+          "price": 900,
+          "category": "Gaming",
+          "description": "Embark on an epic journey with Kratos and his son Atreus in a visually stunning world, full of mythical creatures and heart-pounding action.",
+          "imageurl": "https://m.media-amazon.com/images/I/811AhOv5zqL._SX522_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":65000,
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "A masterpiece with an emotional story and stunning visuals.",
+            "One of the best action-adventure games ever made."
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Marvel's Spider-Man: Miles Morales (PS4)",
+          "price": 1700,
+          "category": "Gaming",
+          "description": "Swing through New York City as Miles Morales, taking on villains and uncovering new challenges in this thrilling Spider-Man adventure.",
+          "imageurl": "https://m.media-amazon.com/images/I/81oOStsvVWL._SY606_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":73000,
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The gameplay is fluid, and the story is compelling.",
+            "A fantastic superhero experience for all Spider-Man fans."
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Need for Speed Heat - PlayStation 4",
+          "price": 800,
+          "category": "Gaming",
+          "description": "Race during the day and evade the cops at night in Need for Speed Heat. Customize your cars and conquer the streets.",
+          "imageurl": "https://m.media-amazon.com/images/I/71pH5mrhc5L._SX522_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":55000,
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "Fast-paced and thrilling with great customization options.",
+            "A must-play for fans of street racing games."
+          ]
+        },
+        {
+          "id": 9,
+          "name": "CyberPowerPC Gamer Xtreme VR Gaming PC",
+          "price": 95000,
+          "category": "Gaming",
+          "description": "Powerful gaming PC with Intel Core i5 processor and GeForce RTX 4060 graphics for immersive VR gaming and seamless performance.",
+          "imageurl": "https://m.media-amazon.com/images/I/71rPUJ72P5L._AC_SX679_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":1100,
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "Handles high-end games with ease. Excellent performance.",
+            "Perfect for VR and heavy-duty gaming."
+          ]
+        },
+        {
+          "id": 10,
+          "name": "KAIGERR 2025 Gaming Laptop with Intel N97 Processor",
+          "price": 75000,
+          "category": "Gaming",
+          "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
+          "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":50000,
+          "isNewArrival": false,
+          "isBestSeller": false,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "Great specs for the price, runs games smoothly.",
+            "Impressive battery life and sleek design."
+          ]
+        },
+      {
+        "id": 11,
+        "name": "Yankee Candle Wax Melts, Clean Cotton, Up to 8 Hours of Fragrance",
+        "price": 120,
+       "category": "HomeProduct",
+        "description": "Experience the refreshing scent of freshly laundered cotton with these premium wax melts. Perfect for any space, providing a soothing ambiance for up to 8 hours.",
+        "imageurl": "https://m.media-amazon.com/images/I/81hqAXPlXHL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Lovely scent that fills the room quickly. Highly recommend!",
+          "Great value for money. Perfect for small spaces."
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Shubhkart Tejas Puja Ghee T-Light Candles",
+        "price": 199,
+       "category": "HomeProduct",
+        "description": "Indulge in the rich and luscious aroma of ripe black cherries. These wax melts offer a delightful and long-lasting fragrance for your home.",
+        "imageurl": "https://m.media-amazon.com/images/I/71Xl3X7BcnL._SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":2400,
+        "isNewArrival": false,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Smells just like fresh cherries! So relaxing.",
+          "Amazing quality and lasts much longer than expected."
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Sonia Moer Super Soft Brushed Microfibre Pillowcases",
+        "price": 300,
+       "category": "HomeProduct",
+        "description": "Upgrade your bedding with these super soft microfiber pillowcases. Durable, wrinkle-resistant, and perfect for a restful night's sleep.",
+        "imageurl": "https://m.media-amazon.com/images/I/71cAfMi+SyL._AC_SY400_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐",
+        "ratingNum":2,
+        "ratingCount":1980,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Incredibly soft and comfortable. Worth every penny!",
+          "These pillowcases feel luxurious. Great for sensitive skin."
+        ]
+      },
+      {
+        "id": 14,
+        "name": "The Cheeky Panda Bamboo Pocket Tissues, 8 Pack of 10 Hypoallergenic Tissues",
+        "price": 200,
+       "category": "HomeProduct",
+        "description": "Eco-friendly and hypoallergenic bamboo tissues. Gentle on the skin and perfect for everyday use, at home or on the go.",
+        "imageurl": "https://m.media-amazon.com/images/I/81-hWXmYRzL._AC_SX679_PIbundle-8,TopRight,0,0_SH20_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+        "ratingNum":3,
+        "ratingCount":1650,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Great for sensitive skin. Love the eco-friendly packaging.",
+          "Strong and soft! Perfect for my family."
+        ]
+      },
+      {
+        "id": 15,
+        "name": "EcoBag - 50 Pack Extra Strong Heavy Duty Refuse Sacks - 100L - 33 Microns",
+        "price": 150,
+       "category": "HomeProduct",
+        "description": "Heavy-duty refuse sacks ideal for home or commercial use. Strong, durable, and designed for hassle-free waste management.",
+        "imageurl": "https://m.media-amazon.com/images/I/71F0afkcD4L._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":1345,
+        "isNewArrival": false,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "These bags are super sturdy and hold a lot. Highly recommend!",
+          "Great value for money. No tears even with heavy loads."
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Curver My Style Small Rectangular Storage Basket, Vintage White, 4 Litre",
+        "price": 250,
+       "category": "HomeProduct",
+        "description": "A stylish and functional storage solution for your home. Perfect for organizing small items with a vintage white finish.",
+        "imageurl": "https://m.media-amazon.com/images/I/716LhDsOBLL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐",
+        "ratingNum":1,
+        "ratingCount":1790,
+        "isNewArrival": false,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Beautiful design and very practical. Keeps my things organized.",
+          "Perfect size for my bathroom essentials. Love the quality!"
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Moredig Galaxy Light Projector for Bedroom, Sensory Lights with 13 Color",
+        "price": 350,
+       "category": "HomeProduct",
+        "description": "Create a mesmerizing ambiance with this galaxy light projector. Features 13 colors and sensory lights, perfect for relaxation or entertainment.",
+        "imageurl": "https://m.media-amazon.com/images/I/71HHQ06PLEL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":1200,
+        "isNewArrival": true,
+        "isBestSeller":false,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "My kids love it! Creates a magical atmosphere in their room.",
+          "The colors are stunning. Perfect for winding down after a long day."
+        ]
+      },
+      {
+        "id": 19,
+        "name": "INIU Power Bank, Portable Charger 10000mAh",
+        "price": 1550,
+        "category": "Electronics",
+        "description": "A compact and powerful 10000mAh power bank that offers fast charging for your devices on the go.",
+        "imageurl": "https://m.media-amazon.com/images/I/51KtknT9brL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":4500,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Charges my phone quickly and lasts for days!",
+          "Lightweight and portable, perfect for travel."
+        ]
+      },
+      {
+        "id": 20,
+        "name": "JETech Screen Protector for iPhone 16 6.1-Inch",
+        "price": 400,
+        "category": "Electronics",
+        "description": "A high-quality screen protector for iPhone 16 that protects your screen from scratches and drops.",
+        "imageurl": "https://m.media-amazon.com/images/I/71041qvQIXL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":55000,
+        "isNewArrival": false,
+        "isBestSeller": false,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Perfect fit for my iPhone, easy to apply.",
+          "Protects my screen without affecting touch sensitivity."
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Blukar Car Phone Holder for iPhone 4.0''-7.0''",
+        "price": 550,
+        "category": "Electronics",
+        "description": "A universal car phone holder that keeps your device secure and within reach while driving.",
+        "imageurl": "https://m.media-amazon.com/images/I/71fBuXJet1L._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":3600,
+        "isNewArrival": true,
+        "isBestSeller": false,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Sturdy and reliable, keeps my phone secure.",
+          "Great for hands-free driving, fits perfectly."
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Apple Watch Series 10",
+        "price": 600,
+        "category": "Electronics",
+        "description": "The Apple Watch Series 10 features enhanced health tracking, seamless integration with your Apple devices, and a sleek design.",
+        "imageurl": "https://m.media-amazon.com/images/I/61bJZx1v8GL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":55000,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Amazing features and excellent build quality.",
+          "Tracks my workouts and heart rate effortlessly."
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Samsung Galaxy Tab A9+ Tablet 11” 64GB Android Tablet",
+        "price": 20000,
+        "category": "Electronics",
+        "description": "A high-performance Android tablet with an 11-inch display, perfect for work, entertainment, and gaming.",
+        "imageurl": "https://m.media-amazon.com/images/I/61d46oYQgdL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":34000,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Great tablet for the price, fast performance.",
+          "Perfect for watching videos and gaming on the go."
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Amazon Fire TV Stick 4K",
+        "price": 2000,
+        "category": "Electronics",
+        "description": "Enjoy 4K streaming with Amazon Fire TV Stick, offering access to thousands of apps and channels.",
+        "imageurl": "https://m.media-amazon.com/images/I/51s-dIOI5zL._AC_SX569_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":33000,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Easy to set up and provides great picture quality.",
+          "A must-have for streaming enthusiasts!"
+        ]
+      },
+      {
+        "id": 25,
+        "name": "JBL Tune 510BT - Bluetooth headphones with up to 40 hours battery",
+        "price": 3000,
+        "category": "Electronics",
+        "description": "These JBL Bluetooth headphones offer powerful sound and a long battery life of up to 40 hours.",
+        "imageurl": "https://m.media-amazon.com/images/I/51EUjPMn6UL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":47600,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Comfortable fit with amazing sound quality.",
+          "Perfect for long listening sessions without charging."
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Marshall Stockwell II Portable Bluetooth Speaker, Black and Brass",
+        "price": 15000,
+        "category": "Electronics",
+        "description": "A portable Bluetooth speaker with premium sound and a stylish design, perfect for any music lover.",
+        "imageurl": "https://m.media-amazon.com/images/I/71O1lW4PXQL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":4300,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Fantastic sound and looks great in my living room.",
+          "The battery life is amazing, lasts all day!"
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Apple iPhone 12 Pro Max (256GB, Pacific Blue) [Locked] + Carrier Subscription",
+        "price": 120000,
+        "category": "Electronics",
+        "description": "The Apple iPhone 12 Pro Max offers top-notch performance, a fantastic camera, and a stunning display.",
+        "imageurl": "https://m.media-amazon.com/images/I/71MHTD3uL4L._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":76600,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":true,
+        "reviews": [
+          "Incredible camera quality and performance.",
+          "Great phone, but pricey. Totally worth it!"
+        ]
+      },
+      {
+        "id": 28,
+        "name": "C24 Ultra 5G Smartphone,6+256GB Unlocked Phone, Android 13.0",
+        "price": 150000,
+        "category": "Electronics",
+        "description": "A high-end 5G smartphone with a powerful processor, large display, and fast charging capabilities.",
+        "imageurl": "https://m.media-amazon.com/images/I/61icHXIU8HL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+        "ratingNum":3,
+        "ratingCount":5600,
+        "isNewArrival": false,
+        "isBestSeller": false,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Excellent performance, fast 5G speed.",
+          "Sleek design and easy to use, great value for money."
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Dell Inspiron 15 3000 3520 Business Laptop Computer[Windows 11 Pro], 15.6'' FHD Touchscreen",
+        "price": 90000,
+        "category": "Electronics",
+        "description": "A powerful business laptop with an FHD touchscreen, Windows 11 Pro, and robust performance for productivity tasks.",
+        "imageurl": "https://m.media-amazon.com/images/I/71gbrvRJI-L._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Great laptop for work, very responsive touchscreen.",
+          "Perfect for business tasks and light gaming."
+        ]
+      },
+      {
+        "id": 30,
+        "name": "ASUS Chromebook CM14 Laptop, 14 HD Anti-Glare Display (1366x768)",
+        "price": 80000,
+        "category": "Electronics",
+        "description": "An affordable Chromebook with a 14-inch display, ideal for students and casual browsing.",
+        "imageurl": "https://m.media-amazon.com/images/I/616aCuRtnpL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":44900,
+        "isNewArrival": true,
+        "isBestSeller": false,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Lightweight and perfect for schoolwork.",
+          "Good performance for everyday tasks, long battery life."
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Slime Play Red from Zimpli Kids",
+        "price": 300,
+        "category": "Toys",
+        "description": "Dive into hours of gooey fun with Zimpli Kids' Slime Play in vibrant red. Perfect for sensory play and imaginative activities, it's safe, non-toxic, and easy to clean.",
+        "imageurl": "https://m.media-amazon.com/images/I/61gRcljBthL._AC_SY400_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":7900,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "My kids absolutely loved the squishy texture, great for sensory play!",
+          "Fun and easy to use, my children were entertained for hours."
+        ]
+      },
+      {
+        "id": 32,
+        "name": "CRAYOLA SuperTips Washable Markers - Assorted Colours (Pack of 12)",
+        "price": 300,
+        "category": "Toys",
+        "description": "Unleash creativity with CRAYOLA SuperTips Washable Markers. Vibrant colors and washable ink make them ideal for kids' art projects.",
+        "imageurl": "https://m.media-amazon.com/images/I/71+eKFcLqJL._AC_SY741_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":5400,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "Bright colors and easy to wash off surfaces, perfect for kids.",
+          "These markers are my go-to for all art activities, great quality!"
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Mattel Games UNO, Classic Card Game for Kids and Adults for Family Game Night",
+        "price": 150,
+        "category": "Toys",
+        "description": "Enjoy endless fun with Mattel's UNO, the classic card game perfect for family game nights. Easy to learn and fun for all ages.",
+        "imageurl": "https://m.media-amazon.com/images/I/71MrrNB7jCL._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":3400,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "UNO is a staple in our family game nights, so much fun!",
+          "Easy to learn and always entertaining, suitable for all ages."
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Stickle Bricks Little Builder Construction Set with 30 Pieces",
+        "price": 220,
+        "category": "Toys",
+        "description": "Spark creativity and motor skills with the Stickle Bricks Little Builder set. With 30 colorful pieces, it's perfect for imaginative construction play.",
+        "imageurl": "https://m.media-amazon.com/images/I/71MRKpa7ZJL._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":6000,
+        "isNewArrival": false,
+        "isBestSeller": false,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "My kids love building with these, great for creativity!",
+          "A durable and fun toy, keeps my little one entertained for hours."
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Asmodee | Dobble | Card Game | Ages 6+ | 2-8 Players | 15 Minutes Playing Time",
+        "price": 550,
+        "category": "Toys",
+        "description": "A fast-paced card game of matching symbols, Dobble is fun for the whole family. Easy to learn, quick to play, and great for all ages.",
+        "imageurl": "https://m.media-amazon.com/images/I/81SIAkM6E8L._AC_SY879_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐",
+      "ratingNum":4,
+      "ratingCount":1300,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "Perfect for family game night, everyone had a blast!",
+          "Quick and engaging, great for all ages."
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Ravensburger Marvel Spiderman Mini Memory Game",
+        "price": 800,
+        "category": "Toys",
+        "description": "Join your favorite Marvel superhero in this exciting memory game. Perfect for developing memory and concentration skills while having fun.",
+        "imageurl": "https://m.media-amazon.com/images/I/91BZW+LOPpL._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
+        "isBestSeller": false,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "A fun and challenging game for Spiderman fans!",
+          "Great for improving memory, my kids love it."
+        ]
+      },
+      {
+        "id": 37,
+        "name": "LEGO 31058 Creator Mighty Dinosaurs Toy, 3 in 1 Model",
+        "price": 800,
+        "category": "Toys",
+        "description": "Build your favorite dinosaur with the LEGO Creator Mighty Dinosaurs set. Features 3 models in 1 for endless creative play.",
+        "imageurl": "https://m.media-amazon.com/images/I/71-U9Tq8Y+L._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":55000,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "My child loves dinosaurs, and this set was a hit!",
+          "High-quality LEGO set with great instructions and versatility."
+        ]
+      },
+      {
+        "id": 38,
+        "name": "TOMY Pop Up Pirate Classic Children's Action Board Game",
+        "price": 450,
+        "category": "Toys",
+        "description": "Bring excitement to your family game night with the TOMY Pop-Up Pirate game. It's easy to play and thrilling for all ages.",
+        "imageurl": "https://m.media-amazon.com/images/I/812lSGtI33L._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":4300,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "Simple yet entertaining, a hit with the kids!",
+          "A timeless classic that never gets old."
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Orchard Toys Farmyard Heads & Tails Game - Matching & Pairing Memory Game",
+        "price": 630,
+        "category": "Toys",
+        "description": "Match and pair farmyard animals in this delightful memory game. Ideal for improving concentration and cognitive skills in young children.",
+        "imageurl": "https://m.media-amazon.com/images/I/81+xNw1TioL._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+      "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":55000,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "A fun way to teach my toddler about farm animals!",
+          "Lovely game with bright illustrations and sturdy cards."
+        ]
+      },
+      {
+        "id": 40,
+        "name": "CRAYOLA Color Wonder - Bluey Colouring Mess-Free Book",
+        "price": 250,
+        "category": "Toys",
+        "description": "Keep creativity mess-free with the CRAYOLA Color Wonder Bluey Coloring Book. Includes 18 pages and 5 magic markers that reveal colors only on special paper.",
+        "imageurl": "https://m.media-amazon.com/images/I/614-hQux3mL._AC_SX522_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "My kids love Bluey, and this mess-free coloring book is a lifesaver!",
+          "The magic markers are amazing, no mess at all!"
+        ]
+      },
+        {
+          "id": 41,
+          "name": "Thomas Scott Men Classic Slim Fit Checked Casual Shirt",
+          "price": 597,
+          "category": "Clothing",
+          "description": "A classic slim-fit checked casual shirt designed for comfort and style. Perfect for outings and casual events.",
+          "imageurl": "https://m.media-amazon.com/images/I/71cwWmQvZWL._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":4500,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The fabric is soft and fits perfectly. Great for casual wear!",
+            "Excellent quality and value for money."
+          ]
+        },
+        {
+          "id": 42,
+          "name": "Thomas Scott Men's Slim Fit Full Sleeves Tartan Checked Casual Shirt",
+          "price": 890,
+          "category": "Clothing",
+          "description": "This slim-fit tartan checked shirt combines a modern look with timeless style. Ideal for casual or semi-formal occasions.",
+          "imageurl": "https://m.media-amazon.com/images/I/61VmstpY2KL._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":4400,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "Love the design and the fit. Highly recommend!",
+            "Stylish and comfortable, perfect for any event."
+          ]
+        },
+        {
+          "id": 43,
+          "name": "Arrow Men's Solid Short Sleeve Regular Fit Cotton Polo T-Shirt",
+          "price": 550,
+          "category": "Clothing",
+          "description": "A high-quality cotton polo t-shirt with a regular fit, offering a classic and versatile look for daily wear.",
+          "imageurl": "https://m.media-amazon.com/images/I/91rwxj1oAkL._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐",
+          "ratingNum":1,
+          "ratingCount":3400,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The fabric is breathable and great for summer.",
+            "Well-made and fits perfectly. Will buy again!"
+          ]
+        },
+        {
+          "id": 44,
+          "name": "ONN Men's Polo",
+          "price": 539,
+          "category": "Clothing",
+          "description": "A casual yet elegant polo shirt that’s easy to wear and maintain, offering maximum comfort.",
+          "imageurl": "https://m.media-amazon.com/images/I/61ilE6RR9+L._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐",
+          "ratingNum":4,
+          "ratingCount":2200,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The color doesn’t fade even after multiple washes.",
+            "Fits as expected, and the material is durable."
+          ]
+        },
+        {
+          "id": 45,
+          "name": "BEYOUNG Men's Regular Round Neck Plain Half Sleeve T-Shirt for Men",
+          "price": 349,
+          "category": "Clothing",
+          "description": "A simple and stylish plain t-shirt made from soft fabric. A wardrobe essential for everyday wear.",
+          "imageurl": "https://m.media-amazon.com/images/I/71Bu18gjA1L._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":2300,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The t-shirt is super comfortable and lightweight.",
+            "Affordable and perfect for casual outings."
+          ]
+        },
+        {
+          "id": 46,
+          "name": "Ben Martin Men's Casual Stretchable Denim Tapered Fit Carrot Jeans",
+          "price": 999,
+          "category": "Clothing",
+          "description": "Stylish and stretchable denim jeans designed for comfort and a modern look. Perfect for daily wear.",
+          "imageurl": "https://m.media-amazon.com/images/I/51tQUQnvRPL._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐",
+          "ratingNum":2,
+          "ratingCount":2300,
+          "sizes": ["28", "30", "32", "34"],
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The jeans are comfortable and stretchable. Great fit!",
+            "Looks amazing and feels premium."
+          ]
+        },
+        {
+          "id": 47,
+          "name": "The Indian Garage Co Men Blue Slim Fit",
+          "price": 700,
+          "category": "Clothing",
+          "description": "A trendy slim-fit shirt with a refined design. Suitable for both casual and formal settings.",
+          "imageurl": "https://m.media-amazon.com/images/I/510LeIBtvqL._SX679_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":4900,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The color and style are outstanding. Highly recommended!",
+            "Excellent quality at a great price."
+          ]
+        },
+        {
+          "id": 48,
+          "name": "Nermosa Women Cotton Block Printed Kurta Pant With Dupatta",
+          "price": 699,
+          "category": "Clothing",
+          "description": "A beautiful block-printed cotton kurta set with matching pants and dupatta. Ideal for festive occasions.",
+          "imageurl": "https://m.media-amazon.com/images/I/71Xvagl5gsL._SX679_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐",
+          "ratingNum":2,
+          "ratingCount":2500,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": false,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The material is soft and breathable. Loved it!",
+            "Great value for money, looks elegant."
+          ]
+        },
+        {
+          "id": 49,
+          "name": "GoSriKi Women's Cotton Blend Embroidered Straight Kurta with Pant & Dupatta",
+          "price": 689,
+          "category": "Clothing",
+          "description": "An embroidered straight kurta set with a modern design and premium quality fabric.",
+          "imageurl": "https://m.media-amazon.com/images/I/61SgADmAyDL._SY879_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐⭐",
+          "ratingNum":5,
+          "ratingCount":1200,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "Looks even better than the pictures!",
+            "The embroidery work is impressive. Would buy again."
+          ]
+        },
+        {
+          "id": 50,
+          "name": "MAHIRA'S Comfort Short Kurti for Women",
+          "price": 639,
+          "category": "Clothing",
+          "description": "A comfortable short kurti with a modern design. Perfect for casual outings and daily wear.",
+          "imageurl": "https://m.media-amazon.com/images/I/417aCFXarKL.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐⭐",
+          "ratingNum":4,
+          "ratingCount":2300,
+          "sizes": ["S", "M", "L", "XL"],
+          "isNewArrival": true,
+          "isBestSeller": true,
+          "isDealOfTheDay": false,
+          "reviews": [
+            "The fit is amazing, and it’s super comfy!",
+            "Love the design and the material quality."
+          ]
+        }
+]
