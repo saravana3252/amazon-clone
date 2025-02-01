@@ -209,16 +209,20 @@ function Header(props) {
                 </>
               )}
             </div>
-            <p>
+            {
+              loggedInData.loggedUser ? (<>
+               <p >
+                hello,{" "}{loggedInData.loggedUser.name}
+            </p>
+              </>):(<>
+                <p>
               <Link to="/login">
-                hello,{" "}
-                {`${
-                  loggedInData.loggedUser
-                    ? loggedInData.loggedUser.name
-                    : "sign in"
-                }`}
+                hello,{" "} Sign in
               </Link>
             </p>
+              
+              </>)
+            }
             <p className="font-medium">Accounts & Lists</p>
           </div>
           <div>

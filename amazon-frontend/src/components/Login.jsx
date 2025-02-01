@@ -22,7 +22,7 @@ const loggedInData = useContext(userContext)
 useEffect(()=>{
   auth.onAuthStateChanged((user)=>{
     if(user){
-        navigate("/")
+        // navigate("/")
     }
     else{
         console.log("logged out")
