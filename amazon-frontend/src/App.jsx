@@ -15,6 +15,8 @@ import Private from "./components/Private"
 import Checkout from "./components/Checkout"
 import SearchProdList from "./components/SearchProdsList"
 import { ToastContainer, toast } from "react-toastify";
+import PaymentSuccess from "./components/PaymentSuccess"
+import PaymentCancel from "./components/PaymentCancel"
 
 function App() {
  const [product,setProduct] = useState({})
@@ -96,6 +98,8 @@ function searchNameFunc(name){
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/register" element={<Register></Register>}></Route>
       <Route path="checkout" element={<Private Component={Checkout} cartData={cart}></Private>}></Route>
+      <Route path="/success" element={<Private Component={PaymentSuccess}/>}/>
+      <Route path="/cancel" element={<Private Component={PaymentCancel}/>}/>
    </Routes>
    </userContext.Provider>
    </BrowserRouter>
