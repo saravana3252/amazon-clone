@@ -350,7 +350,7 @@ app.get("/success", (req, res) => {
               price: item.price
           })),
           shippingAddress: shippingAddress,
-          paymentMethod: "Online",
+          paymentMethod: "ONLINE",
           paymentStatus: "Paid",  
           totalAmount: totalAmount,
         })
@@ -423,7 +423,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
           price: item.price
       })),
       shippingAddress: shippingAddress,
-      paymentMethod: "Online",
+      paymentMethod: "ONLINE",
       paymentStatus: "Paid",
       totalAmount: totalAmount,
     })
