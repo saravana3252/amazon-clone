@@ -234,7 +234,7 @@ app.post("/checkout",(req,res)=>{
  const productPromises = cartData.map((item) => {
      return productModel.findById(item.productId).then((product) => {
          if (product) {
-             totalAmount += item.price * item.quantity;
+             totalAmount += product.price * item.quantity;
          }
      }).catch((err) => {
          console.error("Error fetching product:", err);
