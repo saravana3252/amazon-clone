@@ -12,6 +12,7 @@ function Cart(props) {
         const initialQuantities = props.cartData.map(item => ({
             id: item.id,
             quantity: item.quantity || 1, // Use quantity from backend or default to 1
+            stock:item.stock
         }));
         setQuantities(initialQuantities);
         console.log(props.cartData)
@@ -22,7 +23,9 @@ function Cart(props) {
         setQuantities((prevQuantities)=> {
             return prevQuantities.map((qty)=> {
                 if (qty.id === itemId) {
-                    const newQuantity = operation === "increment" ? qty.quantity + 1 : qty.quantity - 1;
+                    let newQuantity = operation === "increment" 
+                    ? Math.min(qty.quantity + 1, qty.stock)  // Restrict to stock
+                    : Math.max(qty.quantity - 1, 1);
                     props.updateCart(itemId, newQuantity)
                     return {
                         ...qty,

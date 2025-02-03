@@ -258,6 +258,14 @@ app.post("/checkout",(req,res)=>{
          paymentStatus: paymentMethod === "COD" ? "Pending" : "Paid",
      })
      .then((checkout) => {
+         const stockUpdatePromise = cartData.map(async (item)=>{
+           await productModel.findByIdAndUpdate(item.productId,{
+            $inc:{stock:-item.quantity}
+           })
+         })
+
+         Promise.all(stockUpdatePromise)
+
          res.status(201).send({ message: "Checkout successful", checkout });
      })
      .catch((error) => {
@@ -358,6 +366,13 @@ app.get("/success", (req, res) => {
           totalAmount: totalAmount,
         })
         .then(() => {
+          const stockUpdatePromise = cartData.map(async (item)=>{
+            await productModel.findByIdAndUpdate(item.productId,{
+             $inc:{stock:-item.quantity}
+            })
+          })
+ 
+          Promise.all(stockUpdatePromise)
           res.send("Payment was successful. Thank you for your purchase!");
         })
         .catch((error) => {
@@ -432,6 +447,13 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
       totalAmount: totalAmount,
     })
     .then(() => {
+      const stockUpdatePromise = cartData.map(async (item)=>{
+        await productModel.findByIdAndUpdate(item.productId,{
+         $inc:{stock:-item.quantity}
+        })
+      })
+
+      Promise.all(stockUpdatePromise)
       console.log("Checkout data saved successfully.");
     })
     .catch((error) => {
