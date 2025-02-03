@@ -26,6 +26,9 @@ const checkoutSchema = mongoose.Schema({
             },
             quantity:{
                 type:Number,
+            },
+            selectedSize:{
+                type:String
             }
             
         }

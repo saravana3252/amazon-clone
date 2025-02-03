@@ -66,13 +66,14 @@ function updateCart(itemId, newQuantity) {
   );
 }
 
-function updateCartSize(newSize){
-  setCart((prevCart)=>{
-    prevCart.map((item)=>{
-      return {...item,size:newSize}
-    })
-  })
+function updateCartSize(itemId, newSize) {
+  setCart((prevCart) =>
+    prevCart.map((item) =>
+      item.id === itemId ? { ...item, selectedSize: newSize } : item
+    )
+  );
 }
+
 
 
  useEffect(()=>{

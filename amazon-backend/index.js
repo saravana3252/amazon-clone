@@ -250,7 +250,8 @@ app.post("/checkout",(req,res)=>{
              productId: item.productId,
              productName: item.productName,
              price: item.price,
-             quantity:item.quantity
+             quantity:item.quantity,
+             selectedSize:item.selectedSize
          })),
          shippingAddress,
          paymentMethod,
@@ -358,6 +359,7 @@ app.get("/success", (req, res) => {
               productName: item.productName,
               price: item.price,
               quantity:item.quantity
+              selectedSize:item.selectedSize
           })),
           shippingAddress: shippingAddress,
           paymentMethod: "ONLINE",
@@ -439,6 +441,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
           productName: item.productName,
           price: item.price,
           quantity:item.quantity
+          selectedSize:item.selectedSize
       })),
       shippingAddress: shippingAddress,
       paymentMethod: "ONLINE",

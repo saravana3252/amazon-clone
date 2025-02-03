@@ -85,9 +85,18 @@ function Cart(props) {
                                                     >
                                                         -
                                                     </button>
-                                                </div>
+                                                    {
+                                                        data.category === "Clothing" ? ( <> {data.sizes.map((size)=>{
+                                                            return (<>
+                                                             <button className="bg-gray-200 px-2 cursor-pointer active:bg-blue-500" >{size}</button>
+                                                            </>)
+                                                        })}</>):null
+                                                    }
+                                                   
+                                                </div> 
                                             </div>
                                         </div>
+                                       
                                         <button
                                             className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
                                             onClick={() => props.RemoveFromCart(index)}

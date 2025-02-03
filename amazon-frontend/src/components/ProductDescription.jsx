@@ -1,11 +1,11 @@
-import {  useEffect, useState } from "react";
+import {  useState } from "react";
 import Header from "./Header";
 import PropTypes from 'prop-types';
 
 
 function ProductDescription(props) {
   
-// const [size,setSize] = useState([])
+const [size,setSize] = useState([])
 
 // useEffect(()=>{
 //   console.log(size)
@@ -38,9 +38,9 @@ function ProductDescription(props) {
         props.product.category === "Clothing" ? (<div className="flex gap-2">sizes : {props.product.sizes.map((size)=>{
           return (
             <>
-            <button className="bg-gray-200 px-2 cursor-pointer active:bg-blue-500" onClick={(()=>{
-            //  props.updateCartSize(size)
-            })}>{size}</button>
+            <button className="bg-gray-200 px-2 cursor-pointer active:bg-blue-500" onClick={()=>{
+              setSize(size)
+            }}>{size}</button>
             </>
           )
         })}</div>) : null
@@ -50,7 +50,7 @@ function ProductDescription(props) {
       <button disabled = {props.product.stock <= 0}
         className={`mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${props.product.stock <= 0 ? "cursor-not-allowed bg-gray-500 hover:bg-gray-500" : "cursor-pointer"}`} onClick={()=>{
           props.AddToCart(props.product)
-          
+          props.updateCartSize(props.product.id,size)
         }}
         
       >
@@ -92,6 +92,7 @@ function ProductDescription(props) {
     productdes : PropTypes.func.isRequired,
     productDes: PropTypes.string.isRequired,
     product: PropTypes.shape({
+      id:PropTypes.number.isRequired,
       imageurl: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
