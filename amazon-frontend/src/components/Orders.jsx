@@ -41,7 +41,7 @@ function Orders() {
                             <ul className="list-disc ml-4">
                                 {order.cartData.map((product, i) => (
                                     <>
-                                    <li key={i} className="text-sm text-gray-700">{product.productName} - ₹{product.price} x {product.quantity}</li>
+                                    <li key={i} className="text-sm text-gray-700">{product.productName} - ₹{product.price} x {product.quantity} {product.category === "Clothing" ? (product.selectedSize):null}</li>
                                     </>
                                 ))}
                             </ul>
