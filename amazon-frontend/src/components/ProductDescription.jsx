@@ -1,8 +1,16 @@
+import {  useEffect, useState } from "react";
 import Header from "./Header";
 import PropTypes from 'prop-types';
 
 
 function ProductDescription(props) {
+  
+// const [size,setSize] = useState([])
+
+// useEffect(()=>{
+//   console.log(size)
+// },[size])
+
     return (
       <>    
       <Header cartLength={props.cartLength} searchName={props.searchName} productdes={props.productdes}></Header>
@@ -26,11 +34,23 @@ function ProductDescription(props) {
       <p className="text-2xl font-semibold text-green-600">Rs {props.product.price} & Free Shipping</p>
       <p className="mt-2 text-gray-600">{props.product.description}</p>
       <p className="text-red-600 font-semibold mt-2 animate-pulse">{props.product.stock <= 0 ? "OUT OF STOCK" : "IN STOCK"}</p>
+      {
+        props.product.category === "Clothing" ? (<div className="flex gap-2">sizes : {props.product.sizes.map((size)=>{
+          return (
+            <>
+            <button className="bg-gray-200 px-2 cursor-pointer active:bg-blue-500" onClick={(()=>{
+            //  props.updateCartSize(size)
+            })}>{size}</button>
+            </>
+          )
+        })}</div>) : null
+      }
       <p className="text-gray-500 italic">{props.product.category}</p>
 
       <button disabled = {props.product.stock <= 0}
         className={`mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${props.product.stock <= 0 ? "cursor-not-allowed bg-gray-500 hover:bg-gray-500" : "cursor-pointer"}`} onClick={()=>{
           props.AddToCart(props.product)
+          
         }}
         
       >
@@ -67,6 +87,7 @@ function ProductDescription(props) {
   }
  
   ProductDescription.propTypes = {
+     updateCartSize:PropTypes.func.isRequired,  
    searchName:PropTypes.func.isRequired,
     productdes : PropTypes.func.isRequired,
     productDes: PropTypes.string.isRequired,
@@ -78,6 +99,7 @@ function ProductDescription(props) {
       stock:PropTypes.number.isRequired,
       category: PropTypes.string.isRequired,
       reviews: PropTypes.arrayOf(PropTypes.string).isRequired,
+      sizes:PropTypes.arrayOf(PropTypes.string).isRequired,
     }).isRequired,
     cartLength: PropTypes.number.isRequired,
     AddToCart: PropTypes.func.isRequired,

@@ -30,7 +30,7 @@ let productSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    size:{
+    sizes:{
         type:[String]
     },
     quantity:{
