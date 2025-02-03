@@ -297,9 +297,8 @@ app.post("/create-checkout-session", (req, res) => {
         product_data: {
           name: item.productName,
           description: item.description,
-          quantity:item.quantity
         },
-        unit_amount: item.price * 100, 
+        unit_amount: item.price * item.quantity * 100, 
       },
       quantity: 1, 
     })),
