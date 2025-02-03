@@ -358,7 +358,7 @@ app.get("/success", (req, res) => {
               productId: item.productId,
               productName: item.productName,
               price: item.price,
-              quantity:item.quantity
+              quantity:item.quantity,
               selectedSize:item.selectedSize
           })),
           shippingAddress: shippingAddress,
@@ -440,7 +440,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
           productId: item.productId,
           productName: item.productName,
           price: item.price,
-          quantity:item.quantity
+          quantity:item.quantity,
           selectedSize:item.selectedSize
       })),
       shippingAddress: shippingAddress,
