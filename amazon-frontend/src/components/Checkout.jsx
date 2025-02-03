@@ -72,7 +72,7 @@ function Checkout({cartData}){
 
         if(step === 3){
         if(paymentMethod === "COD"){
-           fetch("http://localhost:8000/checkout",{
+           fetch("https://amazon-clone-backend-mxip.onrender.com/checkout",{
             method:"POST",
             body:JSON.stringify(checkoutData),
             headers:{
