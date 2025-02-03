@@ -10,31 +10,33 @@ function Cart(props) {
     useEffect(() => {
         // Initialize quantities based on the backend data (props.cartData)
         const initialQuantities = props.cartData.map(item => ({
-            id: item.name,
+            id: item.id,
             quantity: item.quantity || 1, // Use quantity from backend or default to 1
         }));
         setQuantities(initialQuantities);
+        console.log(props.cartData)
     }, [props.cartData]);
 
     // Update the quantity for a specific item
-    // function handleQuantityChange(itemId, operation) {
-    //     setQuantities((prevQuantities)=> {
-    //         return prevQuantities.map((qty)=> {
-    //             if (qty.id === itemId) {
-    //                 const newQuantity = operation === "increment" ? qty.quantity + 1 : qty.quantity - 1;
-    //                 return {
-    //                     ...qty,
-    //                     quantity: Math.max(newQuantity, 1), // Ensure quantity is at least 1
-    //                 };
-    //             }
-    //             return qty;
-    //         });
-    //     });
-    // }
+    function handleQuantityChange(itemId, operation) {
+        setQuantities((prevQuantities)=> {
+            return prevQuantities.map((qty)=> {
+                if (qty.id === itemId) {
+                    const newQuantity = operation === "increment" ? qty.quantity + 1 : qty.quantity - 1;
+                    props.updateCart(itemId, newQuantity)
+                    return {
+                        ...qty,
+                        quantity: Math.max(newQuantity, 1), // Ensure quantity is at least 1
+                    };
+                }
+                return qty;
+            });
+        });
+    }
 
     // Calculate the total price using the updated quantities
     const totalPrice = props.cartData.reduce((sum, item) => {
-        const quantity = quantities.find(qty => qty.id === item.name)?.quantity || 1;
+        const quantity = quantities.find(qty => qty.id === item.id)?.quantity || 1;
         return sum + item.price * quantity;
     }, 0);
 
@@ -48,7 +50,7 @@ function Cart(props) {
                     {props.cartLength > 0 ? (
                         <div className="flex flex-col space-y-6">
                             {props.cartData.map((data, index) => {
-                                // const itemQuantity = quantities.find(qty => qty.id === data.name)?.quantity || 1;
+                                const itemQuantity = quantities.find(qty => qty.id === data.id)?.quantity || 1;
 
                                 return (
                                     <div
@@ -66,21 +68,21 @@ function Cart(props) {
                                             <div className="flex-1 lg:flex-none ">
                                                 <p className="text-lg font-semibold text-gray-800">{data.name}</p>
                                                 <p className="text-gray-600">Price: rs {data.price}</p>
-                                                {/* <div className="flex items-center space-x-4 mt-2">
+                                                <div className="flex items-center space-x-4 mt-2">
                                                     <button
                                                         className="bg-blue-500 px-4 py-2 text-white rounded-lg hover:bg-blue-600 transition"
-                                                        onClick={() => handleQuantityChange(data.name, "increment")}
+                                                        onClick={() => handleQuantityChange(data.id, "increment")}
                                                     >
                                                         +
                                                     </button>
                                                     <p id="quantityData" className="text-lg font-semibold">{itemQuantity}</p>
                                                     <button
                                                         className="bg-blue-500 px-4 py-2 text-white rounded-lg hover:bg-blue-600 transition"
-                                                        onClick={() => handleQuantityChange(data.name, "decrement")}
+                                                        onClick={() => handleQuantityChange(data.id, "decrement")}
                                                     >
                                                         -
                                                     </button>
-                                                </div> */}
+                                                </div>
                                             </div>
                                         </div>
                                         <button
@@ -121,6 +123,7 @@ function Cart(props) {
 }
 
 Cart.propTypes = {
+     updateCart:PropTypes.func.isRequired,  
      AddToCart:PropTypes.func.isRequired,  
       searchName:PropTypes.func.isRequired,
       productdes: PropTypes.func.isRequired,

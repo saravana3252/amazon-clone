@@ -54,7 +54,8 @@ function Checkout({cartData}){
     cartData: cartData.map((item)=>({
        productId : item._id,
        productName: item.name,
-       price : item.price
+       price : item.price,
+       quantity:item.quantity
     })),
     shippingAddress,
     paymentMethod
@@ -173,7 +174,7 @@ function Checkout({cartData}){
                       cartData.map((item)=>{
                         return (
                           <>
-                          <p>{item.name},{item.price}</p>
+                          <p>{item.name},{item.price * item.quantity},{item.quantity}</p>
                           </>
                         )
                       })

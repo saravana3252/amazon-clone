@@ -234,7 +234,7 @@ app.post("/checkout",(req,res)=>{
  const productPromises = cartData.map((item) => {
      return productModel.findById(item.productId).then((product) => {
          if (product) {
-             totalAmount += product.price;
+             totalAmount += product.price * item.quantity;
          }
      }).catch((err) => {
          console.error("Error fetching product:", err);
@@ -249,7 +249,8 @@ app.post("/checkout",(req,res)=>{
          cartData: cartData.map((item) => ({
              productId: item.productId,
              productName: item.productName,
-             price: item.price
+             price: item.price,
+             quantity:item.quantity
          })),
          shippingAddress,
          paymentMethod,
@@ -277,7 +278,7 @@ app.post("/create-checkout-session", (req, res) => {
   
  
   cartData.forEach((item) => {
-    totalAmount += item.price;
+    totalAmount += item.price * item.quantity;
   });
 
   stripe.checkout.sessions.create({
@@ -288,6 +289,7 @@ app.post("/create-checkout-session", (req, res) => {
         product_data: {
           name: item.productName,
           description: item.description,
+          quantity:item.quantity
         },
         unit_amount: item.price * 100, 
       },
@@ -347,7 +349,8 @@ app.get("/success", (req, res) => {
           cartData: cartData.map(item => ({
               productId: item.productId,
               productName: item.productName,
-              price: item.price
+              price: item.price,
+              quantity:item.quantity
           })),
           shippingAddress: shippingAddress,
           paymentMethod: "ONLINE",
@@ -420,7 +423,8 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
       cartData: cartData.map(item => ({
           productId: item.productId,
           productName: item.productName,
-          price: item.price
+          price: item.price,
+          quantity:item.quantity
       })),
       shippingAddress: shippingAddress,
       paymentMethod: "ONLINE",

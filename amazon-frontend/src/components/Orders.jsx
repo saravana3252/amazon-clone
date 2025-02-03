@@ -40,7 +40,10 @@ function Orders() {
                             <h4 className="mt-2 font-semibold">Products:</h4>
                             <ul className="list-disc ml-4">
                                 {order.cartData.map((product, i) => (
+                                    <>
+                                    <p>{product.quantity}</p>
                                     <li key={i} className="text-sm text-gray-700">{product.productName} - ₹{product.price}</li>
+                                    </>
                                 ))}
                             </ul>
                         </div>
