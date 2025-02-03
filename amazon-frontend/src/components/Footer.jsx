@@ -113,7 +113,7 @@ function Footer() {
     
       <div className="mt-8 border-t border-gray-700 pt-4 text-center">
         <p className="text-sm text-gray-400">
-          All Rights Reserved | Amazon 2025
+        Built by Saravana ⚡ | © 2025
         </p>
       </div>
     </footer>

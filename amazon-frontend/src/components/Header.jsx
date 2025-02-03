@@ -50,18 +50,22 @@ function Header(props) {
     }
 
   function handleNavOpen(){
-    document.getElementById("mobileNav").style.right = "0"
+    document.getElementById("mobileNav").style.left = "0"
   }
 
   function handleNavClose(){
-    document.getElementById("mobileNav").style.right = "-50%"
+    document.getElementById("mobileNav").style.left = "-50%"
   }
 
   return (
     <>
-      <div className="h-20 w-full bg-gray-900 flex justify-between ">
-        <div className="lg:w-[15%] w-[35%]  h-20 flex justify-center items-center">
-          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[90%] ml-3 lg:ml-0 lg:w-[78%]">
+      <div className="h-20 w-full bg-gray-900 flex justify-between lg:justify-evenly">
+        <div className=" w-[55%]  flex lg:hidden">
+      <div className="lg:hidden w-[25%] flex justify-center items-center  cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="text-white h-10" onClick={handleNavOpen} > <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg> 
+        </div>
+        <div className="lg:w-[15%] w-[53%] h-20 flex justify-start items-center">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[90%]  lg:ml-0 lg:w-[78%]">
             <img
               src="./amazon-logo.png"
               className="h-full w-full lg:w-[98%]"
@@ -69,11 +73,32 @@ function Header(props) {
             ></img>
           </Link>
         </div>
-        <div className="lg:hidden cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="text-white h-20 w-3/6" onClick={handleNavOpen} > <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg> 
         </div>
+        <div className="lg:w-[15%] w-[50%]  h-20 lg:flex hidden justify-start items-center">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[90%]  lg:ml-3 lg:w-[78%]">
+            <img
+              src="./amazon-logo.png"
+              className="h-full w-full lg:w-[98%]"
+              alt="amazon-logo"
+            ></img>
+          </Link>
+        </div>
+       
+        <div className="font-medium w-[35%]   text-white  flex justify-end px-12 items-center lg:hidden">
+            <p>
+              {" "}
+              <Link to="/cart" className="relative">
+                <FontAwesomeIcon icon={faCartShopping} className="text-xl"/>
+                {props.cartLength > 0 && (
+                  <span className="absolute -top-[12px] -right-[18px] bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                    {props.cartLength}
+                  </span>
+                )}
+              </Link>
+            </p>
+         </div>
 
-        <div id="mobileNav" className="fixed z-50 lg:hidden transition-all duration-500 top-0 -right-[50%] bg-gray-800 h-svh w-[50%]">
+        <div id="mobileNav" className="fixed z-50 lg:hidden transition-all duration-500 top-0 -left-[50%] bg-gray-800 h-svh w-[50%]">
             <div className="flex justify-center mt-5 ">
                 <button className="p-2 px-5 border border-orange-500 text-white text-2xl font-semibold cursor-pointer" onClick={handleNavClose}>X</button>
             </div>
@@ -114,19 +139,7 @@ function Header(props) {
          <div className="font-medium  text-white p-2 mt-3">
           <p className="text-center"><Link to="/orders">ORDERS</Link></p>
          </div>
-         <div className="font-medium  text-white mt-5 flex justify-center">
-            <p>
-              {" "}
-              <Link to="/cart" className="relative">
-                <FontAwesomeIcon icon={faCartShopping} />
-                {props.cartLength > 0 && (
-                  <span className="absolute -top-[12px] -right-[18px] bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-                    {props.cartLength}
-                  </span>
-                )}
-              </Link>
-            </p>
-         </div>
+        
          <div className="flex justify-center text-white font-semibold mt-5">
             {loggedInData.loggedUser ? (<> <button className="w-1/2 bg-orange-600 p-2 rounded cursor-pointer" onClick={logout}>LOGOUT</button></>):(<> <button className="w-1/2 bg-orange-600 p-2 rounded"><Link to="/login">SIGN IN</Link></button></>)}
            
