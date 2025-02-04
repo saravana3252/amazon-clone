@@ -24,6 +24,7 @@ function App() {
  const [cart,setCart] = useState([])
  const [searchData,setSearchData] = useState([])
  const [searchName,SetSearchName] = useState("")
+ 
 
  
  const [loggedUser,setloggedUser] = useState(JSON.parse(localStorage.getItem("amazon")))
@@ -116,7 +117,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/toyproducts" element={<ToyProdsList productdes={productdescription} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc}></ToyProdsList>}></Route>
       <Route path="/productdescription" element={<ProductDescription product={product} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc} productdes={productdescription} updateCartSize={updateCartSize}></ProductDescription>}></Route>
       <Route path="/searchproductslist" element={<SearchProdList product={searchData} AddToCart={AddToCart} searchName={searchNameFunc} cartLength={cart.length} productdes={productdescription}></SearchProdList>}></Route>
-      <Route path="/cart" element={<Cart cartData={cart} cartLength={cart.length} RemoveFromCart={RemoveFromCart} productdes={productdescription} searchName={searchNameFunc} updateCart={updateCart} ></Cart>}></Route>
+      <Route path="/cart" element={<Cart cartData={cart} cartLength={cart.length} RemoveFromCart={RemoveFromCart} productdes={productdescription} searchName={searchNameFunc} updateCart={updateCart} updateCartSize={updateCartSize} ></Cart>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/register" element={<Register></Register>}></Route>
       <Route path="checkout" element={<Private Component={Checkout} cartData={cart}></Private>}></Route>

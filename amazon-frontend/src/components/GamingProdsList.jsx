@@ -503,13 +503,16 @@ let products = [...originalProds]
                       Rs {product.price}
                     </p>
                     <div className="flex justify-center mt-4">
-                      <button
-                        className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-600 transition-colors"
+                    <button disabled={product.stock <= 0 }
+                        className={` text-white py-2 px-6 rounded-lg focus:outline-none focus:ring-2  transition-colors ${product.stock <=0 ? "cursor-not-allowed bg-gray-500 " : "cursor-pointer bg-orange-500 hover:bg-orange-600 focus:ring-orange-600"}`}
                         onClick={() => {
                           props.AddToCart(product);
                         }}
                       >
-                        Add to Cart
+                        {
+                        product.stock <=0 ? "Out Of Stock" : "Add to Cart"
+                      }
+          
                       </button>
                     </div>
                   </div>

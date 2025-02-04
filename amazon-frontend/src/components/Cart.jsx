@@ -43,6 +43,10 @@ function Cart(props) {
         return sum + item.price * quantity;
     }, 0);
 
+    const isSizeMissing = props.cartData.some((item)=>
+        item.category === "Clothing" && !item.selectedSize
+    )
+
     return (
         <>
             <Header cartLength={props.cartLength} searchName={props.searchName} productdes={props.productdes}/>
@@ -88,7 +92,9 @@ function Cart(props) {
                                                     {
                                                         data.category === "Clothing" ? ( <> {data.sizes.map((size)=>{
                                                             return (<>
-                                                             <button className="bg-gray-200 px-2 cursor-pointer active:bg-blue-500" >{size}</button>
+                                                             <button className={` px-2 cursor-pointer ${data.selectedSize === size ? "bg-blue-400" : "bg-gray-200" }`} onClick={()=>{
+                                                                props.updateCartSize(data.id,size)
+                                                             }}>{size}</button>
                                                             </>)
                                                         })}</>):null
                                                     }
@@ -122,11 +128,15 @@ function Cart(props) {
                             <span>Total Price:</span>
                             <span>Rs {totalPrice}</span>
                         </div>
-                        <button
-                            className="w-full mt-6 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+                        <button disabled={isSizeMissing}
+                            className={`w-full mt-6 px-6 py-3  text-white rounded-lg  transition ${isSizeMissing ? "bg-gray-500" : "bg-green-500 hover:bg-green-600"}`}
                         >
-                            <Link to="/checkout">Proceed to Checkout</Link>
+                            <Link to={`${isSizeMissing ? "#" :"/checkout"}`}>Proceed to Checkout</Link>
                         </button>
+                        {
+                            isSizeMissing ? (<><p className="text-red-500 text-sm mt-2 text-center">Please select size before proceeding.</p></>):null
+                        }
+                        
                     </div>
                 )}
             </div>
@@ -135,6 +145,7 @@ function Cart(props) {
 }
 
 Cart.propTypes = {
+    updateCartSize:PropTypes.func.isRequired,  
      updateCart:PropTypes.func.isRequired,  
      AddToCart:PropTypes.func.isRequired,  
       searchName:PropTypes.func.isRequired,

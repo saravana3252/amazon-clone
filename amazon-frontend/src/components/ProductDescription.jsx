@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function ProductDescription(props) {
   
-const [size,setSize] = useState([])
+// const [size,setSize] = useState([])
 
 // useEffect(()=>{
 //   console.log(size)
@@ -34,7 +34,7 @@ const [size,setSize] = useState([])
       <p className="text-2xl font-semibold text-green-600">Rs {props.product.price} & Free Shipping</p>
       <p className="mt-2 text-gray-600">{props.product.description}</p>
       <p className="text-red-600 font-semibold mt-2 animate-pulse">{props.product.stock <= 0 ? "OUT OF STOCK" : "IN STOCK"}</p>
-      {
+      {/* {
         props.product.category === "Clothing" ? (<div className="flex gap-2">sizes : {props.product.sizes.map((size)=>{
           return (
             <>
@@ -44,13 +44,13 @@ const [size,setSize] = useState([])
             </>
           )
         })}</div>) : null
-      }
+      } */}
       <p className="text-gray-500 italic">{props.product.category}</p>
 
       <button disabled = {props.product.stock <= 0}
         className={`mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${props.product.stock <= 0 ? "cursor-not-allowed bg-gray-500 hover:bg-gray-500" : "cursor-pointer"}`} onClick={()=>{
           props.AddToCart(props.product)
-          props.updateCartSize(props.product.id,size)
+          // props.updateCartSize(props.product.id,size)
         }}
         
       >

@@ -55,7 +55,8 @@ function Checkout({cartData}){
        productId : item._id,
        productName: item.name,
        price : item.price,
-       quantity:item.quantity
+       quantity:item.quantity,
+       selectedSize:item.selectedSize
     })),
     shippingAddress,
     paymentMethod
@@ -174,7 +175,7 @@ function Checkout({cartData}){
                       cartData.map((item)=>{
                         return (
                           <>
-                          <p>{item.name},{item.price * item.quantity},{item.quantity}</p>
+                          <p>{item.name},{item.price * item.quantity},{item.quantity} {item.category === "Clothing" ? ("size:" + item.selectedSize):null}</p>
                           </>
                         )
                       })
