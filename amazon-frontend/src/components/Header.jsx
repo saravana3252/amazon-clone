@@ -75,7 +75,7 @@ function Header(props) {
         </div>
         </div>
         <div className="lg:w-[15%] w-[50%]  h-20 lg:flex hidden justify-start items-center">
-          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] bg-blue-400 w-[90%]  lg:ml-3 lg:w-[78%]">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%]  w-[90%]  lg:ml-3 lg:w-[78%]">
             <img
               src="./amazon-logo.png"
               className="h-full w-full lg:w-[98%]"

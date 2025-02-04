@@ -23,6 +23,7 @@ function App() {
  const [product,setProduct] = useState({})
  const [cart,setCart] = useState([])
  const [searchData,setSearchData] = useState([])
+ const [originalSearchProds, setOriginalSearchProds] = useState([]); 
  const [searchName,SetSearchName] = useState("")
  
 
@@ -87,6 +88,7 @@ function updateCartSize(itemId, newSize) {
    
    fetch(`https://amazon-clone-backend-mxip.onrender.com/search/${searchName}`).then((res)=>res.json()).then((data)=>{
     setSearchData(data)
+    setOriginalSearchProds(data)
    }).catch((err)=>{
     console.log(err)
    })
@@ -116,7 +118,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/homeproducts" element={<HomeProdsList productdes={productdescription} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc}></HomeProdsList>}></Route>
       <Route path="/toyproducts" element={<ToyProdsList productdes={productdescription} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc}></ToyProdsList>}></Route>
       <Route path="/productdescription" element={<ProductDescription product={product} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc} productdes={productdescription} updateCartSize={updateCartSize}></ProductDescription>}></Route>
-      <Route path="/searchproductslist" element={<SearchProdList product={searchData} AddToCart={AddToCart} searchName={searchNameFunc} cartLength={cart.length} productdes={productdescription}></SearchProdList>}></Route>
+      <Route path="/searchproductslist" element={<SearchProdList product={searchData} ogProd={originalSearchProds} AddToCart={AddToCart} searchName={searchNameFunc} cartLength={cart.length} productdes={productdescription}></SearchProdList>}></Route>
       <Route path="/cart" element={<Cart cartData={cart} cartLength={cart.length} RemoveFromCart={RemoveFromCart} productdes={productdescription} searchName={searchNameFunc} updateCart={updateCart} updateCartSize={updateCartSize} ></Cart>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/register" element={<Register></Register>}></Route>

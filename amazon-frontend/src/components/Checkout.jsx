@@ -176,7 +176,7 @@ function Checkout({cartData}){
                       cartData.map((item)=>{
                         return (
                           <>
-                          <p>{item.name},{item.price * item.quantity},{item.quantity} {item.category === "Clothing" ? ("size:" + item.selectedSize):null}</p>
+                          <p>{item.name},{item.price * item.quantity} X {item.quantity} {item.category === "Clothing" ? ("size:" + item.selectedSize):null}</p>
                           </>
                         )
                       })
