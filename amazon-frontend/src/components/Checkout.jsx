@@ -3,6 +3,7 @@ import { userContext } from "./context/userContext";
 import { toast } from "react-toastify";
 import PropTypes from 'prop-types';
 import { loadStripe } from '@stripe/stripe-js';
+import { Link} from "react-router-dom";
 
 const stripePromise = loadStripe('pk_test_51QX5XXATNE3jIpp9bvgMfJdRKu6haKZfHIxendRV9LMxzspPNsLBsZE9S9zdfhrXCY7651fuwPrC3rbD6ER6snJ800Tx1rrmhP');
 
@@ -187,6 +188,9 @@ function Checkout({cartData}){
                 </div>
                 <div className="mt-6">
                     <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" >{isLoading ? "LOADING..." : "Place Order" }</button>
+                </div>
+                <div className="mt-6">
+                  <button className="bg-green-600 w-full p-3 rounded-lg font-medium text-white cursor-pointer"><Link to="/orders">GO TO ORDERS</Link></button>
                 </div>
                 </div>
                   </>

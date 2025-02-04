@@ -185,6 +185,7 @@ function Header(props) {
                 type="search"
                 placeholder="search products..."
                 className="bg-white p-2 w-full rounded outline-none"
+                autoComplete="off"
                 onChange={(e) => {
                   setInpSearchName(e.target.value);
                 }}
@@ -334,28 +335,28 @@ function Header(props) {
             <p>hi</p>
         </div> */}
 
-      <div className="bg-gray-700 h-10 lg:flex hidden items-center px-5 space-x-4 text-white cursor-pointer">
-        <div className="group">
+      <div className="bg-gray-700 h-10 lg:flex hidden items-center px-5 space-x-4 text-white">
+        <div className="group cursor-pointer">
           <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
             <Link to="/gamingproducts">Gaming</Link>
           </p>
         </div>
-        <div className="group">
+        <div className="group cursor-pointer">
           <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
             <Link to="/electronics">Electronics</Link>
           </p>
         </div>
-        <div className="group">
+        <div className="group cursor-pointer">
           <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
             <Link to="/clothingproducts">Clothing</Link>
           </p>
         </div>
-        <div className="group">
+        <div className="group cursor-pointer">
           <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
             <Link to="/homeproducts">HomeProducts</Link>
           </p>
         </div>
-        <div className="group">
+        <div className="group cursor-pointer">
           <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
             <Link to="/toyproducts">Toys</Link>
           </p>
