@@ -9,7 +9,7 @@ function Banner(props){
     const[DealOfTheDayProd,setDealOfTheDayProd]=useState([])
     const [currentIndex,setcurrentIndex]=useState(0)
     const images = ["./banner1.jpg","./banner2.jpg","./banner3.jpg","./banner4.jpg"]
-    const mobileImgs = ["./mobile-banner1.jpg","./mobile-banner2.jpg","./mobile-banner3.jpg","./mobile-banner4.jpg"]
+    const mobileImgs = ["./mobile-banner1.jpg","./mobile-banner7.jpg","./mobile-banner3.jpg","./mobile-banner4.jpg","./mobile-banner6.jpg","./mobile-banner8.jpg","./mobile-banner2.jpg"]
     const isMobile = window.innerWidth < 1024
     const [isLoading,setIsLoading] = useState(false)
 

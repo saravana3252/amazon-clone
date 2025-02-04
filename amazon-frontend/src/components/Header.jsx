@@ -65,7 +65,7 @@ function Header(props) {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="text-white h-10" onClick={handleNavOpen} > <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg> 
         </div>
         <div className=" w-[55%]  h-20 flex justify-start items-center">
-          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[98%] ">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[100%] ">
             <img
               src="./amazon-logo.png"
               className="h-full w-full "
@@ -75,7 +75,7 @@ function Header(props) {
         </div>
         </div>
         <div className="lg:w-[15%] w-[50%]  h-20 lg:flex hidden justify-start items-center">
-          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] w-[90%]  lg:ml-3 lg:w-[78%]">
+          <Link to="/" className="lg:h-full h-[70px] md:w-[80%] bg-blue-400 w-[90%]  lg:ml-3 lg:w-[78%]">
             <img
               src="./amazon-logo.png"
               className="h-full w-full lg:w-[98%]"
