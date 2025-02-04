@@ -5,14 +5,14 @@ function ProdInfo(){
     return (
         <>
          <div className='bg-gray-200 grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-2 px-4 pt-10  w-full '>
-            <div className='bg-white p-2 px-4'>
-                <h1 className=' font-bold text-xl mb-2'>Pet care</h1>
-                <img src='https://images-eu.ssl-images-amazon.com/images/G/02/AISExports_UK_GW/Desktop/AIS_GW_DESKTOP_CATCARD_PETS_758x608._SY608_CB642486966_.jpg' alt='gaming-banner-img'></img>
-                <p className='text-blue-800 pt-5 font-semibold'>Shop Now</p>
+            <div className='bg-white p-2 lg:px-3 px-3'>
+                <h1 className=' font-bold text-xl mb-2 '>Save 30% on Tech!</h1>
+                <img src='https://images-eu.ssl-images-amazon.com/images/G/29/Events/2021/IT_fallback_campaigns/XCM_CUTTLE_1321861_1653915_DE_3783397_758x608_2X_IT._SY608_CB639715330_.jpg' alt='gaming-banner-img'></img>
+                <p className='text-blue-800 lg:pt-4 pt-3.5 font-semibold'>Shop Now</p>
             </div>
             <div className='bg-white p-2'>
                 <h1 className=' font-bold text-xl'>Home Appliances</h1>
-                <div className='grid grid-cols-2 gap-2 mt-2'>
+                <div className='lg:grid grid-cols-2 gap-2 lg:mt-2 mt-3 hidden'>
                     <div>
                         <img  src='https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-372x232----B08RDL6H79._SY232_CB667322346_.jpg'></img>
                         <p className='text-sm'>air conditioners</p>
@@ -27,15 +27,18 @@ function ProdInfo(){
                     </div>
                     <div className='pt-2'>
                         <img  src='https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08CPQVLZT._SY232_CB667322346_.jpg'></img>
-                        <p className='text-sm'>Machine</p>
+                        <p className='text-sm'>washing machine</p>
                     </div>
+                </div>
+                <div className="lg:hidden mt-2">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/37/Gateway-New/OHL/June2020/SmallKitchenAppliances_CC_758x608._SY608_CB430833266_.jpg"></img>
                 </div>
                 <p className='text-blue-800  font-semibold pt-2'>Shop Now</p>
             </div>
             <div className='bg-white p-2 px-3'>
                 <h1 className='font-bold text-xl mb-2'>Clothing</h1>
                 <div className="flex justify-center">
-                <img className="lg:h-[215px] h-[120px]" src='https://m.media-amazon.com/images/I/61VmstpY2KL._SY879_.jpg'></img>
+                <img  src='https://images-fe.ssl-images-amazon.com/images/G/35/AU-hq/2024/img/Events/XCM_CUTTLE_2115052_6183719_758x608_2X_en_AU_MensDesktop._SY608_CB539591921_.jpg'></img>
                 </div>
                 <p className='text-blue-800  font-semibold pt-4'>See More</p>
             </div>

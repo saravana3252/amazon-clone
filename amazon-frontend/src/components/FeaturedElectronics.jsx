@@ -37,12 +37,12 @@ useEffect(()=>{
 
     return (
         <>
-        <div className="bg-gray-200 w-full pt-12 px-4">
+        <div className="bg-gray-200 w-full lg:pt-12 pt-10 px-4">
             <div className="bg-white relative w-full px-3 py-2 group">
-                <h1 className="font-bold lg:text-2xl text-xl">Popular products in Wireless Tech</h1>
+                <h1 className="font-bold lg:text-2xl text-xl">Popular products in Electronics</h1>
                 <div className="absolute top-1/2 left-5 bg-white/90 transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer" onClick={scrollLeft}><FontAwesomeIcon icon={faLessThan} size='3x' className='text-black p-2' /></div>
                 <div className="absolute top-1/2 right-5 bg-white/90 transition-all duration-300  opacity-0 group-hover:opacity-100  cursor-pointer" onClick={scrollRight}><FontAwesomeIcon icon={faGreaterThan} size='3x' className='text-black p-2' /></div>
-                <div id="scrollContainer1" className="w-full mt-2.5 flex overflow-x-auto scrollbar-hide space-x-7 cursor-pointer">
+                <div id="scrollContainer1" className="w-full  mt-4 lg:mt-3 flex overflow-x-auto scrollbar-hide space-x-7 cursor-pointer">
                     
                     {
                         !isLoading ? (products.map((product,index)=>{
