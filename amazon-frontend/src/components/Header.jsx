@@ -98,7 +98,7 @@ function Header(props) {
             </p>
          </div>
 
-        <div id="mobileNav" className="fixed z-50 lg:hidden transition-all duration-500 top-0 -left-[70%] bg-gray-800 h-svh w-[70%]">
+        <div id="mobileNav" className="fixed z-50 lg:hidden transition-all duration-500 top-0 -left-[70%] bg-gray-800 h-full w-[70%]">
             <div className="flex justify-center mt-5 ">
                 <button className="p-2 px-5 border border-orange-500 text-white text-2xl font-semibold cursor-pointer" onClick={handleNavClose}>X</button>
             </div>
