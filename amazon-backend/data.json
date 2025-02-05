@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "name": "Sony PS4 Slim 1 TB Console",
-        "price": 33000,
+        "name": "Sony PlayStation 5 Digital Edition (slim)",
+        "price": 44000,
         "category": "Gaming",
-        "description": "Experience incredible games and endless entertainment with the all-new, lighter, slimmer PS4 1TB hard drive, offering the greatest games, TV, music, and more.",
-        "imageurl": "https://m.media-amazon.com/images/I/51t0bPwu8uL._SX522_.jpg",
+        "description": "Experience next-gen gaming with the Sony PlayStation 5 Digital Edition (Slim). Enjoy ultra-fast loading with the SSD, stunning visuals with ray tracing, and an immersive gaming experience with the DualSense controller. The sleek, compact design makes it a perfect addition to any setup.",
+        "imageurl": "https://m.media-amazon.com/images/I/51afJC92cgL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐⭐",
@@ -15,17 +15,17 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "Incredible gaming experience with endless entertainment.",
-          "The PS4 Slim is lighter and faster than ever before."
+           "The PS5 Slim is a game-changer! Lightning-fast speeds and stunning graphics.",
+           "Incredible performance and a sleek design. Totally worth the upgrade!"
         ]
       },
       {
         "id": 2,
-        "name": "Sony PlayStation DualShock 4 Controller - Glacier White",
-        "price": 4000,
+        "name": "ZEBRONICS Wired Gaming Mouse",
+        "price": 400,
         "category": "Gaming",
-        "description": "The PlayStation 4 controller offers enhanced precision control with improved analog sticks and trigger buttons. The Share button allows easy sharing of gameplay moments, while the touch pad, light bar, and built-in speaker provide unique ways to interact with games. It also features a 35mm audio jack for private listening and can be efficiently charged via the PlayStation 4 system or any micro-USB charger. For support, contact Sony Careline at 0203 538 2665.",
-        "imageurl": "https://m.media-amazon.com/images/I/51PkqE9Kb6L._SX522_.jpg",
+        "description": "The ZEBRONICS Wired Gaming Mouse delivers high precision and responsiveness, making it ideal for gamers. It features an ergonomic design for comfortable usage, customizable DPI settings for accuracy, and durable switches for long-lasting performance. The RGB lighting adds a stylish touch, enhancing the gaming experience.",
+        "imageurl": "https://m.media-amazon.com/images/I/71PfyTreJIL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐",
@@ -35,8 +35,8 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "The controller feels great in hand and offers smooth gameplay.",
-          "Perfect precision for every game, with responsive buttons."
+          "Excellent grip and smooth movement, perfect for long gaming sessions!",
+          "Great value for money, highly responsive buttons with a sleek design."
         ]
       },
       {
@@ -61,11 +61,11 @@
       },
       {
         "id": 4,
-        "name": "Nintendo Switch™ - Mario Kart™ 8 Deluxe Bundle",
+        "name": "ASUS ROG Ally X Handheld Gaming Console",
         "price": 38000,
         "category": "Gaming",
-        "description": "Grand Theft Auto V features the largest, most detailed open world, blending storytelling and gameplay as players switch between three lead characters. It also includes Grand Theft Auto Online, an ever-evolving multiplayer universe for players to explore.",
-        "imageurl": "https://m.media-amazon.com/images/I/71SzulcJI4L._SX522_.jpg",
+        "description": "The ASUS ROG Ally X is a powerful handheld gaming console designed for high-performance gaming on the go. Featuring a sleek design, immersive display, and customizable controls, it delivers a premium gaming experience for both casual and hardcore gamers.",
+        "imageurl": "https://m.media-amazon.com/images/I/71APXG8zAHL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐",
@@ -75,8 +75,8 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "The perfect bundle for Mario Kart fans, fun for all ages.",
-          "Mario Kart 8 Deluxe on the Switch is an absolute blast to play."
+          "Amazing handheld console with powerful performance and smooth gameplay.",
+          "Great for gaming on the go, but the battery life could be better."
         ]
       },
         {
@@ -121,11 +121,11 @@
         },
         {
           "id": 7,
-          "name": "Marvel's Spider-Man: Miles Morales (PS4)",
+          "name": "WWE 2K24 (PS4)",
           "price": 1700,
           "category": "Gaming",
-          "description": "Swing through New York City as Miles Morales, taking on villains and uncovering new challenges in this thrilling Spider-Man adventure.",
-          "imageurl": "https://m.media-amazon.com/images/I/81oOStsvVWL._SY606_.jpg",
+          "description": "WWE 2K24 brings the ultimate wrestling experience with stunning graphics, realistic gameplay, and an extensive roster of superstars. Engage in dynamic matches, create your own wrestler, and relive legendary moments in WWE history. With improved mechanics and engaging game modes, it's a must-have for wrestling fans.",
+          "imageurl": "https://m.media-amazon.com/images/I/81oc5fQhrHL._SX466_.jpg",
           "stock": 5,
           "quantity": 1,
           "rating": "⭐⭐⭐⭐⭐",
@@ -135,8 +135,8 @@
           "isBestSeller": true,
           "isDealOfTheDay": false,
           "reviews": [
-            "The gameplay is fluid, and the story is compelling.",
-            "A fantastic superhero experience for all Spider-Man fans."
+           "The graphics and gameplay are top-notch, making every match exciting!",
+           "A must-buy for WWE fans, with an amazing roster and career mode."
           ]
         },
         {
@@ -161,11 +161,11 @@
         },
         {
           "id": 9,
-          "name": "CyberPowerPC Gamer Xtreme VR Gaming PC",
+          "name": "ALKETRONI Gaming PC",
           "price": 95000,
           "category": "Gaming",
-          "description": "Powerful gaming PC with Intel Core i5 processor and GeForce RTX 4060 graphics for immersive VR gaming and seamless performance.",
-          "imageurl": "https://m.media-amazon.com/images/I/71rPUJ72P5L._AC_SX679_.jpg",
+          "description": "High-performance gaming PC featuring an Intel Core i5 processor and GeForce RTX 4060 graphics, delivering smooth gameplay, stunning visuals, and reliable multitasking for gamers and creators alike.",
+          "imageurl": "https://m.media-amazon.com/images/I/71H+LSQY3oL._SX679_.jpg",
           "stock": 5,
           "quantity": 1,
           "rating": "⭐⭐⭐⭐⭐",
@@ -175,13 +175,13 @@
           "isBestSeller": true,
           "isDealOfTheDay": false,
           "reviews": [
-            "Handles high-end games with ease. Excellent performance.",
-            "Perfect for VR and heavy-duty gaming."
+            "Runs the latest games at ultra settings without any lag.",
+            "Excellent build quality and performance, worth the price."        
           ]
         },
         {
           "id": 10,
-          "name": "KAIGERR 2025 Gaming Laptop with Intel N97 Processor",
+          "name": "KAIGERR 2025 Gaming Laptop",
           "price": 75000,
           "category": "Gaming",
           "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
@@ -201,11 +201,11 @@
         },
       {
         "id": 11,
-        "name": "Yankee Candle Wax Melts, Clean Cotton, Up to 8 Hours of Fragrance",
+        "name": "Yankee Pure Cotton Scented Candles",
         "price": 120,
        "category": "HomeProduct",
         "description": "Experience the refreshing scent of freshly laundered cotton with these premium wax melts. Perfect for any space, providing a soothing ambiance for up to 8 hours.",
-        "imageurl": "https://m.media-amazon.com/images/I/81hqAXPlXHL._AC_SX679_.jpg",
+        "imageurl": "https://m.media-amazon.com/images/I/81xs4R6O9IL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐⭐",
@@ -261,7 +261,7 @@
       },
       {
         "id": 14,
-        "name": "The Cheeky Panda Bamboo Pocket Tissues, 8 Pack of 10 Hypoallergenic Tissues",
+        "name": "The Cheeky Panda Bamboo Pocket Tissues",
         "price": 200,
        "category": "HomeProduct",
         "description": "Eco-friendly and hypoallergenic bamboo tissues. Gentle on the skin and perfect for everyday use, at home or on the go.",
@@ -281,7 +281,7 @@
       },
       {
         "id": 15,
-        "name": "EcoBag - 50 Pack Extra Strong Heavy Duty Refuse Sacks - 100L - 33 Microns",
+        "name": "EcoBag - 50 Pack Extra Strong Heavy Duty Refuse Sacks",
         "price": 150,
        "category": "HomeProduct",
         "description": "Heavy-duty refuse sacks ideal for home or commercial use. Strong, durable, and designed for hassle-free waste management.",
@@ -301,7 +301,7 @@
       },
       {
         "id": 16,
-        "name": "Curver My Style Small Rectangular Storage Basket, Vintage White, 4 Litre",
+        "name": "Curver My Style Small Rectangular Storage Basket",
         "price": 250,
        "category": "HomeProduct",
         "description": "A stylish and functional storage solution for your home. Perfect for organizing small items with a vintage white finish.",
@@ -321,7 +321,7 @@
       },
       {
         "id": 17,
-        "name": "Moredig Galaxy Light Projector for Bedroom, Sensory Lights with 13 Color",
+        "name": "Moredig Galaxy Light Projector for Bedroom",
         "price": 350,
        "category": "HomeProduct",
         "description": "Create a mesmerizing ambiance with this galaxy light projector. Features 13 colors and sensory lights, perfect for relaxation or entertainment.",
@@ -421,7 +421,7 @@
       },
       {
         "id": 23,
-        "name": "Samsung Galaxy Tab A9+ Tablet 11” 64GB Android Tablet",
+        "name": "Samsung Galaxy Tab A9+ Tablet",
         "price": 20000,
         "category": "Electronics",
         "description": "A high-performance Android tablet with an 11-inch display, perfect for work, entertainment, and gaming.",
@@ -461,7 +461,7 @@
       },
       {
         "id": 25,
-        "name": "JBL Tune 510BT - Bluetooth headphones with up to 40 hours battery",
+        "name": "JBL Tune 510BT - Bluetooth headphone",
         "price": 3000,
         "category": "Electronics",
         "description": "These JBL Bluetooth headphones offer powerful sound and a long battery life of up to 40 hours.",
@@ -481,7 +481,7 @@
       },
       {
         "id": 26,
-        "name": "Marshall Stockwell II Portable Bluetooth Speaker, Black and Brass",
+        "name": "Marshall Stockwell II Portable Bluetooth Speaker",
         "price": 15000,
         "category": "Electronics",
         "description": "A portable Bluetooth speaker with premium sound and a stylish design, perfect for any music lover.",
@@ -501,7 +501,7 @@
       },
       {
         "id": 27,
-        "name": "Apple iPhone 12 Pro Max (256GB, Pacific Blue) [Locked] + Carrier Subscription",
+        "name": "Apple iPhone 12 Pro Max (256GB, Pacific Blue)",
         "price": 120000,
         "category": "Electronics",
         "description": "The Apple iPhone 12 Pro Max offers top-notch performance, a fantastic camera, and a stunning display.",
@@ -521,7 +521,7 @@
       },
       {
         "id": 28,
-        "name": "C24 Ultra 5G Smartphone,6+256GB Unlocked Phone, Android 13.0",
+        "name": "Samsung C24 Ultra 5G Smartphone",
         "price": 150000,
         "category": "Electronics",
         "description": "A high-end 5G smartphone with a powerful processor, large display, and fast charging capabilities.",
@@ -541,7 +541,7 @@
       },
       {
         "id": 29,
-        "name": "Dell Inspiron 15 3000 3520 Business Laptop Computer[Windows 11 Pro], 15.6'' FHD Touchscreen",
+        "name": "Dell Inspiron 15 3000 3520 Business Laptop",
         "price": 90000,
         "category": "Electronics",
         "description": "A powerful business laptop with an FHD touchscreen, Windows 11 Pro, and robust performance for productivity tasks.",
@@ -561,7 +561,7 @@
       },
       {
         "id": 30,
-        "name": "ASUS Chromebook CM14 Laptop, 14 HD Anti-Glare Display (1366x768)",
+        "name": "ASUS Chromebook CM14 Laptop",
         "price": 80000,
         "category": "Electronics",
         "description": "An affordable Chromebook with a 14-inch display, ideal for students and casual browsing.",
