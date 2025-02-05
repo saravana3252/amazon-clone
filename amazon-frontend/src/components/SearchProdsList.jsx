@@ -85,7 +85,7 @@ let products = [...originalProds]
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
         }}>X</button></div>
-        <div className="grid grid-cols-[150px_1fr] md:grid-cols-[200px_1fr] cursor-pointer shadow">
+        <div className="grid grid-cols-[130px_1fr] md:grid-cols-[200px_1fr] cursor-pointer shadow">
           <div className="bg-gray-200 h-svh md:h-screen text-black space-y-5 p-2 pl-3">
             <p onClick={()=>{
                document.getElementById("FilByPrice").style.display="block"
