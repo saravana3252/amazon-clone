@@ -264,7 +264,7 @@ function Header(props) {
             <div className="w-[80%] relative">
               <div
                 id="searchDataDiv1"
-                className="absolute z-30 top-11 w-full py-2 space-y-1 border-b-4 border-l-4 border-gray-500 bg-white hidden"
+                className="absolute z-30 top-11 w-full py-2 space-y-1 border-b-6 border-l-6 border-gray-500 bg-white hidden"
               >
                 {inpSearchData.length > 0 ? (
                   inpSearchData.map((data, index) => {
