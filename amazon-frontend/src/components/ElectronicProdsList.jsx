@@ -478,7 +478,7 @@ let products = [...originalProds]
           {Prods.length > 0 ? (
             <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-2 justify-items-center">
               {Prods.map((product, index) => (
-                <div key={index} className="bg-white flex lg:block p-3 lg:p-4 rounded-lg shadow-lg transition-shadow lg:max-w-xs w-full">
+                <div key={index} className="bg-white flex lg:block p-4 rounded-lg shadow-lg transition-shadow lg:max-w-xs w-full">
                   <div className="flex justify-start items-center lg:items-start lg:justify-center pr-2  w-[40%] lg:w-full">
                     <img
                       className="lg:h-40 h-36 rounded-lg"
