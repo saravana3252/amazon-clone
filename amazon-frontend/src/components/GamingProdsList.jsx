@@ -75,7 +75,7 @@ let products = [...originalProds]
     <>
       <Header cartLength={props.cartLength} searchName={props.searchName} productdes={props.productdes}></Header>
       <div className="w-full bg-gray-200 h-screen grid grid-cols-1 lg:grid-cols-[280px_1fr]">
-      <div className="lg:hidden text-center bg-gray-500 p-4 cursor-pointer font-mono"><button className="p-2 px-4 bg-yellow-500 rounded cursor-pointer" onClick={()=>{
+      <div className="lg:hidden text-center bg-gray-500  h-16 flex items-center justify-center font-mono"><button className="p-2 px-4 bg-yellow-500 rounded cursor-pointer" onClick={()=>{
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left=0
         }}><FontAwesomeIcon icon={faFilter} /> Filters</button></div>
