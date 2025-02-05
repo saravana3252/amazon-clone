@@ -86,7 +86,7 @@ function Cart(props) {
                                                 
 
                                                 {data.category === "Clothing" && (
-                                                    <div className="mt-3  lg:w-[50%] md:w-[40%] w-[60%]  grid lg:grid-cols-4 grid-cols-2 gap-2">
+                                                    <div className="mt-3  lg:w-[50%] md:w-[40%] w-[90%]  grid lg:grid-cols-4 grid-cols-2 gap-2">
                                                         {data.sizes.map(size => (
                                                             <button
                                                                 key={size}
