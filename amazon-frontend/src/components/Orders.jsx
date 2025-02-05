@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import Header from "./Header";
 import { userContext } from "./context/userContext";
+import PropTypes from 'prop-types';
 
-function Orders() {
+
+function Orders(props) {
     const loggedInData = useContext(userContext);
     const [userOrders, setUserOrders] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -24,7 +26,7 @@ function Orders() {
 
     return (
         <>
-            <Header />
+            <Header cartLength={props.cartLength} searchName={props.searchName} productdes={props.productdes}/>
             <div className="container mx-auto p-4">
                 <h2 className="text-2xl font-bold mb-4">Your Orders</h2>
                 {loading && <p>Loading orders...</p>}
@@ -51,6 +53,14 @@ function Orders() {
             </div>
         </>
     );
+}
+
+
+Orders.propTypes = {
+  searchName:PropTypes.func.isRequired,
+  productdes : PropTypes.func.isRequired,
+  AddToCart: PropTypes.func.isRequired,
+  cartLength:PropTypes.number.isRequired
 }
 
 export default Orders;

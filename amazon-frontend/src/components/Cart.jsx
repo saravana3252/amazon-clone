@@ -65,7 +65,7 @@ function Cart(props) {
                                                 className="w-24 h-24 object-cover rounded-lg"
                                             />
                                             <div className="flex-1">
-                                                <p className="text-lg font-semibold text-gray-800">{data.name}</p>
+                                                <p className="text-lg font-semibold text-gray-800 cursor-pointer" onClick={()=> props.productdes(data)}><Link to="/productdescription">{data.name}</Link></p>
                                                 <p className="text-gray-600">Price: Rs {data.price}</p>
 
                                                 <div className="flex items-center space-x-4 mt-3">
@@ -86,7 +86,7 @@ function Cart(props) {
                                                 
 
                                                 {data.category === "Clothing" && (
-                                                    <div className="mt-3 flex space-x-2">
+                                                    <div className="mt-3  lg:w-[50%] md:w-[40%] w-[60%]  grid lg:grid-cols-4 grid-cols-2 gap-2">
                                                         {data.sizes.map(size => (
                                                             <button
                                                                 key={size}
