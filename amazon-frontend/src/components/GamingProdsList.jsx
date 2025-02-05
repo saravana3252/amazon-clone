@@ -86,7 +86,7 @@ let products = [...originalProds]
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
         }}>X</button></div>
-        <div className="grid grid-cols-[130px_1fr] grid-rows-[700px_500px]  cursor-pointer shadow">
+        <div className="grid grid-cols-[170px_1fr] grid-rows-[700px_500px]  cursor-pointer shadow">
           <div className="bg-gray-200 h-[95%] text-black space-y-5 p-2 pl-3">
             <p onClick={()=>{
                document.getElementById("FilByPrice").style.display="block"
@@ -276,8 +276,8 @@ let products = [...originalProds]
               <p className="flex justify-between"><Link to="/ToyProducts">Toys</Link> <span className="text-gray-400">(10 products)</span></p>
             </div>
           </div>  
-          <div className=" w-full h-10 mt-5 pr-8 flex justify-end">
-          <button className="bg-blue-600 w-[70%] h-10 p-2 font-semibold rounded-md text-white cursor-pointer" onClick={()=>{
+          <div className=" w-full h-10 mt-5 pr-5 flex justify-end">
+          <button className="bg-blue-600 w-[75%] h-10 p-2 font-semibold rounded-md text-white cursor-pointer" onClick={()=>{
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
         }}>{`Show ${Prods.length} results`}</button>
@@ -477,7 +477,7 @@ let products = [...originalProds]
           </div>
 
           {Prods.length > 0 ? (
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 justify-items-center">
+            <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-2 justify-items-center">
               {Prods.map((product, index) => (
                 <div key={index} className="bg-white flex lg:block p-4 rounded-lg shadow-lg transition-shadow lg:max-w-xs w-full">
                   <div className="flex justify-center">
