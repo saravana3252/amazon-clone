@@ -86,7 +86,7 @@ let products = [...originalProds]
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
         }}>X</button></div>
-        <div className="grid grid-cols-[170px_1fr] grid-rows-[700px_500px]  cursor-pointer shadow">
+        <div className="grid grid-cols-[150px_1fr] md:grid-cols-[200px_1fr] grid-rows-[700px_500px]  cursor-pointer shadow">
           <div className="bg-gray-200 h-[95%] text-black space-y-5 p-2 pl-3">
             <p onClick={()=>{
                document.getElementById("FilByPrice").style.display="block"
@@ -277,7 +277,7 @@ let products = [...originalProds]
             </div>
           </div>  
           <div className=" w-full h-10 mt-5 pr-5 flex justify-end">
-          <button className="bg-blue-600 w-[75%] h-10 p-2 font-semibold rounded-md text-white cursor-pointer" onClick={()=>{
+          <button className="bg-blue-600 w-[75%] md:w-[40%] h-10 p-2 font-semibold rounded-md text-white cursor-pointer" onClick={()=>{
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
         }}>{`Show ${Prods.length} results`}</button>
