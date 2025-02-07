@@ -39,6 +39,7 @@ function Orders(props) {
                             <p className="text-sm text-gray-600">Placed by: {order.userName}</p>
                             <p className="text-sm text-gray-600">Total Amount: ₹{order.totalAmount}</p>
                             <p className="text-sm text-gray-600">Payment: {order.paymentMethod} ({order.paymentStatus})</p>
+                            <p className="text-sm text-gray-600">order status: {order.orderStatus}</p>
                             <h4 className="mt-2 font-semibold">Products:</h4>
                             <ul className="list-disc ml-4">
                                 {order.cartData.map((product, i) => (

@@ -520,9 +520,18 @@ app.get("/checkout",(req,res)=>{
   })
 })
 
-app.put("/updatepaymentstatus/:orderid/:status",(req,res)=>{
-  let status=req.params.status;
-  checkoutModel.updateOne({_id:req.params.orderid},{$set:{paymentStatus:status}}).then((data)=>{
+app.put("/updatepaymentstatus/:orderid/:paymentstatus",(req,res)=>{
+  let paymentstatus=req.params.paymentstatus;
+  checkoutModel.updateOne({_id:req.params.orderid},{$set:{paymentStatus:paymentstatus}}).then((data)=>{
+    res.send({message:"Payment Status Updated"})
+  }).catch((err)=>{
+    res.send({meesage:err})
+  })
+})
+
+app.put("/updatepaymentstatus/:orderid/:orderstatus",(req,res)=>{
+  let orderstatus=req.params.status;
+  checkoutModel.updateOne({_id:req.params.orderid},{$set:{orderStatus:orderstatus}}).then((data)=>{
     res.send({message:"Payment Status Updated"})
   }).catch((err)=>{
     res.send({meesage:err})

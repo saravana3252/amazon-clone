@@ -8,6 +8,7 @@ function OrderList() {
   const [loading, setLoading] = useState(true);
   const [isEditingIndex, setIsEditingIndex] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState("");
+  const [orderStatus, setOrderStatus] = useState("");
   const loggedIndata = useContext(userContext);
 
   useEffect(() => {
@@ -36,9 +37,11 @@ function OrderList() {
 
   function handleInputChange(e) {
     setPaymentStatus(e.target.value);
+    setOrders(e.target.value)
   }
 
   function handleUpdate(orderId) {
+    if(paymentStatus){
     fetch(
       `http://localhost:8000/updatepaymentstatus/${orderId}/${paymentStatus}`,
       {
@@ -59,6 +62,29 @@ function OrderList() {
       .catch((err) => {
         console.log(err);
       });
+    }
+    else if(orderStatus){
+        fetch(
+            `http://localhost:8000/updatepaymentstatus/${orderId}/${orderStatus}`,
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
+            .then((response) => response.json())
+            .then(() => {
+              toast.success("Payment status updated", {
+                position: "bottom-left",
+                autoClose: 3000,
+              });
+              setIsEditingIndex(false);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+    }
   }
 
   return (
@@ -138,11 +164,11 @@ function OrderList() {
                             type="text"
                             placeholder="Enter payment status"
                             className="outline-none border border-gray-400 rounded p-2 w-full"
-                            value={paymentStatus}
+                            value={orderStatus}
                             onChange={handleInputChange}
                           />
                         ):(
-                            <p className="text-gray-600">{order.paymentStatus}</p>
+                            <p className="text-gray-600">{order.orderStatus}</p>
                           )
                     }
                   </div>
