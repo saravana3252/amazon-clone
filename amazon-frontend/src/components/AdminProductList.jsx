@@ -88,7 +88,7 @@ function ProductList(){
                 </div>
             
             {
-                isLoading ? (<><p>loading...</p> </>):(<>    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 mb-10 p-5">
+                isLoading ? (<><p>loading...</p> </>):(<>    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-5 gap-2 mb-10 p-5">
 
                     {
                         products.map((product)=>{

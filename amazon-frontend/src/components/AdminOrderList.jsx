@@ -9,11 +9,11 @@ function OrderList() {
   const [isEditingIndex, setIsEditingIndex] = useState(null);
   const [paymentStatus, setPaymentStatus] = useState("");
   const [orderStatus, setOrderStatus] = useState("");
-  const loggedIndata = useContext(userContext);
+  // const loggedIndata = useContext(userContext);
 
   // Fetch orders from backend
   function fetchOrders() {
-    fetch("http://localhost:8000/checkout")
+    fetch("https://amazon-clone-backend-mxip.onrender.com/checkout")
       .then((response) => response.json())
       .then((data) => {
         setOrders(data);
