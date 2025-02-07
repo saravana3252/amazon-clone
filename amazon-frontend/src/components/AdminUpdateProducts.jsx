@@ -44,7 +44,7 @@ function handleUpdate(e){
 function handleSubmit(e){
   e.preventDefault();
   setIsLoading(true)
-  fetch("http://localhost:8000/admin/update-products",{
+  fetch("https://amazon-clone-backend-mxip.onrender.com/admin/update-products",{
     method:"POST",
     body:JSON.stringify(data),
     headers:{
@@ -80,7 +80,7 @@ function handleSubmit(e){
 
 function handleDelete(){
 setIsLoading(true)
-fetch(`http://localhost:8000/admin/delete-products/${inpDeleteValue}`,{
+fetch(`https://amazon-clone-backend-mxip.onrender.com/admin/delete-products/${inpDeleteValue}`,{
   method:"DELETE",
 }).then((response)=>response.json()).then((data)=>{
   console.log(data)

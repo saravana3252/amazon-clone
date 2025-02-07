@@ -9,7 +9,7 @@ function ProductList(){
 
     useEffect(()=>{
         setIsLoading(true)
-        fetch("http://localhost:8000/admin/products-list").then((res)=>res.json()).then((data)=>{
+        fetch("https://amazon-clone-backend-mxip.onrender.com/admin/products-list").then((res)=>res.json()).then((data)=>{
            setProducts(data)
            setOriginalProds(data)
         }).catch((err)=>{

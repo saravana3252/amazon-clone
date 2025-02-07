@@ -51,7 +51,7 @@ function OrderList() {
 
     if (paymentStatus) {
       updates.push(
-        fetch(`http://localhost:8000/updatepaymentstatus/${orderId}/${paymentStatus}`, {
+        fetch(`https://amazon-clone-backend-mxip.onrender.com/updatepaymentstatus/${orderId}/${paymentStatus}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
         })
@@ -60,7 +60,7 @@ function OrderList() {
 
     if (orderStatus) {
       updates.push(
-        fetch(`http://localhost:8000/updateorderstatus/${orderId}/${orderStatus}`, {
+        fetch(`https://amazon-clone-backend-mxip.onrender.com/updateorderstatus/${orderId}/${orderStatus}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
         })
