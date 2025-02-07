@@ -22,7 +22,7 @@ function Orders(props) {
         setError("Failed to fetch orders. Please try again later." + err);
         setLoading(false);
       });
-  }, []);
+  }, [loggedInData.loggedUser.id]);
 
   return (
     <>

@@ -139,13 +139,13 @@ function Header(props) {
          <div className="font-medium  text-white p-2 mt-3">
           <p className="text-center"><Link to="/orders">ORDERS</Link></p>
          </div>
-         {
+         {/* {
           loggedInData.loggedUser.id === "SVO2moOwqHeuq1tMrsGyYLRl1j52" ? (<> <div className="mt-3 p-2 text-white font-medium cursor-pointer">
             <p className="text-center">
               <Link to="/admin">ADMIN</Link>
             </p>
           </div></>):null
-        }
+        } */}
          <div className="flex justify-center text-white font-semibold mt-5">
             {loggedInData.loggedUser ? (<> <button className="w-1/2 bg-orange-600 p-2 rounded cursor-pointer" onClick={logout}>LOGOUT</button></>):(<> <button className="w-1/2 bg-orange-600 p-2 rounded"><Link to="/login">SIGN IN</Link></button></>)}
            
@@ -367,13 +367,13 @@ function Header(props) {
             <Link to="/toyproducts">Toys</Link>
           </p>
         </div>
-        {
+        {/* {
           loggedInData.loggedUser.id === "SVO2moOwqHeuq1tMrsGyYLRl1j52" ? (<> <div className="group cursor-pointer">
             <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
               <Link to="/admin">Admin</Link>
             </p>
           </div></>):null
-        }
+        } */}
        
       </div>
     </>
