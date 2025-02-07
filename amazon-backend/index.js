@@ -529,10 +529,10 @@ app.put("/updatepaymentstatus/:orderid/:paymentstatus",(req,res)=>{
   })
 })
 
-app.put("/updatepaymentstatus/:orderid/:orderstatus",(req,res)=>{
-  let orderstatus=req.params.status;
+app.put("/updateorderstatus/:orderid/:orderstatus",(req,res)=>{
+  let orderstatus=req.params.orderstatus;
   checkoutModel.updateOne({_id:req.params.orderid},{$set:{orderStatus:orderstatus}}).then((data)=>{
-    res.send({message:"Payment Status Updated"})
+    res.send({message:"Order Status Updated"})
   }).catch((err)=>{
     res.send({meesage:err})
   })

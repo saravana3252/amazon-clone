@@ -6,232 +6,194 @@ import { userContext } from "./context/userContext";
 function OrderList() {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [isEditingIndex, setIsEditingIndex] = useState(false);
+  const [isEditingIndex, setIsEditingIndex] = useState(null);
   const [paymentStatus, setPaymentStatus] = useState("");
   const [orderStatus, setOrderStatus] = useState("");
   const loggedIndata = useContext(userContext);
 
-  useEffect(() => {
+  // Fetch orders from backend
+  function fetchOrders() {
     fetch("http://localhost:8000/checkout")
       .then((response) => response.json())
       .then((data) => {
         setOrders(data);
         setLoading(false);
       })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+      .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetchOrders();
   }, []);
 
   
   function toggleEditing(index) {
     setIsEditingIndex(index);
     setPaymentStatus(orders[index].paymentStatus);
+    setOrderStatus(orders[index].orderStatus);
   }
+
 
   function toggleEditingCancel() {
-    setIsEditingIndex(false);
+    setIsEditingIndex(null);
     setPaymentStatus("");
+    setOrderStatus("");
   }
 
-  function handleInputChange(e) {
-    setPaymentStatus(e.target.value);
-    setOrders(e.target.value)
-  }
-
+  
   function handleUpdate(orderId) {
-    if(paymentStatus){
-    fetch(
-      `http://localhost:8000/updatepaymentstatus/${orderId}/${paymentStatus}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then((response) => response.json())
+    if (!paymentStatus && !orderStatus) {
+      toast.warning("Please enter a status to update!");
+      return;
+    }
+
+    const updates = [];
+
+    if (paymentStatus) {
+      updates.push(
+        fetch(`http://localhost:8000/updatepaymentstatus/${orderId}/${paymentStatus}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+    }
+
+    if (orderStatus) {
+      updates.push(
+        fetch(`http://localhost:8000/updateorderstatus/${orderId}/${orderStatus}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+    }
+
+   
+    Promise.all(updates)
       .then(() => {
-        toast.success("Payment status updated", {
-          position: "bottom-left",
-          autoClose: 3000,
-        });
-        setIsEditingIndex(false);
+        toast.success("Order updated successfully!");
+        setIsEditingIndex(null);
+        fetchOrders(); 
       })
-      .catch((err) => {
-        console.log(err);
-      });
-    }
-    else if(orderStatus){
-        fetch(
-            `http://localhost:8000/updatepaymentstatus/${orderId}/${orderStatus}`,
-            {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
-          )
-            .then((response) => response.json())
-            .then(() => {
-              toast.success("Payment status updated", {
-                position: "bottom-left",
-                autoClose: 3000,
-              });
-              setIsEditingIndex(false);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-    }
+      .catch((err) => console.log(err));
   }
 
   return (
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <div className="max-w-7xl mx-auto p-6 bg-gray-100">
-        <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Order List
+      <ToastContainer position="top-right" autoClose={3000} />
+      <div className="max-w-7xl mx-auto p-6 bg-gray-50 min-h-screen">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          🛒 Order List
         </h1>
+
         {loading ? (
           <p className="text-center text-lg text-gray-600">Loading...</p>
         ) : orders.length === 0 ? (
           <p className="text-center text-lg text-gray-600">No orders found.</p>
         ) : (
-          <div className="space-y-6 pb-10">
+          <div className="space-y-8">
             {orders.map((order, index) => (
-              <div
-                key={order._id}
-                className="bg-white p-6 rounded-lg shadow-lg flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6"
-              >
-                {/* Left Section - Shipping and Payment Info */}
-                <div className="flex-1 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-700 border-b pb-2">
-                      Shipping Address
-                    </h3>
-                    <p className="text-gray-600">{order.shippingAddress.name}</p>
-                    <p className="text-gray-600">{order.shippingAddress.address}</p>
-                    <p className="text-gray-600">
-                      {order.shippingAddress.city}, {order.shippingAddress.zipCode}, {" "}
-                      {order.shippingAddress.country}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-700 border-b pb-2">
-                      Payment Method
-                    </h3>
-                    <p className="text-gray-600">{order.paymentMethod}</p>
+              <div key={order._id} className="bg-white p-6 rounded-lg shadow-md border">
+                <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">
+                  🆔 Order ID: <span className="text-gray-900">{order._id}</span>
+                </h3>
+
+                {/* User Info */}
+                <div className="grid grid-cols-2 gap-4 mt-3">
+                  <p><strong>👤 User:</strong> {order.userName} (ID: {order.userId})</p>
+                  <p><strong>💳 Payment:</strong> {order.paymentMethod}</p>
+                </div>
+
+                <p className="mt-2"><strong>💰 Total Amount:</strong> <span className="text-green-600 font-semibold">${order.totalAmount}</span></p>
+
+                {/* Cart Items Table */}
+                <div className="mt-4">
+                  <h3 className="text-lg font-medium text-gray-700">🛍️ Cart Items</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border mt-2 text-sm">
+                      <thead>
+                        <tr className="bg-gray-100 border-b">
+                          <th className="border p-2">Product</th>
+                          <th className="border p-2">Price</th>
+                          <th className="border p-2">Quantity</th>
+                          <th className="border p-2">Size</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {order.cartData.map((item) => (
+                          <tr key={item.productId} className="border-b text-center">
+                            <td className="border p-2">{item.productName}</td>
+                            <td className="border p-2">${item.price}</td>
+                            <td className="border p-2">{item.quantity}</td>
+                            <td className="border p-2">{item.selectedSize || "N/A"}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
-                {/* Middle Section - Payment Status and Cart Items */}
-                <div className="flex-1 space-y-4">
+               
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  
                   <div>
-                    <h3 className="text-xl font-medium text-gray-700 border-b pb-2">
-                      Payment Status
-                    </h3>
+                    <h3 className="text-lg font-medium text-gray-700">💰 Payment Status</h3>
                     {isEditingIndex === index ? (
                       <input
                         type="text"
-                        placeholder="Enter payment status"
-                        className="outline-none border border-gray-400 rounded p-2 w-full"
+                        className="border p-2 w-full rounded"
                         value={paymentStatus}
-                        onChange={handleInputChange}
+                        onChange={(e) => setPaymentStatus(e.target.value)}
                       />
                     ) : (
-                      <p className="text-gray-600">{order.paymentStatus}</p>
+                      <span className={`px-3 py-1 text-sm font-medium rounded-lg ${order.paymentStatus === "Paid" ? "bg-green-200 text-green-800" : "bg-red-200 text-red-800"}`}>
+                        {order.paymentStatus}
+                      </span>
                     )}
                   </div>
+
+                 
                   <div>
-                    <h3 className="font-medium border-b text-xl text-gray-700">
-                        Order Status
-                    </h3>
-                    {
-                        isEditingIndex === index ? (
-                            <input
-                            type="text"
-                            placeholder="Enter payment status"
-                            className="outline-none border border-gray-400 rounded p-2 w-full"
-                            value={orderStatus}
-                            onChange={handleInputChange}
-                          />
-                        ):(
-                            <p className="text-gray-600">{order.orderStatus}</p>
-                          )
-                    }
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-700 border-b pb-2">
-                      Cart Items
-                    </h3>
-                    <ul className="list-none pl-0  space-x-2 flex flex-col">
-                      {order.cartData.map((item) => (
-                        <li
-                          key={item._id}
-                          className="text-gray-600  sm:flex-row sm:justify-between items-start sm:items-center"
-                        >
-                          <div>
-                            <strong>Product Id:</strong> {item._id}
-                          </div>
-                          <div>
-                            <strong>Product Name:</strong> {item.productName}
-                          </div>
-                          <div>
-                            <strong>Price:</strong> ${item.price}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                    <h3 className="text-lg font-medium text-gray-700">📦 Order Status</h3>
+                    {isEditingIndex === index ? (
+                      <input
+                        type="text"
+                        className="border p-2 w-full rounded"
+                        value={orderStatus}
+                        onChange={(e) => setOrderStatus(e.target.value)}
+                      />
+                    ) : (
+                      <span className="px-3 py-1 text-sm font-medium bg-blue-200 text-blue-800 rounded-lg">
+                        {order.orderStatus}
+                      </span>
+                    )}
                   </div>
                 </div>
 
-                {/* Right Section - Total Amount and Actions */}
-                <div className="flex-1 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-700 border-b pb-2">
-                      Total Amount
-                    </h3>
-                    <p className="text-gray-600 text-2xl font-bold">
-                      ${order.totalAmount}
-                    </p>
-                  </div>
-                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-                    {isEditingIndex === index ? (
-                      <>
-                        <button
-                          className="bg-green-500 text-white p-2 rounded-md w-full sm:w-auto"
-                          onClick={() => handleUpdate(order._id)}
-                        >
-                          Update
-                        </button>
-                        <button
-                          className="bg-gray-400 text-white p-2 rounded-md w-full sm:w-auto"
-                          onClick={toggleEditingCancel}
-                        >
-                          Cancel
-                        </button>
-                      </>
-                    ) : (
+             
+                <div className="mt-4 flex gap-3">
+                  {isEditingIndex === index ? (
+                    <>
                       <button
-                        className="bg-blue-500 text-white p-2 rounded-md w-full sm:w-auto"
-                        onClick={() => toggleEditing(index)}
+                        className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
+                        onClick={() => handleUpdate(order._id)}
                       >
-                        Edit
+                        ✅ Update
                       </button>
-                    )}
-                  </div>
+                      <button
+                        className="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition"
+                        onClick={toggleEditingCancel}
+                      >
+                        ❌ Cancel
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                      onClick={() => toggleEditing(index)}
+                    >
+                      ✏️ Edit
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
