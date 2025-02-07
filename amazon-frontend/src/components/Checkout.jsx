@@ -60,7 +60,9 @@ function Checkout({cartData}){
        selectedSize:item.selectedSize
     })),
     shippingAddress,
-    paymentMethod
+    paymentMethod,
+    orderStatus: "processing",  
+
    }
 
    function handleSubmit(e){

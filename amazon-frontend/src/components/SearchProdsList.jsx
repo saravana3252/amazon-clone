@@ -10,8 +10,8 @@ function SearchProdList(props) {
   const [originalProds, setOriginalProds] = useState([]); 
   const [Prods, setProds] = useState([]);
   const [sortOption, setSortOption] = useState("default");
-  const [filterData,setFilterData] =useState(null)
-  const [filterRatingData,setFilterRatingData] =useState(null)
+  // const [filterData,setFilterData] =useState(null)
+  // const [filterRatingData,setFilterRatingData] =useState(null)
 
 let products = [...originalProds]
 
@@ -23,36 +23,41 @@ let products = [...originalProds]
     return data.isNewArrival === false
   })
 
+
   useEffect(() => {
-    if(filterData){
-      fetch(`https://amazon-clone-backend-mxip.onrender.com/filter/toys/${filterData}`).then((response)=>response.json()).then((data)=>{
-        setProds(data)
-      }).catch((err)=>{
-        console.log(err)
-      })
+    if (props.product && props.product.length > 0) {
+      setOriginalProds(props.ogProd);
+      setProds(props.product);
     }
-    else if(filterRatingData){
-      fetch(`https://amazon-clone-backend-mxip.onrender.com/filterRating/toys/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
-        setProds(data)
-      }).catch((err)=>{
-        console.log(err)
-      })
-    }
-    else{    
-    fetch("https://amazon-clone-backend-mxip.onrender.com/toyProducts")
-      .then((response) => 
-        response.json()
-      )
-      .then((data) => {
-        setProds(data);
-        setOriginalProds(data)
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    }
-  }, [filterData,filterRatingData]);
+  }, [props.product,props.ogProd]);
+
+useEffect(()=>{
+  console.log(originalProds)
+  console.log(Prods)
+},[originalProds,Prods])
+
+  // useEffect(() => {
+  //   if(filterData){
+  //     fetch(`https://amazon-clone-backend-mxip.onrender.com/filter/toys/${filterData}`).then((response)=>response.json()).then((data)=>{
+  //       setProds(data)
+  //     }).catch((err)=>{
+  //       console.log(err)
+  //     })
+  //   }
+  //   else if(filterRatingData){
+  //     fetch(`https://amazon-clone-backend-mxip.onrender.com/filterRating/toys/${filterRatingData}`).then((response)=>response.json()).then((data)=>{
+  //       setProds(data)
+  //     }).catch((err)=>{
+  //       console.log(err)
+  //     })
+  //   }
+  //   else{    
+  //   props.searchDataFunc(props.product)
+  //   }
+    
+  //   console.log(JSON.stringify(Prods + originalProds))
+    
+  // },[])
 
 
     function handleSort(option) {
@@ -68,7 +73,7 @@ let products = [...originalProds]
       sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
     }
     
-    setProds(sortedProducts);
+    props.searchDataFunc(sortedProducts);
   };
 
   return (
@@ -87,33 +92,33 @@ let products = [...originalProds]
         }}>X</button></div>
         <div className="grid grid-cols-[130px_1fr] md:grid-cols-[200px_1fr] cursor-pointer shadow">
           <div className="bg-gray-200 h-svh md:h-screen text-black space-y-5 p-2 pl-3">
-            <p onClick={()=>{
+            {/* <p onClick={()=>{
                document.getElementById("FilByPrice").style.display="block"
                document.getElementById("FilByReviews").style.display="none"
                document.getElementById("FilByNewArr").style.display="none"
                document.getElementById("FilByCat").style.display="none"
-            }}>Filter By Price</p>
-            <p onClick={()=>{
+            }}>Filter By Price</p> */}
+            {/* <p onClick={()=>{
                document.getElementById("FilByPrice").style.display="none"
                document.getElementById("FilByReviews").style.display="block"
                document.getElementById("FilByNewArr").style.display="none"
                document.getElementById("FilByCat").style.display="none"
-            }}>Filter By Reviews</p>
+            }}>Filter By Reviews</p> */}
             <p onClick={()=>{
-               document.getElementById("FilByPrice").style.display="none"
-               document.getElementById("FilByReviews").style.display="none"
+              //  document.getElementById("FilByPrice").style.display="none"
+              //  document.getElementById("FilByReviews").style.display="none"
                document.getElementById("FilByNewArr").style.display="block"
                document.getElementById("FilByCat").style.display="none"
             }}>Filter By NewArrivals</p>
             <p onClick={()=>{
-               document.getElementById("FilByPrice").style.display="none"
-               document.getElementById("FilByReviews").style.display="none"
+              //  document.getElementById("FilByPrice").style.display="none"
+              //  document.getElementById("FilByReviews").style.display="none"
                document.getElementById("FilByNewArr").style.display="none"
                document.getElementById("FilByCat").style.display="block"
             }}>Filter By Category</p>
           </div>
           <div className="bg-white h-svh">
-          <div id="FilByPrice" className="bg-gray-100 p-4 mt-4 rounded ">
+          {/* <div id="FilByPrice" className="bg-gray-100 p-4 mt-4 rounded ">
             <p className="font-bold text-xl">Filter By Price</p>
             <div className="flex flex-col mt-2">
               <label className="flex items-center space-x-2">
@@ -233,7 +238,7 @@ let products = [...originalProds]
                 <span>5 Stars Only</span>
               </label>
             </div>
-          </div>
+          </div> */}
 
           <div id="FilByNewArr" className="bg-gray-100 p-4 mt-5 rounded hidden">
             <p className="font-bold text-xl">Filter By NewArrivals</p>
@@ -241,7 +246,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2">
                 <input type="radio"  value="new"  name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(NewArrival);
+            props.searchDataFunc(NewArrival);
           }
         }}/>
                 <span>NEW</span>
@@ -249,7 +254,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2 pt-1">
                 <input type="radio"  value="old" name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(OldArrival);
+            props.searchDataFunc(OldArrival);
           }
         }}/>
                 <span>OLD</span>
@@ -257,7 +262,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2 pt-1">
                 <input type="radio"  value="all" name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(products);
+            props.searchDataFunc(originalProds);
           }
         }}/>
                 <span>ALL</span>
@@ -293,7 +298,7 @@ let products = [...originalProds]
 
 
         <div id="desktopFilters" className="bg-gray-200 p-4 hidden lg:block">
-          <div className="bg-white p-4 rounded">
+          {/* <div className="bg-white p-4 rounded">
             <p className="font-bold text-xl">Filter By Price</p>
             <div className="flex flex-col mt-2">
               <label className="flex items-center space-x-2">
@@ -413,7 +418,7 @@ let products = [...originalProds]
                 <span>5 Stars Only</span>
               </label>
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-white p-4 mt-5 rounded">
             <p className="font-bold text-xl">Filter By NewArrivals</p>
@@ -421,7 +426,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2">
                 <input type="radio"  value="new"  name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(NewArrival);
+            props.searchDataFunc(NewArrival);
           }
         }}/>
                 <span>NEW</span>
@@ -429,7 +434,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2 pt-1">
                 <input type="radio"  value="old" name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(OldArrival);
+            props.searchDataFunc(OldArrival);
           }
         }}/>
                 <span>OLD</span>
@@ -437,7 +442,7 @@ let products = [...originalProds]
               <label className="flex items-center space-x-2 pt-1">
                 <input type="radio"  value="all" name="arrivalFilter"  onChange={(e) => {
           if (e.target.checked) {
-            setProds(products);
+            props.searchDataFunc(originalProds);
           }
         }}/>
                 <span>ALL</span>
@@ -476,7 +481,7 @@ let products = [...originalProds]
             </select>
           </div>
 
-          {props.product.length > 0 ? (
+          {Prods.length > 0 ? (
             <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-2 justify-items-center">
               {props.product.map((product, index) => (
                 <div key={index} className="bg-white flex lg:block p-3 lg:p-4 rounded-lg shadow-lg transition-shadow lg:max-w-xs w-full">

@@ -215,7 +215,7 @@ app.get("/filterRating/clothing/:value",(req,res)=>{
   })
 })
 
-app.get("/search/:name",(req,res)=>{
+app.get("/search/:name",(req,res)=>{z
   let name = req.params.name;
   productModel.find({name:{$regex:name,$options:"i"}}).limit(8).then((data)=>{
     res.send(data)
@@ -225,7 +225,7 @@ app.get("/search/:name",(req,res)=>{
 })
 
 app.post("/checkout",(req,res)=>{
-  let {userId,userName,cartData,shippingAddress,paymentMethod} = req.body
+  let {userId,userName,cartData,shippingAddress,paymentMethod,orderStatus="processing"} = req.body
 
 
  let totalAmount = 0;
@@ -256,6 +256,7 @@ app.post("/checkout",(req,res)=>{
          shippingAddress,
          paymentMethod,
          totalAmount,
+         orderStatus,
          paymentStatus: paymentMethod === "COD" ? "Pending" : "Paid",
      })
      .then((checkout) => {
@@ -364,6 +365,7 @@ app.get("/success", (req, res) => {
           shippingAddress: shippingAddress,
           paymentMethod: "ONLINE",
           paymentStatus: "Paid",  
+          orderStatus,
           totalAmount: totalAmount,
         })
         .then(() => {
@@ -446,6 +448,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
       shippingAddress: shippingAddress,
       paymentMethod: "ONLINE",
       paymentStatus: "Paid",
+      orderStatus,
       totalAmount: totalAmount,
     })
     .then(() => {
@@ -473,6 +476,56 @@ app.get("/orders/:id",(req,res)=>{
     res.send(data)
   }).catch((err)=>{
     res.send(err)
+  })
+})
+
+app.get("/admin/products-list",(req,res)=>{
+  productModel.find().then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    console.log(err)
+  })
+})
+
+app.post("/admin/update-products",(req,res)=>{
+  let newProducts = req.body
+  productModel.create(newProducts).then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    console.log(err)
+  })
+})
+
+app.delete("/admin/delete-products/:name",(req,res)=>{
+  productModel.deleteOne({name:req.params.name}).then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    console.log(err)
+  })
+})
+
+app.get("/admin/orders-list",(req,res)=>{
+  checkoutModel.find().then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    console.log(err)
+  })
+})
+
+app.get("/checkout",(req,res)=>{
+  checkoutModel.find().then((data)=>{
+    res.send(data)
+  }).catch((err)=>{
+    console.log(err)
+  })
+})
+
+app.put("/updatepaymentstatus/:orderid/:status",(req,res)=>{
+  let status=req.params.status;
+  checkoutModel.updateOne({_id:req.params.orderid},{$set:{paymentStatus:status}}).then((data)=>{
+    res.send({message:"Payment Status Updated"})
+  }).catch((err)=>{
+    res.send({meesage:err})
   })
 })
 

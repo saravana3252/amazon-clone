@@ -65,6 +65,11 @@ const checkoutSchema = mongoose.Schema({
         enum:["Pending","Paid"],
         default:"Pending"
     },
+    orderStatus:{
+        type:String,
+        enum:["processing", "shipped", "dispatched", "delivered"],
+        default:"processing"
+    },
     totalAmount:{
         type:Number,
         required:true

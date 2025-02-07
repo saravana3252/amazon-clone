@@ -18,6 +18,8 @@ import { ToastContainer, toast } from "react-toastify";
 import PaymentSuccess from "./components/PaymentSuccess"
 import PaymentCancel from "./components/PaymentCancel"
 import Orders from "./components/Orders"
+import Admin from "./components/Admin"
+import PrivateAdmin from "./components/privateAdmin"
 
 function App() {
  const [product,setProduct] = useState({})
@@ -95,6 +97,11 @@ function updateCartSize(itemId, newSize) {
     
  },[cart,loggedUser,searchName])
 
+ function searchDataFunc(value){
+  setSearchData(value)
+ }
+
+
   return (
     <>
      <ToastContainer
@@ -118,7 +125,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/homeproducts" element={<HomeProdsList productdes={productdescription} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc}></HomeProdsList>}></Route>
       <Route path="/toyproducts" element={<ToyProdsList productdes={productdescription} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc}></ToyProdsList>}></Route>
       <Route path="/productdescription" element={<ProductDescription product={product} AddToCart={AddToCart} cartLength={cart.length} searchName={searchNameFunc} productdes={productdescription} updateCartSize={updateCartSize}></ProductDescription>}></Route>
-      <Route path="/searchproductslist" element={<SearchProdList product={searchData} ogProd={originalSearchProds} AddToCart={AddToCart} searchName={searchNameFunc} cartLength={cart.length} productdes={productdescription}></SearchProdList>}></Route>
+      <Route path="/searchproductslist" element={<SearchProdList product={searchData} searchNameData={searchName} searchDataFunc={searchDataFunc} ogProd={originalSearchProds} AddToCart={AddToCart} searchName={searchNameFunc} cartLength={cart.length} productdes={productdescription}></SearchProdList>}></Route>
       <Route path="/cart" element={<Cart cartData={cart} cartLength={cart.length} RemoveFromCart={RemoveFromCart} productdes={productdescription} searchName={searchNameFunc} updateCart={updateCart} updateCartSize={updateCartSize} ></Cart>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/register" element={<Register></Register>}></Route>
@@ -126,6 +133,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/success" element={<Private Component={PaymentSuccess}/>}/>
       <Route path="/cancel" element={<Private Component={PaymentCancel}/>}/>
       <Route path="/orders" element={<Private Component={Orders} productdes={productdescription} cartLength={cart.length} searchName={searchNameFunc}/>}/>
+      <Route path="/admin/*" element={<PrivateAdmin Component={Admin}></PrivateAdmin>}></Route>
    </Routes>
    </userContext.Provider>
    </BrowserRouter>

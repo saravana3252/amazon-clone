@@ -17,15 +17,16 @@ const [message,setMessage] = useState({
 })
 const [isLoading,setIsLoading] = useState(false)
 
+
 const navigate = useNavigate()
 
 const loggedInData = useContext(userContext)
 
 
-useEffect(()=>{
+useEffect(()=>{  
   auth.onAuthStateChanged((user)=>{
-    if(user){
-        // navigate("/")
+    if(user && user.uid == "SVO2moOwqHeuq1tMrsGyYLRl1j52"){
+        // navigate("/admin")
     }
     else{
         console.log("logged out")
@@ -46,8 +47,12 @@ function handleLogin(e){
         console.log(usercredentials)
         localStorage.setItem("amazon",JSON.stringify(usercredentials))
         loggedInData.setloggedUser(usercredentials)
-        navigate("/")
-
+        if(user.uid === "SVO2moOwqHeuq1tMrsGyYLRl1j52"){
+            navigate("/admin")
+        }
+        else{
+            navigate("/")
+        }   
     }).catch((err)=>{
         setMessage({type:"error",text:err.message})
     }).finally(()=>{
