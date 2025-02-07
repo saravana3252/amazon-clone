@@ -365,7 +365,7 @@ app.get("/success", (req, res) => {
           shippingAddress: shippingAddress,
           paymentMethod: "ONLINE",
           paymentStatus: "Paid",  
-          orderStatus,
+          orderStatus:"processing",
           totalAmount: totalAmount,
         })
         .then(() => {
@@ -448,7 +448,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
       shippingAddress: shippingAddress,
       paymentMethod: "ONLINE",
       paymentStatus: "Paid",
-      orderStatus,
+      orderStatus:"processing",
       totalAmount: totalAmount,
     })
     .then(() => {
