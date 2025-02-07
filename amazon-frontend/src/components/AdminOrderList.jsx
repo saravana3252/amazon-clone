@@ -94,7 +94,7 @@ function OrderList() {
             {orders.map((order, index) => (
               <div key={order._id} className="bg-white p-6 rounded-lg shadow-md border">
                 <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">
-                  🆔 Order ID: <span className="text-gray-900">{order._id}</span>
+                   Order 🆔: <span className="text-gray-900">{order._id}</span>
                 </h3>
 
                 {/* User Info */}
