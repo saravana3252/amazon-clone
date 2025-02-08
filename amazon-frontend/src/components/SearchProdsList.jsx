@@ -240,7 +240,7 @@ useEffect(()=>{
             </div>
           </div> */}
 
-          <div id="FilByNewArr" className="bg-gray-100 p-4 mt-5 rounded hidden">
+          <div id="FilByNewArr" className="bg-gray-100 p-4 mt-5 rounded">
             <p className="font-bold text-xl">Filter By NewArrivals</p>
             <div className="flex flex-col mt-2">
               <label className="flex items-center space-x-2">
