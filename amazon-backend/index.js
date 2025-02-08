@@ -215,7 +215,7 @@ app.get("/filterRating/clothing/:value",(req,res)=>{
   })
 })
 
-app.get("/search/:name",(req,res)=>{z
+app.get("/search/:name",(req,res)=>{
   let name = req.params.name;
   productModel.find({name:{$regex:name,$options:"i"}}).limit(8).then((data)=>{
     res.send(data)
