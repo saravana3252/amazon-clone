@@ -132,10 +132,9 @@ function Checkout({cartData}){
 
     return (
         <>
-       <div className="min-h-screen w-full py-6 bg-gray-50 flex justify-center items-center">
+       <div className="min-h-screen w-full px-2 py-2 lg:px-0 lg:py-6 bg-gray-50 flex justify-center items-center">
   <form className="max-w-xl w-full bg-white shadow-xl rounded-lg p-4 border border-gray-200" onSubmit={handleSubmit}>
-    
-    {/* Step 1: Shipping Address */}
+   
     {step === 1 && (
       <>
         <h1 className="text-center font-extrabold text-3xl text-gray-800 mb-6">Shipping Address</h1>
@@ -148,11 +147,11 @@ function Checkout({cartData}){
           </div>
           <input name="country" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
         </div>
-        <button className="mt-6 bg-blue-600 hover:bg-blue-700 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md" onClick={nextStep}>Next</button>
+        <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md`} onClick={nextStep}>Next</button>
       </>
     )}
 
-    {/* Step 2: Payment Method */}
+
     {step === 2 && (
       <>
         <h2 className="text-center font-bold text-2xl text-gray-800 mb-6">Select Payment Method</h2>
@@ -175,7 +174,7 @@ function Checkout({cartData}){
       </>
     )}
 
-    {/* Step 3: Order Summary */}
+
     {step === 3 && (
       <>
         <h2 className="font-bold text-2xl  text-gray-800 text-center mb-3">Order Summary</h2>
