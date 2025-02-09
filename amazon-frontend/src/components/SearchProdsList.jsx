@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 
 function SearchProdList(props) {
@@ -481,7 +482,7 @@ useEffect(()=>{
             </select>
           </div>
 
-          {Prods.length > 0 ? (
+          {props.product.length > 0 ? (
             <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-2 justify-items-center">
               {props.product.map((product, index) => (
                 <div key={index} className="bg-white flex lg:block p-3 lg:p-4 rounded-lg shadow-lg transition-shadow lg:max-w-xs w-full">
@@ -529,6 +530,7 @@ useEffect(()=>{
           )}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }

@@ -1,7 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faYoutube, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useContext } from "react";
+import { userContext } from "./context/userContext";
+import auth from "../config";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+
+  const loggedInData = useContext(userContext)
+
+  const navigate = useNavigate();
+
+  function logout() {
+    signOut(auth).then(() => {
+      localStorage.removeItem("amazon");
+      navigate("/login");
+    });
+  }
+
   return (
     <>
      <div className="h-10 bg-gray-700 flex justify-center items-center w-full text-white">
@@ -22,7 +39,7 @@ function Footer() {
         </div>
 
        
-        <div className="flex flex-col text-center lg:text-left">
+        <div className="flex flex-col md:justify-center lg:justify-start text-center lg:text-left">
           <h2 className="font-bold text-lg mb-3">Useful Links</h2>
           <ul className="space-y-2">
             <li>
@@ -30,10 +47,12 @@ function Footer() {
                 Home
               </a>
             </li>
-            <li>
-              <a href="/login" className="hover:text-gray-400">
-                Sign In
-              </a>
+            <li>{ 
+            loggedInData.loggedUser ? (<button className="hover:text-gray-400 cursor-pointer" onClick={logout}>Sign Out</button>):( <a href="/login" className="hover:text-gray-400">
+              Sign In
+            </a>)
+              }
+             
             </li>
           </ul>
         </div>

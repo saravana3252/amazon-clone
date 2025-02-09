@@ -132,75 +132,92 @@ function Checkout({cartData}){
 
     return (
         <>
-         <div className="h-svh w-full py-10 bg-gray-200">
-            <form className="max-w-4xl w-full bg-white mx-auto p-6" onSubmit={handleSubmit}>
-              {step === 1 && (
-                <>
-                 <h1 className="text-center font-semibold text-3xl mb-6">Shipping Address</h1>
-                <div className="flex flex-col gap-4">
-                    <input name="name" className="border border-gray-300 p-2 w-full outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="Full Name" onChange={handleInputChange} value={shippingAddress.name} required></input>
-                    <input name="address" className="border border-gray-300 p-2 w-full" type="text" placeholder="Address" onChange={handleInputChange} value={shippingAddress.address} required></input>
-                    <input name="city" className="border border-gray-300 p-2 w-full" type="text" placeholder="City" onChange={handleInputChange} value={shippingAddress.city}  required></input>
-                    <input name="zipCode" className="border border-gray-300 p-2 w-full" type="number" placeholder="Zip Code" onChange={handleInputChange} value={shippingAddress.zipCode} required></input>
-                    <input name="country" className="border border-gray-300 p-2 w-full" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required></input>
+       <div className="min-h-screen w-full py-6 bg-gray-50 flex justify-center items-center">
+  <form className="max-w-xl w-full bg-white shadow-xl rounded-lg p-4 border border-gray-200" onSubmit={handleSubmit}>
+    
+    {/* Step 1: Shipping Address */}
+    {step === 1 && (
+      <>
+        <h1 className="text-center font-extrabold text-3xl text-gray-800 mb-6">Shipping Address</h1>
+        <div className="space-y-4">
+          <input name="name" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Full Name" onChange={handleInputChange} value={shippingAddress.name} required />
+          <input name="address" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Address" onChange={handleInputChange} value={shippingAddress.address} required />
+          <div className="flex space-x-4">
+            <input name="city" className="border border-gray-300 p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="City" onChange={handleInputChange} value={shippingAddress.city} required />
+            <input name="zipCode" className="border border-gray-300 p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="number" placeholder="Zip Code" onChange={handleInputChange} value={shippingAddress.zipCode} required />
+          </div>
+          <input name="country" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
+        </div>
+        <button className="mt-6 bg-blue-600 hover:bg-blue-700 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md" onClick={nextStep}>Next</button>
+      </>
+    )}
+
+    {/* Step 2: Payment Method */}
+    {step === 2 && (
+      <>
+        <h2 className="text-center font-bold text-2xl text-gray-800 mb-6">Select Payment Method</h2>
+        <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="flex flex-col space-y-4">
+            <label className="flex items-center space-x-3 cursor-pointer bg-white shadow-sm p-4 rounded-md border border-gray-300 transition hover:shadow-md">
+              <input value="COD" checked={paymentMethod === "COD"} type="radio" onChange={() => handlePaymentMethod("COD")} className="form-radio text-blue-600 h-5 w-5" />
+              <span className="text-gray-700 text-lg font-medium">Cash On Delivery</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer bg-white shadow-sm p-4 rounded-md border border-gray-300 transition hover:shadow-md">
+              <input value="ONLINE" checked={paymentMethod === "ONLINE"} type="radio" onChange={() => handlePaymentMethod("ONLINE")} className="form-radio text-blue-600 h-5 w-5" />
+              <span className="text-gray-700 text-lg font-medium">Online Payment</span>
+            </label>
+          </div>
+        </div>
+        <div className="mt-6 flex justify-between">
+          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={prevStep}>Prev</button>
+          <button className="bg-blue-600 hover:bg-blue-700 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={nextStep}>Next</button>
+        </div>
+      </>
+    )}
+
+    {/* Step 3: Order Summary */}
+    {step === 3 && (
+      <>
+        <h2 className="font-bold text-2xl  text-gray-800 text-center mb-3">Order Summary</h2>
+        <div className="bg-gray-100 p-6 rounded-lg shadow-inner">
+          <h3 className="font-semibold text-lg text-gray-800 mb-4 border-b pb-2">Your Order</h3>
+          
+          <div className="grid grid-cols-3 font-medium text-gray-700 bg-gray-200 p-3 rounded-md">
+            <span>Item</span>
+            <span className="text-center">Quantity</span>
+            <span className="text-right">Price</span>
+          </div>
+
+          <ul>
+            {cartData.map((item, index) => (
+              <li key={index} className="grid grid-cols-3 py-2">
+                <div className="flex flex-col">
+                  <span className="font-semibold text-gray-800">{item.name}</span>
+                  {item.category === "Clothing" && (
+                    <span className="text-sm text-gray-500">Size: {item.selectedSize}</span>
+                  )}
                 </div>
-                <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={nextStep}>Next</button>
-                </div>
-                </>
-              )}
-               {
-                step === 2 && (
-                  <>
-                   <div className="mt-6">
-                    <h2 className="font-semibold text-lg">Select Payment Method</h2>
-                    <div className="space-x-5 mt-2">
-                        <label><input value="COD" checked={paymentMethod === "COD"} type="radio" onChange={()=>handlePaymentMethod("COD")}></input> Cash On Delivery</label>
-                        <label><input value="ONLINE" checked={paymentMethod === "ONLINE"} type="radio" onChange={()=>handlePaymentMethod("ONLINE")}></input> Online Payment</label>
-                    </div>
-                </div>
-                <div className="mt-6">
-                    <button className="bg-gray-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>Prev</button>
-                </div>
-                <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={nextStep}>Next</button>
-                </div>
-                  </>
-                )
-               }
-               {
-                step === 3 && (
-                  <>
-                   <div className="mt-6">
-                    <h2 className="font-semibold text-lg">Order Summery</h2>
-                    <h3 className="font-semibold">Your Order</h3>
-                    {
-                      cartData.map((item)=>{
-                        return (
-                          <>
-                          <p>{item.name},{item.price * item.quantity} X {item.quantity} {item.category === "Clothing" ? ("size:" + item.selectedSize):null}</p>
-                          </>
-                        )
-                      })
-                    }
-                    <h3 className="font-semibold">Shipping address</h3>
-                    <p>{shippingAddress.name},{shippingAddress.address},{shippingAddress.city},{shippingAddress.zipCode},{shippingAddress.country}</p>
-                <div className="mt-6">
-                    <button className="bg-gray-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" onClick={prevStep}>prev</button>
-                </div>
-                <div className="mt-6">
-                    <button className="bg-orange-500 w-full p-3 rounded-lg font-medium text-white cursor-pointer" >{isLoading ? "LOADING..." : "Place Order" }</button>
-                </div>
-                <div className="mt-6">
-                  <button className="bg-green-600 w-full p-3 rounded-lg font-medium text-white cursor-pointer"><Link to="/orders">GO TO ORDERS</Link></button>
-                </div>
-                </div>
-                  </>
-                )
-               }
-               
-            </form>
-         </div>
+                <span className="text-center font-medium text-gray-700">{item.quantity}</span>
+                <span className="text-right pr-1 font-semibold text-gray-900">Rs {item.price * item.quantity}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="font-semibold text-lg text-gray-800 mt-6 border-t pt-2">Shipping Address</h3>
+          <p className="text-gray-700 leading-relaxed">{shippingAddress.name}, {shippingAddress.address}, {shippingAddress.city}, {shippingAddress.zipCode}, {shippingAddress.country}</p>
+        </div>
+
+        <div className="mt-3 flex justify-between">
+          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={prevStep}>Prev</button>
+          <button className="bg-green-600 hover:bg-green-700 w-1/3 py-2 rounded-md text-white transition duration-300">{isLoading ? "LOADING..." : "Place Order"}</button>
+        </div>
+
+        <Link to="/orders" className="mt-3 text-center bg-blue-500 hover:bg-blue-600 w-full py-2 rounded-md text-white transition duration-300 shadow-md block">Go to Orders</Link>
+      </>
+    )}
+  </form>
+</div>
+
         </>
     )
 }

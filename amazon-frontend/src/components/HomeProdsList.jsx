@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 
 function HomeProdsList(props) {
@@ -520,6 +521,7 @@ let products = [...originalProds]
           )}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }
