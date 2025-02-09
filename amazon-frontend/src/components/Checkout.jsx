@@ -132,7 +132,7 @@ function Checkout({cartData}){
 
     return (
         <>
-       <div className="min-h-screen w-full px-2 py-2 lg:px-0 lg:py-6 bg-gray-50 flex justify-center items-center">
+       <div className="min-h-screen w-full px-2  lg:px-0 lg:py-6 bg-gray-50 flex justify-center items-center">
   <form className="max-w-xl w-full bg-white shadow-xl rounded-lg p-4 border border-gray-200" onSubmit={handleSubmit}>
    
     {step === 1 && (
