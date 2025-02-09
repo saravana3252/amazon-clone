@@ -39,6 +39,12 @@
   }
 }
 
+@media (max-width:321px){
+  #bannerProdInfo{
+      top: 390px;
+  }
+}
+
 
 @media (max-width:400px){
   #featuredHomeProd{
