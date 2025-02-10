@@ -46,13 +46,13 @@ function Orders(props) {
           {userOrders.map((order, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 transition transform hover:scale-105 duration-200"
+              className="bg-white p-4 rounded-lg shadow-lg border border-gray-200 transition transform hover:scale-105 duration-200"
             >
               <h3 className="text-xl font-semibold text-gray-700 border-b pb-2">
                 Order #{index + 1}
               </h3>
 
-              {/* Order Details */}
+            
               <div className="mt-3 text-sm text-gray-600 space-y-2">
                 <p>
                   <strong>👤 Placed by:</strong> {order.userName}
@@ -83,7 +83,7 @@ function Orders(props) {
                 </p>
               </div>
 
-              {/* Product List */}
+              
               <h4 className="mt-4 font-semibold text-gray-700">🛒 Products:</h4>
               <div className="overflow-x-auto mt-2">
                 <table className="w-full border-collapse border text-sm">

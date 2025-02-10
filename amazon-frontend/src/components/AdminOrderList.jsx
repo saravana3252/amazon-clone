@@ -80,7 +80,7 @@ function OrderList() {
   return (
     <>
       <ToastContainer position="top-right" autoClose={3000} />
-      <div className="max-w-7xl mx-auto p-6 bg-gray-50 min-h-screen">
+      <div className="max-w-7xl mx-auto p-4 bg-gray-50 min-h-screen">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
           🛒 Order List
         </h1>
