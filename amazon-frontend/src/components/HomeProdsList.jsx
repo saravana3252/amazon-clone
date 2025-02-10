@@ -81,7 +81,7 @@ let products = [...originalProds]
        mobileFilters.style.left=0
         }}><FontAwesomeIcon icon={faFilter} /> Filters</button></div>
 
-      <div id="mobileFilters" className="bg-white  transition-all  duration-500 fixed h-full top-0 -left-[100%] w-full lg:hidden">
+      <div id="mobileFilters" className="bg-white  transition-all  duration-500 fixed min-h-screen top-0 -left-[100%] w-full lg:hidden">
         <div className="flex justify-between p-4 border-b border-gray-200"><p className="font-bold text-2xl">Filters</p><button className="font-bold p-1 border border-black px-3 cursor-pointer" onClick={()=>{
         let mobileFilters=document.getElementById("mobileFilters") 
        mobileFilters.style.left="-100%"
