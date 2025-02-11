@@ -267,7 +267,7 @@ let products = [...originalProds]
             </div>
           </div>
 
-          <div  id="FilByCat" className="bg-gray-100 p-4 mt-5 rounded hidden">
+          <div  id="FilByCat" className="bg-gray-100 p-2 mt-5 rounded hidden">
             <p className="font-bold text-xl">Filter By Category</p>
             <div className="flex flex-col mt-2 gap-1 font-medium text-red-600">
             <p className="flex justify-between"><Link to="/GamingProducts">Gaming</Link> <span className="text-gray-400">(10 products)</span></p>
