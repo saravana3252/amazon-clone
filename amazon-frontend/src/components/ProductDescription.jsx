@@ -61,7 +61,7 @@ function ProductDescription(props) {
 
  
   <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
-    <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b-1 pb-4">Reviews</h2>
+    <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b-1 border-gray-300 pb-4">Reviews</h2>
     {props.product.reviews.length > 0 ? (
       <ul className="space-y-6">
         {props.product.reviews.map((review, index) => (
