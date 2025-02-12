@@ -1,7 +1,7 @@
 import {  useState } from "react";
 import Header from "./Header";
 import PropTypes from 'prop-types';
-
+import Footer from "./Footer";
 
 function ProductDescription(props) {
   
@@ -78,6 +78,7 @@ function ProductDescription(props) {
     )}
   </div>
 </div>
+<Footer></Footer>
         </>
       ):(<><div><button className="p-2 px-4 bg-amber-400 text-white">GO TO HOME</button></div></>) }
  
