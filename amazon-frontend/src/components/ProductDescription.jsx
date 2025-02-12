@@ -1,7 +1,9 @@
-import {  useState } from "react";
+// import { useState } from "react";
 import Header from "./Header";
 import PropTypes from 'prop-types';
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+
 
 function ProductDescription(props) {
   
@@ -80,7 +82,7 @@ function ProductDescription(props) {
 </div>
 <Footer></Footer>
         </>
-      ):(<><div><button className="p-2 px-4 bg-amber-700 mt-5 text-center text-white">GO TO HOME</button></div></>) }
+      ):(<><div><Link to="/" className="p-2 px-4 bg-amber-700 mt-5 text-center text-white">GO TO HOME</Link></div></>) }
  
 
       </>
