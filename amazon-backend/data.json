@@ -41,22 +41,22 @@
       },
       {
         "id": 3,
-        "name": "KAIGERR 2025 Gaming Laptop",
-        "price": 75000,
+        "name": "ALKETRONI Gaming PC",
+        "price": 95000,
         "category": "Gaming",
-        "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
-        "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
+        "description": "High-performance gaming PC featuring an Intel Core i5 processor and GeForce RTX 4060 graphics, delivering smooth gameplay, stunning visuals, and reliable multitasking for gamers and creators alike.",
+        "imageurl": "https://m.media-amazon.com/images/I/71H+LSQY3oL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
-        "rating": "⭐⭐⭐",
-        "ratingNum":3,
-        "ratingCount":50000,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":1100,
         "isNewArrival": false,
-        "isBestSeller": true,
+        "isBestSeller": false,
         "isDealOfTheDay": false,
         "reviews": [
-          "Great specs for the price, runs games smoothly.",
-          "Impressive battery life and sleek design."
+          "Runs the latest games at ultra settings without any lag.",
+          "Excellent build quality and performance, worth the price."        
         ]
       },
       {
@@ -79,28 +79,8 @@
           "GTA V keeps evolving, always exciting with new updates."
         ]
       },
-      {
-        "id": 5,
-        "name": "ASUS ROG Ally X Handheld Gaming Console",
-        "price": 38000,
-        "category": "Gaming",
-        "description": "The ASUS ROG Ally X is a powerful handheld gaming console designed for high-performance gaming on the go. Featuring a sleek design, immersive display, and customizable controls, it delivers a premium gaming experience for both casual and hardcore gamers.",
-        "imageurl": "https://m.media-amazon.com/images/I/71APXG8zAHL._SX679_.jpg",
-        "stock": 5,
-        "quantity": 1,
-        "rating": "⭐⭐⭐",
-        "ratingNum":3,
-        "ratingCount":4300,
-        "isNewArrival": false,
-        "isBestSeller":false,
-        "isDealOfTheDay":false,
-        "reviews": [
-          "Amazing handheld console with powerful performance and smooth gameplay.",
-          "Great for gaming on the go, but the battery life could be better."
-        ]
-      },
         {
-          "id": 6,
+          "id": 5,
           "name": "The Crew 2 (PS4)",
           "price": 1400,
           "category": "Gaming",
@@ -120,7 +100,7 @@
           ]
         },
         {
-          "id": 7,
+          "id": 6,
           "name": "God of War Hits - PlayStation 4",
           "price": 900,
           "category": "Gaming",
@@ -140,7 +120,7 @@
           ]
         },
         {
-          "id": 8,
+          "id": 7,
           "name": "WWE 2K24 (PS4)",
           "price": 1700,
           "category": "Gaming",
@@ -152,7 +132,7 @@
           "ratingNum":5,
           "ratingCount":73000,
           "isNewArrival": false,
-          "isBestSeller": true,
+          "isBestSeller": false,
           "isDealOfTheDay": false,
           "reviews": [
            "The graphics and gameplay are top-notch, making every match exciting!",
@@ -160,7 +140,7 @@
           ]
         },
         {
-          "id": 9,
+          "id": 8,
           "name": "Need for Speed Heat - PlayStation 4",
           "price": 800,
           "category": "Gaming",
@@ -172,7 +152,7 @@
           "ratingNum":5,
           "ratingCount":55000,
           "isNewArrival": false,
-          "isBestSeller": false,
+          "isBestSeller": true,
           "isDealOfTheDay": false,
           "reviews": [
             "Fast-paced and thrilling with great customization options.",
@@ -180,23 +160,43 @@
           ]
         },
         {
-          "id": 10,
-          "name": "ALKETRONI Gaming PC",
-          "price": 95000,
+          "id": 9,
+          "name": "ASUS ROG Ally X Handheld Gaming Console",
+          "price": 38000,
           "category": "Gaming",
-          "description": "High-performance gaming PC featuring an Intel Core i5 processor and GeForce RTX 4060 graphics, delivering smooth gameplay, stunning visuals, and reliable multitasking for gamers and creators alike.",
-          "imageurl": "https://m.media-amazon.com/images/I/71H+LSQY3oL._SX679_.jpg",
+          "description": "The ASUS ROG Ally X is a powerful handheld gaming console designed for high-performance gaming on the go. Featuring a sleek design, immersive display, and customizable controls, it delivers a premium gaming experience for both casual and hardcore gamers.",
+          "imageurl": "https://m.media-amazon.com/images/I/71APXG8zAHL._SX679_.jpg",
           "stock": 5,
           "quantity": 1,
-          "rating": "⭐⭐⭐⭐⭐",
-          "ratingNum":5,
-          "ratingCount":1100,
+          "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":4300,
+          "isNewArrival": false,
+          "isBestSeller":true,
+          "isDealOfTheDay":false,
+          "reviews": [
+            "Amazing handheld console with powerful performance and smooth gameplay.",
+            "Great for gaming on the go, but the battery life could be better."
+          ]
+        },
+        {
+          "id": 10,
+          "name": "KAIGERR 2025 Gaming Laptop",
+          "price": 75000,
+          "category": "Gaming",
+          "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
+          "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
+          "stock": 5,
+          "quantity": 1,
+          "rating": "⭐⭐⭐",
+          "ratingNum":3,
+          "ratingCount":50000,
           "isNewArrival": false,
           "isBestSeller": true,
           "isDealOfTheDay": false,
           "reviews": [
-            "Runs the latest games at ultra settings without any lag.",
-            "Excellent build quality and performance, worth the price."        
+            "Great specs for the price, runs games smoothly.",
+            "Impressive battery life and sleek design."
           ]
         },
        {
@@ -898,7 +898,7 @@
           "ratingCount":2300,
           "sizes": ["28", "30", "32", "34"],
           "isNewArrival": false,
-          "isBestSeller": true,
+          "isBestSeller": false,
           "isDealOfTheDay": false,
           "reviews": [
             "The jeans are comfortable and stretchable. Great fit!",
@@ -907,7 +907,7 @@
         },
         {
           "id": 47,
-          "name": "The Indian Garage Co Men Blue Slim Fit",
+          "name": "The Indian Garage Men Blue Slim Fit Jeans",
           "price": 700,
           "category": "Clothing",
           "description": "A trendy slim-fit shirt with a refined design. Suitable for both casual and formal settings.",
@@ -917,9 +917,9 @@
           "rating": "⭐⭐⭐⭐⭐",
           "ratingNum":5,
           "ratingCount":4900,
-          "sizes": ["S", "M", "L", "XL"],
+          "sizes": ["28", "30", "32", "34"],
           "isNewArrival": true,
-          "isBestSeller": true,
+          "isBestSeller": false,
           "isDealOfTheDay": false,
           "reviews": [
             "The color and style are outstanding. Highly recommended!",
