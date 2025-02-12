@@ -51,7 +51,7 @@ function Banner(props){
 
     return (
         <>
-        <div className="w-full z-10 lg:h-[500px] h-auto relative bg-amber-100 overflow-hidden">
+        <div className="w-full z-10 lg:h-[500px] h-auto relative bg-white overflow-hidden">
             <div className="absolute hidden lg:block transition-all duration-300 hover:bg-black/50 p-2 px-4 z-10 top-[140px] lg:top-[130px] left-2 lg:left-8 cursor-pointer" onClick={()=>{
                 handleSlide("prev")
             }}><FontAwesomeIcon icon={faLessThan} className='text-white text-5xl sm:text-4xl md:text-5xl lg:text-8xl' /></div>
