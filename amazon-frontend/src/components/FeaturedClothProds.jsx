@@ -44,12 +44,14 @@ useEffect(()=>{
                         !isLoading ? ( products.map((product,index)=>{
                             return (
                                 <>
-                                <a href='/productdescription'>
+                                 <div className='flex-none'>
+                                 <a href='/productdescription'>
                                 <img key={index} className="lg:h-48 h-40" src={product.imageurl} alt="featuredElectronicsImg" onClick={()=>{
                                     props.productdes(product)
                                     // navigate("/productdescription")
                                   }}></img>
                                   </a>
+                                  </div>
                                 </>
                             )
                         })):(<div role="status" className='flex justify-center items-center w-full lg:h-52 h-36'>
