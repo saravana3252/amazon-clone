@@ -54,8 +54,8 @@ function Register(){
            <form>
             <h1 className="font-bold text-2xl text-center">Register Your Account</h1>
             <div className="flex flex-col gap-3 pt-4">
-            <input name="name" type="text" className="p-2 border border-black outline-none" placeholder="enter your name" required value={name}  onChange={(e)=>{setName(e.target.value)}}></input>
-            <input name="email" type="email" className="p-2 border border-black outline-none" placeholder="enter your email" required value={email} onChange={(e)=>{setEmail(e.target.value)}}></input>
+            <input name="name" type="text" className="p-2 border border-black outline-none" placeholder="enter your name" required value={name}  onChange={(e)=>{setName(e.target.value)}} autoComplete="off"></input>
+            <input name="email" type="email" className="p-2 border border-black outline-none" placeholder="enter your email" required value={email} onChange={(e)=>{setEmail(e.target.value)}} autoComplete="off"></input>
              <div className="flex border border-black">
                         <input id="password" name="password" type="password" className="p-2 outline-none w-[80%]" placeholder="enter your password" value={password} required onChange={(e)=>{setPassword(e.target.value)}}></input>
                         <button type="button" className="p-2 bg-gray-300 cursor-pointer border-l border-black w-[20%]" onMouseDown={(e)=>{ 
