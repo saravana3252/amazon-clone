@@ -72,15 +72,35 @@
         "ratingNum":3,
         "ratingCount":4300,
         "isNewArrival": false,
-        "isBestSeller":true,
+        "isBestSeller":false,
         "isDealOfTheDay":false,
         "reviews": [
           "Amazing handheld console with powerful performance and smooth gameplay.",
           "Great for gaming on the go, but the battery life could be better."
         ]
       },
+      {
+        "id": 5,
+        "name": "KAIGERR 2025 Gaming Laptop",
+        "price": 75000,
+        "category": "Gaming",
+        "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
+        "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+        "ratingNum":3,
+        "ratingCount":50000,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "Great specs for the price, runs games smoothly.",
+          "Impressive battery life and sleek design."
+        ]
+      },
         {
-          "id": 5,
+          "id": 6,
           "name": "The Crew 2 (PS4)",
           "price": 1400,
           "category": "Gaming",
@@ -92,7 +112,7 @@
           "ratingNum":4,
           "ratingCount":5600,
           "isNewArrival": false,
-          "isBestSeller": false,
+          "isBestSeller": true,
           "isDealOfTheDay": false,
           "reviews": [
             "The graphics and variety of vehicles are amazing!",
@@ -100,7 +120,7 @@
           ]
         },
         {
-          "id": 6,
+          "id": 7,
           "name": "God of War Hits - PlayStation 4",
           "price": 900,
           "category": "Gaming",
@@ -112,7 +132,7 @@
           "ratingNum":5,
           "ratingCount":65000,
           "isNewArrival": false,
-          "isBestSeller": true,
+          "isBestSeller": false,
           "isDealOfTheDay": false,
           "reviews": [
             "A masterpiece with an emotional story and stunning visuals.",
@@ -120,7 +140,7 @@
           ]
         },
         {
-          "id": 7,
+          "id": 8,
           "name": "WWE 2K24 (PS4)",
           "price": 1700,
           "category": "Gaming",
@@ -140,7 +160,7 @@
           ]
         },
         {
-          "id": 8,
+          "id": 9,
           "name": "Need for Speed Heat - PlayStation 4",
           "price": 800,
           "category": "Gaming",
@@ -152,7 +172,7 @@
           "ratingNum":5,
           "ratingCount":55000,
           "isNewArrival": false,
-          "isBestSeller": true,
+          "isBestSeller": false,
           "isDealOfTheDay": false,
           "reviews": [
             "Fast-paced and thrilling with great customization options.",
@@ -160,7 +180,7 @@
           ]
         },
         {
-          "id": 9,
+          "id": 10,
           "name": "ALKETRONI Gaming PC",
           "price": 95000,
           "category": "Gaming",
@@ -179,48 +199,8 @@
             "Excellent build quality and performance, worth the price."        
           ]
         },
-        {
-          "id": 10,
-          "name": "KAIGERR 2025 Gaming Laptop",
-          "price": 75000,
-          "category": "Gaming",
-          "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
-          "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
-          "stock": 5,
-          "quantity": 1,
-          "rating": "⭐⭐⭐",
-          "ratingNum":3,
-          "ratingCount":50000,
-          "isNewArrival": false,
-          "isBestSeller": false,
-          "isDealOfTheDay": false,
-          "reviews": [
-            "Great specs for the price, runs games smoothly.",
-            "Impressive battery life and sleek design."
-          ]
-        },
-      {
+       {
         "id": 11,
-        "name": "Yankee Candle Large Jar Candle, Macintosh",
-        "price": 120,
-        "category": "HomeProduct",
-        "description": "Experience the crisp and refreshing aroma of ripe Macintosh apples with this large jar candle. Crafted with high-quality wax for a long-lasting burn, it fills your space with a delightful fruity fragrance, perfect for creating a warm and inviting atmosphere.",
-        "imageurl": "https://m.media-amazon.com/images/I/71+wlMrZidL._SX679_.jpg",
-        "stock": 5,
-        "quantity": 1,
-        "rating": "⭐⭐⭐⭐⭐",
-        "ratingNum":5,
-        "ratingCount":2300,
-        "isNewArrival": true,
-        "isBestSeller":true,
-        "isDealOfTheDay":false,
-        "reviews": [
-          "Lovely scent that fills the room quickly. Highly recommend!",
-          "Great value for money. Perfect for small spaces."
-        ]
-      },
-      {
-        "id": 12,
         "name": "Shubhkart Tejas Puja Ghee T-Light Candles",
         "price": 199,
        "category": "HomeProduct",
@@ -237,6 +217,26 @@
         "reviews": [
           "Smells just like fresh cherries! So relaxing.",
           "Amazing quality and lasts much longer than expected."
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Yankee Candle Large Jar Candle, Macintosh",
+        "price": 120,
+        "category": "HomeProduct",
+        "description": "Experience the crisp and refreshing aroma of ripe Macintosh apples with this large jar candle. Crafted with high-quality wax for a long-lasting burn, it fills your space with a delightful fruity fragrance, perfect for creating a warm and inviting atmosphere.",
+        "imageurl": "https://m.media-amazon.com/images/I/71+wlMrZidL._SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
+        "isBestSeller":true,
+        "isDealOfTheDay":false,
+        "reviews": [
+          "Lovely scent that fills the room quickly. Highly recommend!",
+          "Great value for money. Perfect for small spaces."
         ]
       },
       {
@@ -581,22 +581,22 @@
       },
       {
         "id": 31,
-        "name": "Slime Play Red from Zimpli Kids",
-        "price": 300,
+        "name": "Ravensburger Marvel Spiderman Mini Memory Game",
+        "price": 800,
         "category": "Toys",
-        "description": "Dive into hours of gooey fun with Zimpli Kids' Slime Play in vibrant red. Perfect for sensory play and imaginative activities, it's safe, non-toxic, and easy to clean.",
-        "imageurl": "https://m.media-amazon.com/images/I/61gRcljBthL._AC_SY400_.jpg",
+        "description": "Join your favorite Marvel superhero in this exciting memory game. Perfect for developing memory and concentration skills while having fun.",
+        "imageurl": "https://m.media-amazon.com/images/I/91BZW+LOPpL._AC_SX522_.jpg",
         "stock": 5,
         "quantity": 1,
-        "rating": "⭐⭐⭐⭐",
-        "ratingNum":4,
-        "ratingCount":7900,
-        "isNewArrival": false,
+        "rating": "⭐⭐⭐⭐⭐",
+        "ratingNum":5,
+        "ratingCount":2300,
+        "isNewArrival": true,
         "isBestSeller": true,
         "isDealOfTheDay": false,
         "reviews": [
-          "My kids absolutely loved the squishy texture, great for sensory play!",
-          "Fun and easy to use, my children were entertained for hours."
+          "A fun and challenging game for Spiderman fans!",
+          "Great for improving memory, my kids love it."
         ]
       },
       {
@@ -641,22 +641,22 @@
       },
       {
         "id": 34,
-        "name": "Stickle Bricks Little Builder Construction Set with 30 Pieces",
-        "price": 220,
+        "name": "LEGO 31058 Creator Mighty Dinosaurs Toy, 3 in 1 Model",
+        "price": 800,
         "category": "Toys",
-        "description": "Spark creativity and motor skills with the Stickle Bricks Little Builder set. With 30 colorful pieces, it's perfect for imaginative construction play.",
-        "imageurl": "https://m.media-amazon.com/images/I/71MRKpa7ZJL._AC_SX522_.jpg",
+        "description": "Build your favorite dinosaur with the LEGO Creator Mighty Dinosaurs set. Features 3 models in 1 for endless creative play.",
+        "imageurl": "https://m.media-amazon.com/images/I/71-U9Tq8Y+L._AC_SX522_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐⭐",
         "ratingNum":5,
-        "ratingCount":6000,
-        "isNewArrival": false,
-        "isBestSeller": false,
+        "ratingCount":55000,
+        "isNewArrival": true,
+        "isBestSeller": true,
         "isDealOfTheDay": false,
         "reviews": [
-          "My kids love building with these, great for creativity!",
-          "A durable and fun toy, keeps my little one entertained for hours."
+          "My child loves dinosaurs, and this set was a hit!",
+          "High-quality LEGO set with great instructions and versatility."
         ]
       },
       {
@@ -681,42 +681,42 @@
       },
       {
         "id": 36,
-        "name": "Ravensburger Marvel Spiderman Mini Memory Game",
-        "price": 800,
+        "name": "Stickle Bricks Little Builder Construction Set with 30 Pieces",
+        "price": 220,
         "category": "Toys",
-        "description": "Join your favorite Marvel superhero in this exciting memory game. Perfect for developing memory and concentration skills while having fun.",
-        "imageurl": "https://m.media-amazon.com/images/I/91BZW+LOPpL._AC_SX522_.jpg",
+        "description": "Spark creativity and motor skills with the Stickle Bricks Little Builder set. With 30 colorful pieces, it's perfect for imaginative construction play.",
+        "imageurl": "https://m.media-amazon.com/images/I/71MRKpa7ZJL._AC_SX522_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐⭐",
         "ratingNum":5,
-        "ratingCount":2300,
-        "isNewArrival": true,
+        "ratingCount":6000,
+        "isNewArrival": false,
         "isBestSeller": false,
         "isDealOfTheDay": false,
         "reviews": [
-          "A fun and challenging game for Spiderman fans!",
-          "Great for improving memory, my kids love it."
+          "My kids love building with these, great for creativity!",
+          "A durable and fun toy, keeps my little one entertained for hours."
         ]
       },
       {
         "id": 37,
-        "name": "LEGO 31058 Creator Mighty Dinosaurs Toy, 3 in 1 Model",
-        "price": 800,
+        "name": "Nerf Super Soaker Flip Fill Water Blaster",
+        "price": 300,
         "category": "Toys",
-        "description": "Build your favorite dinosaur with the LEGO Creator Mighty Dinosaurs set. Features 3 models in 1 for endless creative play.",
-        "imageurl": "https://m.media-amazon.com/images/I/71-U9Tq8Y+L._AC_SX522_.jpg",
+        "description": "Experience epic water battles with the Nerf Super Soaker Flip Fill Water Blaster. Designed for quick refills and powerful streams, it's perfect for outdoor fun on hot days. Lightweight, durable, and easy to use for kids and adults alike.",
+        "imageurl": "https://m.media-amazon.com/images/I/61aOXDljkeL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
-        "rating": "⭐⭐⭐⭐⭐",
-        "ratingNum":5,
-        "ratingCount":55000,
+        "rating": "⭐⭐⭐⭐",
+        "ratingNum":4,
+        "ratingCount":7900,
         "isNewArrival": true,
-        "isBestSeller": true,
+        "isBestSeller": false,
         "isDealOfTheDay": false,
         "reviews": [
-          "My child loves dinosaurs, and this set was a hit!",
-          "High-quality LEGO set with great instructions and versatility."
+         "The water blaster is super fun and easy to refill. My kids love it!",
+         "Great for summer play! The dual-tank flip feature keeps the fun going longer."
         ]
       },
       {
