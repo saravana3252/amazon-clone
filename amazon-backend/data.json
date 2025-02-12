@@ -242,7 +242,7 @@
       {
         "id": 13,
         "name": "Sonia Moer Super Soft Brushed Microfibre Pillowcases",
-        "price": 300,
+        "price": 150,
        "category": "HomeProduct",
         "description": "Upgrade your bedding with these super soft microfiber pillowcases. Durable, wrinkle-resistant, and perfect for a restful night's sleep.",
         "imageurl": "https://m.media-amazon.com/images/I/71cAfMi+SyL._AC_SY400_.jpg",
@@ -281,11 +281,11 @@
       },
       {
         "id": 15,
-        "name": "EcoBag - 50 Pack Extra Strong Heavy Duty Refuse Sacks",
-        "price": 150,
+        "name": "Pigeon Electric Kettle",
+        "price": 300,
        "category": "HomeProduct",
-        "description": "Heavy-duty refuse sacks ideal for home or commercial use. Strong, durable, and designed for hassle-free waste management.",
-        "imageurl": "https://m.media-amazon.com/images/I/71jiZDJrPlL._SX679_.jpg",
+        "description": "A fast-boiling electric kettle with a sleek design, perfect for quick hot beverages. Equipped with automatic shut-off and boil-dry protection for safety and convenience.",
+        "imageurl": "https://m.media-amazon.com/images/I/51DGcy8eBCL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐⭐⭐⭐⭐",
@@ -295,17 +295,17 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "These bags are super sturdy and hold a lot. Highly recommend!",
-          "Great value for money. No tears even with heavy loads."
+         "This kettle boils water quickly and is so easy to use. Love the safety features!",
+         "Great kettle for the price. It heats up fast and looks stylish in my kitchen."
         ]
       },
       {
         "id": 16,
-        "name": "Curver My Style Small Rectangular Storage Basket",
-        "price": 250,
+        "name": "IFB 24 L Solo Microwave Oven",
+        "price": 999,
        "category": "HomeProduct",
-        "description": "A stylish and functional storage solution for your home. Perfect for organizing small items with a vintage white finish.",
-        "imageurl": "https://m.media-amazon.com/images/I/413oEWwHJoL._SX300_SY300_QL70_FMwebp_.jpg",
+        "description": "A high-performance microwave oven designed to meet all your cooking needs with ease. Featuring multiple power settings and a sleek, modern design to complement any kitchen.",
+        "imageurl": "https://m.media-amazon.com/images/I/61hD-fVYjcL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐",
@@ -315,8 +315,8 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "Beautiful design and very practical. Keeps my things organized.",
-          "Perfect size for my bathroom essentials. Love the quality!"
+          "Excellent microwave with quick heating and defrosting options. A must-have in the kitchen!",
+          "Super easy to use, and the design looks amazing in my kitchen. Very happy with this purchase."
         ]
       },
       {
