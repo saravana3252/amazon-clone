@@ -274,11 +274,11 @@ app.post("/checkout",(req,res)=>{
           service:"gmail",
           auth:{
             user:"sara18ec118@gmail.com",
-            pass:"skwk leez pbzz wlwf"
+            pass:process.env.GMAIL_PASS
           }
          })
          const mailOptions = {
-          from:"sara18ec118@gmail.com",
+          from:`"Amazon" <sara18ec118@gmail.com>`,
           to:userEmail,
           subject:"Your Order Has Been Successfully Placed!",
           html: `
@@ -416,6 +416,7 @@ app.get("/success", (req, res) => {
  
           Promise.all(stockUpdatePromise)
           res.send("Payment was successful. Thank you for your purchase!");
+          
         })
         .catch((error) => {
           console.error("Error saving checkout data:", error);
@@ -499,7 +500,45 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
 
       Promise.all(stockUpdatePromise)
       console.log("Checkout data saved successfully.");
-    })
+      const transporter = nodemailer.createTransport({
+        service:"gmail",
+        auth:{
+          user:"sara18ec118@gmail.com",
+          pass:process.env.GMAIL_PASS
+        }
+       })
+       const mailOptions = {
+        from:`"Amazon" <sara18ec118@gmail.com>`,
+        to:userEmail,
+        subject:"Your Order Has Been Successfully Placed!",
+        html: `
+        <p>Hi <strong>${userName}</strong>,</p>
+        <p>Thank you for your order! We have received your order and it is now being processed.</p>
+        <p><strong>Order Details:</strong></p>
+        <ul>
+          ${cartData.map(item => `
+            <li>
+              <strong>${item.productName}</strong> - ${item.quantity} x ₹${item.price} 
+              ${item.selectedSize ? `(Size: ${item.selectedSize})` : ""}
+            </li>
+          `).join("")}
+        </ul>
+        <p><strong>Total Amount:</strong> ₹${totalAmount}</p>
+        <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+        <p>Thank you for shopping with us!</p>
+        <p><em>Best regards,</em><br/>AMAZON</p>
+      `
+       }
+
+       transporter.sendMail(mailOptions,(err,info)=>{
+        if(!err){
+          res.send({message:"email sent"})
+        }
+        else{
+          res.send({message:err})
+        }
+       })
+   })
     .catch((error) => {
       console.error("Error saving checkout data:", error);
       res.status(500).send("An error occurred while processing the checkout.");
