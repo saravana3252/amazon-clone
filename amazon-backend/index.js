@@ -280,8 +280,24 @@ app.post("/checkout",(req,res)=>{
          const mailOptions = {
           from:"sara18ec118@gmail.com",
           to:userEmail,
-          subject:"Placed order",
-          text:`hey! ${userName} your order is placed`
+          subject:"Your Order Has Been Successfully Placed!",
+          html: `
+          <p>Hi <strong>${userName}</strong>,</p>
+          <p>Thank you for your order! We have received your order and it is now being processed.</p>
+          <p><strong>Order Details:</strong></p>
+          <ul>
+            ${cartData.map(item => `
+              <li>
+                <strong>${item.productName}</strong> - ${item.quantity} x ₹${item.price} 
+                ${item.selectedSize ? `(Size: ${item.selectedSize})` : ""}
+              </li>
+            `).join("")}
+          </ul>
+          <p><strong>Total Amount:</strong> ₹${totalAmount}</p>
+          <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+          <p>Thank you for shopping with us!</p>
+          <p><em>Best regards,</em><br/>AMAZON</p>
+        `
          }
 
          transporter.sendMail(mailOptions,(err,info)=>{
