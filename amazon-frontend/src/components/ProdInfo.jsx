@@ -8,7 +8,7 @@ function ProdInfo(){
             <div className='bg-white p-2 lg:px-3 px-3'>
                 <h1 className=' font-bold text-xl mb-2 '>Save 30% on Tech!</h1>
                 <img src='https://images-eu.ssl-images-amazon.com/images/G/29/Events/2021/IT_fallback_campaigns/XCM_CUTTLE_1321861_1653915_DE_3783397_758x608_2X_IT._SY608_CB639715330_.jpg' alt='gaming-banner-img'></img>
-                <p className='text-blue-800 lg:pt-4 pt-3.5 font-semibold'>Shop Now</p>
+                <p className='text-blue-800 lg:pt-4 pt-3.5 font-semibold'><Link to="/elcetronics">Shop Now</Link></p>
             </div>
             <div className='bg-white p-2'>
                 <h1 className=' font-bold text-xl'>Home Appliances</h1>
@@ -33,19 +33,19 @@ function ProdInfo(){
                 <div className="lg:hidden mt-2">
                     <img src="https://images-eu.ssl-images-amazon.com/images/G/37/Gateway-New/OHL/June2020/SmallKitchenAppliances_CC_758x608._SY608_CB430833266_.jpg"></img>
                 </div>
-                <p className='text-blue-800  font-semibold pt-2'>Shop Now</p>
+                <p className='text-blue-800  font-semibold pt-2'><Link to="/homeproducts">Shop Now</Link></p>
             </div>
             <div className='bg-white p-2 px-3'>
                 <h1 className='font-bold text-xl mb-2'>Clothing</h1>
                 <div className="flex justify-center">
                 <img  src='https://images-fe.ssl-images-amazon.com/images/G/35/AU-hq/2024/img/Events/XCM_CUTTLE_2115052_6183719_758x608_2X_en_AU_MensDesktop._SY608_CB539591921_.jpg'></img>
                 </div>
-                <p className='text-blue-800  font-semibold pt-4'>See More</p>
+                <p className='text-blue-800  font-semibold pt-4'><Link to="/clothingproducts">See More</Link></p>
             </div>
             <div className='bg-white p-2 px-3'>
                 <h1 className='font-bold text-xl mb-2'>Toys & Games</h1>
                 <img src='https://images-eu.ssl-images-amazon.com/images/G/02/Exports_2023/UK_Exports_2024/DCC_Toys_758x608_V2._SY608_CB558825168_.jpg'></img>
-                <p className='text-blue-800  font-semibold pt-4'><Link to="/ToyProducts">See More</Link></p>
+                <p className='text-blue-800  font-semibold pt-4'><Link to="/toyproducts">See More</Link></p>
             </div>
             </div>
         </>
