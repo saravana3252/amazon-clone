@@ -349,7 +349,7 @@ app.post("/create-checkout-session", (req, res) => {
     metadata: {
       userId: userId,
       userName:userName,
-      userEmailuserEmail,
+      userEmail:userEmail,
       cartData: JSON.stringify(cartData),
       shippingAddress: JSON.stringify(shippingAddress),
     },
