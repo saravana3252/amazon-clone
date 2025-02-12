@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGreaterThan,faLessThan } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import PropTypes from "prop-types"
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 function FeaturedClothProds(props){
 
 const [products,setProducts] =useState([])    
-const navigate = useNavigate()
+// const navigate = useNavigate()
 const [isLoading,setIsLoading] = useState(false)
 
 function scrollLeft(){
@@ -44,10 +44,12 @@ useEffect(()=>{
                         !isLoading ? ( products.map((product,index)=>{
                             return (
                                 <>
+                                <a href='/productdescription'>
                                 <img key={index} className="lg:h-48 h-40" src={product.imageurl} alt="featuredElectronicsImg" onClick={()=>{
                                     props.productdes(product)
-                                    navigate("/productdescription")
+                                    // navigate("/productdescription")
                                   }}></img>
+                                  </a>
                                 </>
                             )
                         })):(<div role="status" className='flex justify-center items-center w-full lg:h-52 h-36'>

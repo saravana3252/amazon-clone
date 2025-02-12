@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGreaterThan,faLessThan } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
-import {Link, useNavigate } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import PropTypes from "prop-types"
 
 function Banner(props){
@@ -13,7 +13,7 @@ function Banner(props){
     const isMobile = window.innerWidth < 1024
     const [isLoading,setIsLoading] = useState(false)
 
-    const navigate =useNavigate()
+    // const navigate =useNavigate()
 
     function handleSlide(direction){
         if(direction === "next")
@@ -123,15 +123,17 @@ function Banner(props){
                     {!isLoading ? ( DealOfTheDayProd.map((product)=>{
                             return (
                                 <>
+                                <a href='/productdescription'>
                                   <img className='lg:h-48 h-32 cursor-pointer' src={product.imageurl} alt='DealOfTheDayProductImg' onClick={()=>{
                                     props.productdes(product)
-                                    navigate("/productdescription")
+                                    // navigate("/productdescription")
                                   }}></img>
+                                  </a>
                                   <p>Rs <del>2,00,000</del> {product.price}</p>
-                                  <p className='text-blue-800 font-semibold pt-1 lg:pt-3 cursor-pointer'  onClick={()=>{
+                                  <a href='/productdescription' className='text-blue-800 font-semibold pt-1 lg:pt-3 cursor-pointer'  onClick={()=>{
                                     props.productdes(product)
-                                    navigate("/productdescription")
-                                  }}>Shop Now</p>
+                                    // navigate("/productdescription")
+                                  }}>Shop Now</a>
                                   </>
                             )
                         })):(<div role="status" className='flex justify-center items-center w-full lg:h-60 h-36'>

@@ -22,7 +22,10 @@ import Admin from "./components/Admin"
 import PrivateAdmin from "./components/privateAdmin"
 
 function App() {
- const [product,setProduct] = useState({})
+ const [product,setProduct] = useState(()=>{
+  let savedProd = localStorage.getItem("amazon-prodsDes")
+  return savedProd ? JSON.parse(savedProd) : {}
+ })
  const [cart,setCart] = useState([])
  const [searchData,setSearchData] = useState([])
  const [originalSearchProds, setOriginalSearchProds] = useState([]); 
@@ -35,6 +38,10 @@ function App() {
  function productdescription(product){
   setProduct(product)
  }
+
+useEffect(()=>{
+  localStorage.setItem("amazon-prodsDes",JSON.stringify(product))
+},[product])
 
  function AddToCart(item){
    setCart((previtems)=>{

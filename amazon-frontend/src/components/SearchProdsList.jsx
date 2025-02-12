@@ -497,7 +497,7 @@ useEffect(()=>{
                     <p className="font-medium  text-lg text-gray-800" onClick={()=>{
                       props.productdes(product)
                     }}>
-                      <Link to="/productdescription">{product.name}</Link>
+                     <a href="/productdescription">{product.name}</a>
                     </p>
                     <div className="flex flex-col lg:flex-row items-center text-center lg:text-start mt-2">
                       <p className="text-yellow-600 text-xl">{"⭐".repeat(product.ratingNum)}</p>
