@@ -442,7 +442,6 @@ app.get("/success", (req, res) => {
               `).join("")}
             </ul>
             <p><strong>Total Amount:</strong> ₹${totalAmount}</p>
-            <p><strong>Payment Method:</strong> ${paymentMethod}</p>
             <p>Thank you for shopping with us!</p>
             <p><em>Best regards,</em><br/>AMAZON</p>
           `
@@ -564,7 +563,6 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
           `).join("")}
         </ul>
         <p><strong>Total Amount:</strong> ₹${totalAmount}</p>
-        <p><strong>Payment Method:</strong> ${paymentMethod}</p>
         <p>Thank you for shopping with us!</p>
         <p><em>Best regards,</em><br/>AMAZON</p>
       `
