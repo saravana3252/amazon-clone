@@ -41,6 +41,26 @@
       },
       {
         "id": 3,
+        "name": "KAIGERR 2025 Gaming Laptop",
+        "price": 75000,
+        "category": "Gaming",
+        "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
+        "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
+        "stock": 5,
+        "quantity": 1,
+        "rating": "⭐⭐⭐",
+        "ratingNum":3,
+        "ratingCount":50000,
+        "isNewArrival": false,
+        "isBestSeller": true,
+        "isDealOfTheDay": false,
+        "reviews": [
+          "Great specs for the price, runs games smoothly.",
+          "Impressive battery life and sleek design."
+        ]
+      },
+      {
+        "id": 4,
         "name": "Grand Theft Auto V Playstation 4",
         "price": 1299,
         "category": "Gaming",
@@ -60,7 +80,7 @@
         ]
       },
       {
-        "id": 4,
+        "id": 5,
         "name": "ASUS ROG Ally X Handheld Gaming Console",
         "price": 38000,
         "category": "Gaming",
@@ -77,26 +97,6 @@
         "reviews": [
           "Amazing handheld console with powerful performance and smooth gameplay.",
           "Great for gaming on the go, but the battery life could be better."
-        ]
-      },
-      {
-        "id": 5,
-        "name": "KAIGERR 2025 Gaming Laptop",
-        "price": 75000,
-        "category": "Gaming",
-        "description": "High-performance gaming laptop with a 15.6-inch IPS display, 16GB RAM, and 512GB SSD for smooth multitasking and gameplay.",
-        "imageurl": "https://m.media-amazon.com/images/I/71a8eNpIHTL._AC_SX679_.jpg",
-        "stock": 5,
-        "quantity": 1,
-        "rating": "⭐⭐⭐",
-        "ratingNum":3,
-        "ratingCount":50000,
-        "isNewArrival": false,
-        "isBestSeller": true,
-        "isDealOfTheDay": false,
-        "reviews": [
-          "Great specs for the price, runs games smoothly.",
-          "Impressive battery life and sleek design."
         ]
       },
         {
