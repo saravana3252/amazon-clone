@@ -80,7 +80,7 @@ function ProductDescription(props) {
 </div>
 <Footer></Footer>
         </>
-      ):(<><div><button className="p-2 px-4 bg-amber-400 text-white">GO TO HOME</button></div></>) }
+      ):(<><div><button className="p-2 px-4 bg-amber-700 mt-5 text-center text-white">GO TO HOME</button></div></>) }
  
 
       </>
