@@ -8,7 +8,7 @@ function ProdInfo(){
             <div className='bg-white p-2 lg:px-3 px-3'>
                 <h1 className=' font-bold text-xl mb-2 '>Save 30% on Tech!</h1>
                 <img src='https://images-eu.ssl-images-amazon.com/images/G/29/Events/2021/IT_fallback_campaigns/XCM_CUTTLE_1321861_1653915_DE_3783397_758x608_2X_IT._SY608_CB639715330_.jpg' alt='gaming-banner-img'></img>
-                <p className='text-blue-800 lg:pt-4 pt-3.5 font-semibold'><Link to="/elcetronics">Shop Now</Link></p>
+                <p className='text-blue-800 lg:pt-4 pt-3.5 font-semibold'><Link to="/electronics">Shop Now</Link></p>
             </div>
             <div className='bg-white p-2'>
                 <h1 className=' font-bold text-xl'>Home Appliances</h1>
