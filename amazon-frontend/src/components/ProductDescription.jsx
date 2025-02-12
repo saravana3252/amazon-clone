@@ -82,7 +82,7 @@ function ProductDescription(props) {
 </div>
 <Footer></Footer>
         </>
-      ):(<><div><Link to="/" className="p-2 px-4 bg-amber-700 mt-5 text-center text-white">GO TO HOME</Link></div></>) }
+      ):(<><div className="flex justify-center items-center"><Link to="/" className="p-2 px-4 bg-amber-700  text-center text-white">GO TO HOME</Link></div></>) }
  
 
       </>
