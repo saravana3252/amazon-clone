@@ -23,19 +23,19 @@ function PaymentCancel() {
 
             {/* Title */}
             <h1 className="text-3xl font-bold mb-4">Payment Cancelled</h1>
-            <p className="text-lg text-gray-600 mb-6">Your payment was cancelled. Please try again or continue shopping.</p>
+            <p className="text-lg text-gray-600 mb-6 text-center">Your payment was cancelled. Please try again or continue shopping.</p>
 
             {/* Buttons */}
             <div className="flex space-x-4">
                 <Link 
                     to="/checkout"
-                    className="px-6 py-3 bg-red-500 text-white text-lg font-semibold rounded shadow hover:bg-red-600 transition duration-300"
+                    className="px-3 lg:px-6 py-3 bg-red-500 text-white text-lg font-semibold rounded shadow hover:bg-red-600 transition duration-300"
                 >
                     Retry Payment
                 </Link>
                 <Link 
                     to="/"
-                    className="px-6 py-3 bg-gray-200 text-gray-800 text-lg font-semibold rounded shadow hover:bg-gray-300 transition duration-300"
+                    className="px-3 lg:px-6 py-3 bg-gray-200 text-gray-800 text-lg font-semibold rounded shadow hover:bg-gray-300 transition duration-300"
                 >
                     Continue Shopping
                 </Link>

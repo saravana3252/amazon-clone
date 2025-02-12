@@ -46,7 +46,7 @@ function Orders(props) {
           {userOrders.map((order, index) => (
             <div
               key={index}
-              className="bg-white p-2.5 rounded-lg shadow-lg border border-gray-200 transition transform hover:scale-105 duration-200"
+              className="bg-white p-2.5 rounded-lg shadow-lg border border-gray-200"
             >
               <h3 className="text-xl font-semibold text-gray-700 border-b pb-2">
                 Order #{index + 1}

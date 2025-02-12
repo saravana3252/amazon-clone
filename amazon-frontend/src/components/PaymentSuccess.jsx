@@ -23,7 +23,7 @@ function PaymentSuccess() {
 
             {/* Title */}
             <h1 className="text-3xl font-bold mb-4">Payment Successful!</h1>
-            <p className="text-lg text-gray-600 mb-6">Thank you for your purchase. Your order is being processed.</p>
+            <p className="text-lg text-gray-600 mb-6 text-center">Thank you for your purchase. Your order is being processed.</p>
 
             {/* Continue Shopping Button */}
             <Link 

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 const cors = require("cors")
 const express = require("express")
+const nodemailer = require("nodemailer")
 const productModel = require("./models/productsModel")
 const checkoutModel = require("./models/checkoutModel")
 require("dotenv").config()
@@ -225,7 +226,7 @@ app.get("/search/:name",(req,res)=>{
 })
 
 app.post("/checkout",(req,res)=>{
-  let {userId,userName,cartData,shippingAddress,paymentMethod,orderStatus="processing"} = req.body
+  let {userId,userName,userEmail,cartData,shippingAddress,paymentMethod,orderStatus="processing"} = req.body
 
 
  let totalAmount = 0;
@@ -269,6 +270,28 @@ app.post("/checkout",(req,res)=>{
          Promise.all(stockUpdatePromise)
 
          res.status(201).send({ message: "Checkout successful", checkout });
+         const transporter = nodemailer.createTransport({
+          service:"gmail",
+          auth:{
+            user:"sara18ec118@gmail.com",
+            pass:"skwk leez pbzz wlwf"
+          }
+         })
+         const mailOptions = {
+          from:"sara18ec118@gmail.com",
+          to:userEmail,
+          subject:"Placed order",
+          text:`hey! ${userName} your order is placed`
+         }
+
+         transporter.sendMail(mailOptions,(err,info)=>{
+          if(!err){
+            res.send({message:"email sent"})
+          }
+          else{
+            res.send({message:err})
+          }
+         })
      })
      .catch((error) => {
          console.error("Error during checkout creation:", error);  

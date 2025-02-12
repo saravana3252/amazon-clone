@@ -3,7 +3,7 @@ import { userContext } from "./context/userContext";
 import { toast } from "react-toastify";
 import PropTypes from 'prop-types';
 import { loadStripe } from '@stripe/stripe-js';
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 const stripePromise = loadStripe('pk_test_51QX5XXATNE3jIpp9bvgMfJdRKu6haKZfHIxendRV9LMxzspPNsLBsZE9S9zdfhrXCY7651fuwPrC3rbD6ER6snJ800Tx1rrmhP');
 
@@ -11,6 +11,8 @@ const stripePromise = loadStripe('pk_test_51QX5XXATNE3jIpp9bvgMfJdRKu6haKZfHIxen
 function Checkout({cartData}){
 
     const loggedInData = useContext(userContext)
+    
+    const navigate =useNavigate()
 
     const [step,setStep] = useState(1)
 
@@ -25,7 +27,7 @@ function Checkout({cartData}){
     })
 
     const [paymentMethod,setPaymentMethod] =useState("COD")
-
+    
 
     function nextStep(){
       setStep((prevstep)=>{
@@ -52,6 +54,7 @@ function Checkout({cartData}){
    let checkoutData = {
     userId : loggedInData.loggedUser.id,
     userName : loggedInData.loggedUser.name,
+    userEmail : loggedInData.loggedUser.email,
     cartData: cartData.map((item)=>({
        productId : item._id,
        productName: item.name,
@@ -84,6 +87,7 @@ function Checkout({cartData}){
             }
            }).then((response)=>response.json()).then(()=>{
             toast.success("Order placed successfully with Cash on Delivery!")
+            navigate("/orders")
         }).catch((err)=>{
             toast.error("Failed to place order: " + err)
         }).finally(()=>{
