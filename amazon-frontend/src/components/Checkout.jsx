@@ -132,20 +132,20 @@ function Checkout({cartData}){
 
     return (
         <>
-       <div className="min-h-screen w-full px-2 mt-24  lg:px-0 lg:py-6 bg-gray-50 flex justify-center lg:items-center">
+       <div className="min-h-svh w-full px-2 pt-12 lg:pt-0 lg:px-0 lg:py-6 bg-gray-50 flex justify-center lg:items-center">
   <form className="max-w-xl w-full h-full bg-white shadow-xl rounded-lg p-4 border border-gray-200" onSubmit={handleSubmit}>
    
     {step === 1 && (
       <>
         <h1 className="text-center font-extrabold text-3xl text-gray-800 mb-6">Shipping Address</h1>
         <div className="space-y-4">
-          <input name="name" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Full Name" onChange={handleInputChange} value={shippingAddress.name} required />
-          <input name="address" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Address" onChange={handleInputChange} value={shippingAddress.address} required />
+          <input name="name" className="border border-gray-300 outline-none p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Full Name" onChange={handleInputChange} value={shippingAddress.name} required />
+          <input name="address" className="border border-gray-300 outline-none p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Address" onChange={handleInputChange} value={shippingAddress.address} required />
           <div className="flex space-x-4">
-            <input name="city" className="border border-gray-300 p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="City" onChange={handleInputChange} value={shippingAddress.city} required />
-            <input name="zipCode" className="border border-gray-300 p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="number" placeholder="Zip Code" onChange={handleInputChange} value={shippingAddress.zipCode} required />
+            <input name="city" className="border border-gray-300 outline-none p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="City" onChange={handleInputChange} value={shippingAddress.city} required />
+            <input name="zipCode" className="border border-gray-300 outline-none p-3 w-1/2 rounded-md focus:ring-2 focus:ring-blue-500 transition" type="number" placeholder="Zip Code" onChange={handleInputChange} value={shippingAddress.zipCode} required />
           </div>
-          <input name="country" className="border border-gray-300 p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
+          <input name="country" className="border border-gray-300 outline-none p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
         </div>
         <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md`} onClick={nextStep}>Next</button>
       </>
