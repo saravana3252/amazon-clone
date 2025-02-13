@@ -24,6 +24,8 @@ const [data,setData]=useState(
 
 const [isLoading,setIsLoading] = useState(false)
 
+const [isLoadingDel,setIsLoadingDel] = useState(false)
+
 useEffect(()=>{
   console.log(data)
 },[data])
@@ -79,7 +81,7 @@ function handleSubmit(e){
 }
 
 function handleDelete(){
-setIsLoading(true)
+setIsLoadingDel(true)
 fetch(`https://amazon-clone-backend-mxip.onrender.com/admin/delete-products/${inpDeleteValue}`,{
   method:"DELETE",
 }).then((response)=>response.json()).then((data)=>{
@@ -93,7 +95,7 @@ fetch(`https://amazon-clone-backend-mxip.onrender.com/admin/delete-products/${in
 }).catch((err)=>{
   console.log(err)
 }).finally(()=>{
-    setIsLoading(false)
+    setIsLoadingDel(false)
 })
 }
 
@@ -257,7 +259,7 @@ function handleinpDelete(e){
               onChange={handleUpdate}
             ></textarea>
           </div>
-          <button className="w-full bg-blue-500 text-white py-3 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <button className="w-full bg-blue-500 text-white py-3 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer">
           {isLoading ? "LOADING.." :"UPDATE"}
           </button>
         </div>
@@ -278,8 +280,8 @@ function handleinpDelete(e){
               autoComplete="off"
             />
           </div>
-          <button className="w-full bg-red-500 text-white py-3 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400" onClick={handleDelete}>
-            {isLoading ? "LOADING.." :"DELETE"}
+          <button className="w-full bg-red-500 text-white py-3 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 cursor-pointer" onClick={handleDelete}>
+            {isLoadingDel ? "LOADING.." :"DELETE"}
           </button>
         </div>
       </div>
