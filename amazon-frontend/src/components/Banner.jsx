@@ -129,8 +129,8 @@ function Banner(props){
                                     // navigate("/productdescription")
                                   }}></img>
                                   </a>
-                                  <p>Rs <del>2,00,000</del> {product.price}</p>
-                                  <a href='/productdescription' className='text-blue-800 font-semibold pt-1 lg:pt-3 cursor-pointer'  onClick={()=>{
+                                  <p className='pt-1 lg:pt-1'>Rs <del>2,00,000</del> {product.price}</p>
+                                  <a href='/productdescription' className='text-blue-800 font-semibold pt-1 lg:pt-2 cursor-pointer'  onClick={()=>{
                                     props.productdes(product)
                                     // navigate("/productdescription")
                                   }}>Shop Now</a>
