@@ -86,7 +86,7 @@ function handleLogin(e){
             }}><FontAwesomeIcon icon={faEye} /></button>
             </div>
             <div className="flex flex-col gap-3 items-center mt-1">
-            <button className="p-2 bg-yellow-400 w-[50%] font-semibold" onClick={handleLogin}>{isLoading ? "LOADING..." : "SIGN IN"}</button>
+            <button className="p-2 bg-yellow-400 w-[50%] font-semibold cursor-pointer" onClick={handleLogin}>{isLoading ? "LOADING..." : "SIGN IN"}</button>
             <p>DONT HAVE AN ACCOUNT?<span className="font-bold"> <Link to="/register">REGISTER</Link> </span></p>
             <p className={`${message.type} p-2 px-4 mt-2 font-medium text-lg `}>{message.text}</p>
             </div>
