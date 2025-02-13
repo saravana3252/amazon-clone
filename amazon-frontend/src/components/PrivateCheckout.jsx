@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { userContext } from "./context/userContext"
 import { Navigate } from "react-router-dom"
+import PropTypes from 'prop-types';
+
 
 function PrivateCheckout(props){
 
@@ -16,5 +18,10 @@ function PrivateCheckout(props){
         </>
     )
 }
+
+PrivateCheckout.propTypes = {
+    Component: PropTypes.elementType.isRequired,
+    cartData: PropTypes.array.isRequired
+};
 
 export default PrivateCheckout

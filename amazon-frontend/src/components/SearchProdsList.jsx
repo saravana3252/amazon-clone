@@ -541,7 +541,9 @@ SearchProdList.propTypes = {
   productdes: PropTypes.func.isRequired,
   product: PropTypes.array.isRequired,
   search: PropTypes.string.isRequired,
-  cartLength : PropTypes.number.isRequired
+  cartLength : PropTypes.number.isRequired,
+  searchDataFunc: PropTypes.func.isRequired,
+  ogProd: PropTypes.array.isRequired
 };
 
 

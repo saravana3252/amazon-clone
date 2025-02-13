@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { userContext } from "./context/userContext"
 import { Navigate } from "react-router-dom"
+import PropTypes from 'prop-types';
+
 
 function PrivateAdmin(props){
 
@@ -16,5 +18,10 @@ function PrivateAdmin(props){
         </>
     )
 }
+
+PrivateAdmin.propTypes = {
+    Component: PropTypes.elementType.isRequired,
+};
+
 
 export default PrivateAdmin
