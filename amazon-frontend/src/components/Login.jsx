@@ -68,9 +68,9 @@ function handleLogin(e){
            <form >
             <h1 className="font-bold text-2xl text-center">Sign in Your Account</h1>
             <div className="flex flex-col gap-3 pt-4">
-            <input name="email"  type="email" className="p-2 border border-black outline-none focus:ring-2 focus:ring-blue-500" placeholder="enter your email" required onChange={(e)=>{setEmail(e.target.value)}} autoComplete="off"></input>
+            <input name="email"  type="email" className="p-2 border border-black outline-none" placeholder="enter your email" required onChange={(e)=>{setEmail(e.target.value)}} autoComplete="off"></input>
             <div className="flex border border-black">
-            <input id="password" name="password" type="password" className="p-2 outline-none w-[80%] focus:ring-2 focus:ring-blue-500" placeholder="enter your password" required onChange={(e)=>{setPassword(e.target.value)}} autoComplete="off"></input>
+            <input id="password" name="password" type="password" className="p-2 outline-none w-[80%]" placeholder="enter your password" required onChange={(e)=>{setPassword(e.target.value)}} autoComplete="off"></input>
             <button type="button" className="p-2 bg-gray-300 cursor-pointer border-l border-black w-[20%]" onMouseDown={(e)=>{ 
                 e.preventDefault()
                 document.getElementById("password").type = "text"
