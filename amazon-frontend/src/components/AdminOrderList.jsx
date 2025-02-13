@@ -103,7 +103,7 @@ function OrderList() {
                   <p><strong>💳 Payment:</strong> {order.paymentMethod}</p>
                 </div>
 
-                <p className="mt-2"><strong>💰 Total Amount:</strong> <span className="text-green-600 font-semibold">${order.totalAmount}</span></p>
+                <p className="mt-2"><strong>💰 Total Amount:</strong> <span className="text-green-600 font-semibold">Rs {order.totalAmount}</span></p>
 
                 {/* Cart Items Table */}
                 <div className="mt-4">
