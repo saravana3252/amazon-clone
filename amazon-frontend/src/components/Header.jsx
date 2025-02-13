@@ -264,7 +264,7 @@ function Header(props) {
               <Link to="/cart" className="relative">
                 <FontAwesomeIcon icon={faCartShopping} />
                 {props.cartLength > 0 && (
-                  <span className="absolute -top-[12px] -right-[18px] bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                  <span className="absolute -top-[12px] -right-[16px] bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
                     {props.cartLength}
                   </span>
                 )}
