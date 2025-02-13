@@ -151,7 +151,7 @@ function Checkout({cartData}){
           </div>
           <input name="country" className="border border-gray-300 outline-none p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
         </div>
-        <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md`} onClick={nextStep}>Next</button>
+        <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md cursor-pointer`} onClick={nextStep}>Next</button>
       </>
     )}
 
@@ -172,8 +172,8 @@ function Checkout({cartData}){
           </div>
         </div>
         <div className="mt-6 flex justify-between">
-          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={prevStep}>Prev</button>
-          <button className="bg-blue-600 hover:bg-blue-700 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={nextStep}>Next</button>
+          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300 cursor-pointer" onClick={prevStep}>Prev</button>
+          <button className="bg-blue-600 hover:bg-blue-700 w-1/3 py-2 rounded-md text-white transition duration-300 cursor-pointer" onClick={nextStep}>Next</button>
         </div>
       </>
     )}
@@ -211,8 +211,8 @@ function Checkout({cartData}){
         </div>
 
         <div className="mt-3 flex justify-between">
-          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300" onClick={prevStep}>Prev</button>
-          <button className="bg-green-600 hover:bg-green-700 w-1/3 py-2 rounded-md text-white transition duration-300">{isLoading ? "LOADING..." : "Place Order"}</button>
+          <button className="bg-gray-500 hover:bg-gray-600 w-1/3 py-2 rounded-md text-white transition duration-300 cursor-pointer" onClick={prevStep}>Prev</button>
+          <button className="bg-green-600 hover:bg-green-700 w-1/3 py-2 rounded-md text-white transition duration-300 cursor-pointer">{isLoading ? "LOADING..." : "Place Order"}</button>
         </div>
 
         <Link to="/orders" className="mt-3 text-center bg-blue-500 hover:bg-blue-600 w-full py-2 rounded-md text-white transition duration-300 shadow-md block">Go to Orders</Link>
