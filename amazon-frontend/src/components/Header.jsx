@@ -10,6 +10,7 @@ import { useContext, useEffect, useState } from "react";
 import { userContext } from "./context/userContext";
 import auth from "../config";
 import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 
 function Header(props) {
   const loggedInData = useContext(userContext);
@@ -18,14 +19,23 @@ function Header(props) {
 
   const [inpSearchName, setInpSearchName] = useState("");
   const [inpSearchData, setInpSearchData] = useState([]);
-   const [isOpen,setIsOpen] = useState(false)
+  const [isOpen,setIsOpen] = useState(false)
+  const [loggedUser,setLoggedUser] = useState(loggedInData.loggedUser)
 
   function logout() {
     signOut(auth).then(() => {
       localStorage.removeItem("amazon");
-      navigate("/login");
+      loggedInData.setloggedUser(null)
+      setLoggedUser(null)
+      toast.success("Logged out successfully!",{
+        position:"bottom-left"
+      })
     });
   }
+
+ useEffect(()=>{
+  setLoggedUser(loggedInData.loggedUser)
+ },[loggedInData.loggedUser])
 
   useEffect(() => {
     if (inpSearchName != "") {
@@ -106,10 +116,10 @@ function Header(props) {
             <div className="flex flex-col">
             <div className="text-center p-2 mt-5 text-white text-lg font-medium mx-4 ">
                 {
-                    loggedInData.loggedUser ? (
+                    loggedUser ? (
                     <>
                      <p>
-                hello,{" "}{loggedInData.loggedUser.name}
+                hello,{" "}{loggedUser.name}
                      </p>
                     </>):(
                         <>
@@ -147,7 +157,7 @@ function Header(props) {
           </div></>):null
         } */}
          <div className="flex justify-center text-white font-semibold mt-5">
-            {loggedInData.loggedUser ? (<> <button className="w-1/2 bg-orange-600 p-2 rounded cursor-pointer" onClick={logout}>LOGOUT</button></>):(<> <button className="w-1/2 bg-orange-600 p-2 rounded"><Link to="/login">SIGN IN</Link></button></>)}
+            {loggedUser ? (<> <button className="w-1/2 bg-orange-600 p-2 rounded cursor-pointer" onClick={logout}>LOGOUT</button></>):(<> <button className="w-1/2 bg-orange-600 p-2 rounded"><Link to="/login">SIGN IN</Link></button></>)}
            
          </div>
 
@@ -212,7 +222,7 @@ function Header(props) {
         <div className="w-[30%] h-20 justify-evenly items-center text-white hidden lg:flex">
           <div className="flex flex-col relative group">
             <div className="absolute top-14  w-full transition-all duration-300 opacity-0 group-hover:opacity-100 ">
-              {loggedInData.loggedUser ? (
+              {loggedUser ? (
                 <>
                   <button
                     className="p-2 bg-yellow-500 text-black rounded w-full cursor-pointer"
@@ -230,9 +240,9 @@ function Header(props) {
               )}
             </div>
             {
-              loggedInData.loggedUser ? (<>
+              loggedUser ? (<>
                <p >
-                hello,{" "}{loggedInData.loggedUser.name}
+                hello,{" "}{loggedUser.name}
             </p>
               </>):(<>
                 <p>

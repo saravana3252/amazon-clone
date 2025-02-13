@@ -301,11 +301,11 @@
       },
       {
         "id": 16,
-        "name": "IFB 24 L Solo Microwave Oven",
+        "name": "AGARO 9L Oven Toaster Griller",
         "price": 999,
        "category": "HomeProduct",
-        "description": "A high-performance microwave oven designed to meet all your cooking needs with ease. Featuring multiple power settings and a sleek, modern design to complement any kitchen.",
-        "imageurl": "https://m.media-amazon.com/images/I/61hD-fVYjcL._SX679_.jpg",
+        "description": "A compact and efficient Oven Toaster Griller (OTG) perfect for baking, toasting, and grilling. With a stylish design and easy-to-use controls, it is ideal for small kitchens and quick meals.",
+        "imageurl": "https://m.media-amazon.com/images/I/71vJLCZBeoL._SX679_.jpg",
         "stock": 5,
         "quantity": 1,
         "rating": "⭐",
@@ -315,8 +315,8 @@
         "isBestSeller":true,
         "isDealOfTheDay":false,
         "reviews": [
-          "Excellent microwave with quick heating and defrosting options. A must-have in the kitchen!",
-          "Super easy to use, and the design looks amazing in my kitchen. Very happy with this purchase."
+         "Perfect for baking small batches of cookies and cakes. Heats up quickly and works efficiently!",
+         "Great value for the price! Ideal for grilling sandwiches and toasting bread. Highly recommended."
         ]
       },
       {
