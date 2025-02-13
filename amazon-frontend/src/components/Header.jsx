@@ -124,10 +124,10 @@ function Header(props) {
             </div>
             </div>
          
-         <div className="bg-gray-600 p-2 mt-4  text-center font-medium text-white cursor-pointer" onClick={handleCategoryToggle}>
+         <div className="bg-gray-600 p-2 mt-4  text-center font-medium text-white cursor-pointer overflow-hidden" onClick={handleCategoryToggle}>
             <p className="text-lg">Categories</p><span><FontAwesomeIcon icon={faAngleDown} className={`transition-all duration-500  ${isOpen ? "transform rotate-180" : "transform rotate-0"}`} /></span>
-            <div className={`bg-gray-500 transition-all duration-500 space-y-1 opacity-0 h-0  ${isOpen ? "h-52 opacity-100" : "h-0 opacity-0" }`}>
-            <div className={`transition-opacity duration-300 delay-200 flex flex-col space-y-4 pt-2 ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-80"}`}>
+            <div className={`bg-gray-500 transition-all duration-500 space-y-1 opacity-0 h-0 overflow-hidden ${isOpen ? "h-52 opacity-100" : "h-0 opacity-0" }`}>
+            <div className={`transition-opacity duration-300 delay-200 flex flex-col space-y-4 pt-2 overflow-hidden ${isOpen ? "opacity-100" : "opacity-0"}`}>
              <p><Link to="/gamingproducts">Gaming</Link></p>
              <p><Link to="/electronics">Electronics</Link></p>
              <p><Link to="/clothingproducts">Clothing</Link></p>

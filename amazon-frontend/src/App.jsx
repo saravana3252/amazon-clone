@@ -26,8 +26,14 @@ function App() {
   let savedProd = localStorage.getItem("amazon-prodsDes")
   return savedProd ? JSON.parse(savedProd) : {}
  })
- const [cart,setCart] = useState([])
- const [searchData,setSearchData] = useState([])
+ const [cart,setCart] = useState(()=>{
+  let savedCartData = localStorage.getItem("amazon-cart")
+  return savedCartData ?JSON.parse(savedCartData) : []
+ })
+ const [searchData,setSearchData] = useState(()=>{
+  let savedSearchData = localStorage.getItem("amazon-searchData")
+  return savedSearchData ? JSON.parse(savedSearchData) :[]
+ })
  const [originalSearchProds, setOriginalSearchProds] = useState([]); 
  const [searchName,SetSearchName] = useState("")
  
@@ -41,7 +47,9 @@ function App() {
 
 useEffect(()=>{
   localStorage.setItem("amazon-prodsDes",JSON.stringify(product))
-},[product])
+  localStorage.setItem("amazon-searchData",JSON.stringify(searchData))
+  localStorage.setItem("amazon-cart",JSON.stringify(cart))
+},[product,searchData,cart])
 
  function AddToCart(item){
    setCart((previtems)=>{
