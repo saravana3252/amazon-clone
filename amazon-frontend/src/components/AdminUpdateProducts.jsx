@@ -139,6 +139,7 @@ function handleinpDelete(e){
               name="name"
               value={data.name}
               onChange={handleUpdate}
+              autoComplete="off"
             />
           </div>
           <div>
@@ -161,6 +162,7 @@ function handleinpDelete(e){
               name="category"
               value={data.category}
               onChange={handleUpdate}
+              autoComplete="off"
            />
           </div>
           <div>
@@ -172,6 +174,7 @@ function handleinpDelete(e){
               name="description"
               value={data.description}
               onChange={handleUpdate}
+              autoComplete="off"
             ></textarea>
           </div>
           <div>
@@ -183,6 +186,7 @@ function handleinpDelete(e){
               name="imageurl"
               value={data.imageurl}
               onChange={handleUpdate}
+              autoComplete="off"
             />
           </div>
           <div>
@@ -227,6 +231,7 @@ function handleinpDelete(e){
               name="isNewArrival"
               value={data.isNewArrival}
               onChange={handleUpdate}
+              autoComplete="off"
             />
           </div>
           <div>
@@ -238,6 +243,7 @@ function handleinpDelete(e){
               name="isBestSeller"
               value={data.isBestSeller}
               onChange={handleUpdate}
+              autoComplete="off"
             />
           </div>
           <div>
@@ -269,6 +275,7 @@ function handleinpDelete(e){
               name="inpDelete"
               value={inpDeleteValue}
               onChange={handleinpDelete}
+              autoComplete="off"
             />
           </div>
           <button className="w-full bg-red-500 text-white py-3 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400" onClick={handleDelete}>
