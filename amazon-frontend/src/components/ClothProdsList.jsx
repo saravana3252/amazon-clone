@@ -270,9 +270,9 @@ let products = [...originalProds]
             <p className="font-bold text-xl">Filter By Category</p>
             <div className="flex flex-col mt-2 gap-2 font-medium text-red-600">
             <p className="flex justify-between"><Link to="/GamingProducts">Gaming</Link> <span className="text-gray-400">(10 products)</span></p>
-              <p className="flex justify-between"><Link to="/Electronics">Electronics</Link> <span className="text-gray-400">(10 products)</span></p>
+              <p className="flex justify-between"><Link to="/Electronics">Electronics</Link> <span className="text-gray-400">(12 products)</span></p>
               <p className="flex justify-between"><Link to="/ClothingProducts">Clothing</Link> <span className="text-gray-400">(10 products)</span></p>
-              <p className="flex justify-between"><Link to="/HomeProducts">HomeProducts</Link> <span className="text-gray-400">(10 products)</span></p>
+              <p className="flex justify-between"><Link to="/HomeProducts">HomeProducts</Link> <span className="text-gray-400">(7 products)</span></p>
               <p className="flex justify-between"><Link to="/ToyProducts">Toys</Link> <span className="text-gray-400">(10 products)</span></p>
             </div>
           </div>  
@@ -450,9 +450,9 @@ let products = [...originalProds]
             <p className="font-bold text-xl">Filter By Category</p>
             <div className="flex flex-col mt-2 gap-1 font-medium text-red-600">
             <p className="flex justify-between"><Link to="/GamingProducts">Gaming</Link> <span className="text-gray-400">(10 products)</span></p>
-              <p className="flex justify-between"><Link to="/Electronics">Electronics</Link> <span className="text-gray-400">(10 products)</span></p>
+              <p className="flex justify-between"><Link to="/Electronics">Electronics</Link> <span className="text-gray-400">(12 products)</span></p>
               <p className="flex justify-between"><Link to="/ClothingProducts">Clothing</Link> <span className="text-gray-400">(10 products)</span></p>
-              <p className="flex justify-between"><Link to="/HomeProducts">HomeProducts</Link> <span className="text-gray-400">(10 products)</span></p>
+              <p className="flex justify-between"><Link to="/HomeProducts">HomeProducts</Link> <span className="text-gray-400">(7 products)</span></p>
               <p className="flex justify-between"><Link to="/ToyProducts">Toys</Link> <span className="text-gray-400">(10 products)</span></p>
             </div>
           </div>
