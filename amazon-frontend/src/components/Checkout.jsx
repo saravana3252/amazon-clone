@@ -151,7 +151,7 @@ function Checkout({cartData}){
           </div>
           <input name="country" className="border border-gray-300 outline-none p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500 transition" type="text" placeholder="Country" onChange={handleInputChange} value={shippingAddress.country} required />
         </div>
-        <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md cursor-pointer`} onClick={nextStep}>Next</button>
+        <button disabled={shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === ""} className={`${shippingAddress.name === "" ||shippingAddress.address === "" ||shippingAddress.country === "" || shippingAddress.zipCode === "" || shippingAddress.city === "" ? "bg-gray-400 cursor-not-allowed" :"bg-blue-600 hover:bg-blue-700 cursor-pointer"} mt-6 w-full py-2.5 rounded-md font-medium text-white transition duration-300 shadow-md`} onClick={nextStep}>Next</button>
       </>
     )}
 
