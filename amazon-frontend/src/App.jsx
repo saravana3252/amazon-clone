@@ -20,7 +20,7 @@ import PaymentCancel from "./components/PaymentCancel"
 import Orders from "./components/Orders"
 import Admin from "./components/Admin"
 import PrivateAdmin from "./components/privateAdmin"
-import PrivateCheckout from "./components/PrivateCheckout"
+
 
 function App() {
  const [product,setProduct] = useState(()=>{
@@ -145,7 +145,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/cart" element={<Cart cartData={cart} cartLength={cart.length} RemoveFromCart={RemoveFromCart} productdes={productdescription} searchName={searchNameFunc} updateCart={updateCart} updateCartSize={updateCartSize} ></Cart>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/register" element={<Register></Register>}></Route>
-      <Route path="checkout" element={<PrivateCheckout Component={Checkout} cartData={cart}></PrivateCheckout>}></Route>
+      <Route path="checkout" element={<Private Component={Checkout} cartData={cart}></Private>}></Route>
       <Route path="/success" element={<Private Component={PaymentSuccess}/>}/>
       <Route path="/cancel" element={<Private Component={PaymentCancel}/>}/>
       <Route path="/orders" element={<Private Component={Orders} productdes={productdescription} cartLength={cart.length} searchName={searchNameFunc}/>}/>
