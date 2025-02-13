@@ -64,7 +64,7 @@ function ProductList(){
 
     return(
         <>
-         <div className="bg-gray-300 h-full">
+         <div className="bg-gray-300 min-h-screen">
             <div className="h-20 bg-gray-600 text-white  lg:flex space-x-5 items-center px-5 hidden">
                 <p className="cursor-pointer transition-all duration-300 hover:bg-gray-500 p-2 px-4 rounded" onClick={()=>{setProducts(originalProds)}}>All</p>
                 <p className="cursor-pointer transition-all duration-300 hover:bg-gray-500 p-2 px-4 rounded" onClick={handleGamingProds}>Gaming</p>
