@@ -115,7 +115,7 @@ function Banner(props){
             <div className='bg-white min-w-[200px]  p-3'>
                 <p className='font-bold text-xl mb-2'>Home & Kitchen</p>
                 <img className='h-36 lg:h-56' src='https://images-eu.ssl-images-amazon.com/images/G/02/Exports_2023/UK_Exports_2024/DCC_Home_758x608_V2._SY608_CB558825168_.jpg' alt='homeProducts-banner'></img>
-                <p className='text-blue-800 font-semibold pt-4 lg:pt-2'><Link to="homeproducts">Shop Now</Link></p>
+                <p className='text-blue-800 font-semibold pt-4 lg:pt-2'><a to="/homeproducts">Shop Now</a></p>
             </div>
             <div className='bg-white min-w-[200px]  p-3'>
                 <h1 className='animate-pulse text-red-700 font-bold text-xl text-center'>Deal Of The Day</h1>
