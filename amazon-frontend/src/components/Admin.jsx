@@ -22,10 +22,10 @@ function Admin(){
         </div>
         <div id="mobileNav" className={`bg-gray-700 min-h-full fixed top-0 w-[50%] transition-all duration-300 ${toggle ? "left-0" : "-left-[50%]"} lg:hidden`}>
                 <div className="flex flex-col gap-8 text-white mt-5 ">
-                <Link to="/admin" className="hover:bg-gray-600 p-2 pl-6 transition-all duration-300 cursor-pointer">Products List</Link>
-                <Link to="/admin/admin-orders" className="hover:bg-gray-600 p-2 pl-6 transition-all duration-300 cursor-pointer">Orders List</Link>
-                <Link to="/admin/update-products" className="hover:bg-gray-600 p-2 pl-6 transition-all duration-300 cursor-pointer">Update Products</Link>
-                <Link to="/" className="hover:bg-gray-600 p-2 pl-6 transition-all duration-300 cursor-pointer">Home</Link>
+                <Link to="/admin" className="hover:bg-gray-600 p-2 pl-6 mx-2  md:text-center  md:pl-0 rounded transition-all duration-300 cursor-pointer">Products List</Link>
+                <Link to="/admin/admin-orders" className="hover:bg-gray-600 p-2 pl-6 md:text-center md:pl-0  mx-2 rounded transition-all duration-300 cursor-pointer">Orders List</Link>
+                <Link to="/admin/update-products" className="hover:bg-gray-600 p-2 pl-6  md:text-center  md:pl-0 mx-2 rounded transition-all duration-300 cursor-pointer">Update Products</Link>
+                <Link to="/" className="hover:bg-gray-600 p-2 pl-6  md:text-center  md:pl-0 mx-2 rounded transition-all duration-300 cursor-pointer">Home</Link>
                 </div>
             </div>
         <div className="grid lg:grid-cols-[200px_1fr]">
