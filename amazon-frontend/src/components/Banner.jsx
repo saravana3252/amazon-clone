@@ -88,7 +88,7 @@ function Banner(props){
             <div className='bg-white min-w-[200px] shrink-0 p-3'>
                 <p className='font-bold text-xl mb-2'>Get your game on</p>
                 <img className='h-36 lg:h-56' src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg' alt='gaming-banner-img'></img>
-                <p className='text-blue-800 font-semibold pt-4 lg:pt-2'><Link to="/gamingproducts">Shop Gaming</Link></p>
+                <p className='text-blue-800 font-semibold pt-4 lg:pt-2'><a href="/gamingproducts">Shop Gaming</a></p>
             </div>
             <div className='bg-white min-w-[200px]  p-3'>
                 <p className='font-bold text-xl mb-2'>Wireless Tech</p>
@@ -110,7 +110,7 @@ function Banner(props){
                   <p className='text-sm'>tablets</p>
                   </div>
                 </div>
-                <p className='text-blue-800 font-semibold pt-2 lg:pt-4'><Link to="electronics">Shop Now</Link></p>
+                <p className='text-blue-800 font-semibold pt-2 lg:pt-4'><a href="/electronics">Shop Now</a></p>
             </div>
             <div className='bg-white min-w-[200px]  p-3'>
                 <p className='font-bold text-xl mb-2'>Home & Kitchen</p>
