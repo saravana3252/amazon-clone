@@ -11,7 +11,7 @@ function OrderList() {
   const [orderStatus, setOrderStatus] = useState("");
   // const loggedIndata = useContext(userContext);
 
-  // Fetch orders from backend
+  
   function fetchOrders() {
     fetch("https://amazon-clone-backend-mxip.onrender.com/checkout")
       .then((response) => response.json())
@@ -97,7 +97,7 @@ function OrderList() {
                    Order 🆔: <span className="text-gray-900">{order._id}</span>
                 </h3>
 
-                {/* User Info */}
+               
                 <div className="grid grid-cols-2 gap-4 mt-3">
                   <p><strong>👤 User:</strong> {order.userName} (ID: {order.userId})</p>
                   <p><strong>💳 Payment:</strong> {order.paymentMethod}</p>
@@ -105,7 +105,7 @@ function OrderList() {
 
                 <p className="mt-2"><strong>💰 Total Amount:</strong> <span className="text-green-600 font-semibold">₹{order.totalAmount}</span></p>
 
-                {/* Cart Items Table */}
+                
                 <div className="mt-4">
                   <h3 className="text-lg font-medium text-gray-700">🛍️ Cart Items</h3>
                   <div className="overflow-x-auto">
