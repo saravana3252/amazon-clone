@@ -78,12 +78,12 @@ function ProductList(){
             </div>
             
               <div className={`bg-gray-700 text-white  items-center transition-all duration-300 ease-in-out lg:hidden flex flex-col overflow-hidden gap-1.5   ${toggle ? "h-64 p-2" :"h-0 "}`} >
-                {toggle ? (<><p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-2 px-4 rounded ${toggle ? "translate-x-0 opacity-100" : "translate-50"}`} onClick={()=>{setProducts(originalProds)}}>All</p>
-                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "translate-x-0 opacity-100 " : "translate-50"}`} onClick={handleGamingProds}>Gaming</p>
-                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "translate-x-0 opacity-100" : "translate-50"}`} onClick={handleElectronics}>Electronics</p>
-                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "translate-x-0 opacity-100" : "translate-50"}`} onClick={handleClothing}>Clothing</p>
-                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "translate-x-0 opacity-100" : "translate-50"}`} onClick={handleHomeProducts}>Home-products</p>
-                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "translate-x-0 opacity-100" : "translate-50"}`}onClick={handleToyProducts}>Toys</p></>):null}
+                {toggle ? (<><p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-2 px-4 rounded ${toggle ? "opacity-100" : "opacity-0"}`} onClick={()=>{setProducts(originalProds)}}>All</p>
+                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "opacity-100 " : "opacity-0"}`} onClick={handleGamingProds}>Gaming</p>
+                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "opacity-100" : "opacity-0"}`} onClick={handleElectronics}>Electronics</p>
+                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "opacity-100" : "opacity-0"}`} onClick={handleClothing}>Clothing</p>
+                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "opacity-100" : "opacity-0"}`} onClick={handleHomeProducts}>Home-products</p>
+                    <p className={`cursor-pointer transition-all duration-300 hover:bg-gray-500 p-1 px-4 rounded ${toggle ? "opacity-100" : "opacity-0"}`}onClick={handleToyProducts}>Toys</p></>):null}
                     
                 </div>
             
