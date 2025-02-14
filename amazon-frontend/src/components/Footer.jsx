@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faYoutube, faSquareXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faYoutube, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useContext } from "react";
 import { userContext } from "./context/userContext";
 import auth from "../config";
@@ -123,7 +123,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              <FontAwesomeIcon icon={faSquareXTwitter} size="lg"/>
+              <FontAwesomeIcon icon={faXTwitter} size="lg"/>
             </a>
           </div>
         </div>
