@@ -150,6 +150,13 @@ function Header(props) {
          <div className="font-medium  text-white p-2 mt-3">
           <p className="text-center"><Link to="/orders">ORDERS</Link></p>
          </div>
+         {loggedInData?.loggedUser?.id === "SVO2moOwqHeuq1tMrsGyYLRl1j52" && (
+  <div className="mt-3 p-2 text-white font-medium text-center">
+    <p className="text-center">
+      <Link to="/admin">Admin-Panel</Link>
+    </p>
+  </div>
+)}
          {/* {
           loggedInData.loggedUser.id === "SVO2moOwqHeuq1tMrsGyYLRl1j52" ? (<> <div className="mt-3 p-2 text-white font-medium cursor-pointer">
             <p className="text-center">
@@ -256,6 +263,7 @@ function Header(props) {
             }
             <p className="font-medium">Accounts & Lists</p>
           </div>
+        
           <div>
             <p><Link to="/orders">ORDERS</Link></p>
           </div>
@@ -382,7 +390,7 @@ function Header(props) {
         {loggedInData?.loggedUser?.id === "SVO2moOwqHeuq1tMrsGyYLRl1j52" && (
   <div className="group cursor-pointer">
     <p className="group-hover:bg-red-700 p-2 w-1/2 group-hover:w-full transition-all duration-300">
-      <Link to="/admin">Admin</Link>
+      <Link to="/admin">AdminPanel</Link>
     </p>
   </div>
 )}
