@@ -494,10 +494,10 @@ useEffect(()=>{
                     />
                   </div>
                   <div className="lg:mt-4  text-center  lg:text-start w-[60%] lg:w-auto">
-                    <p className="font-medium  text-lg text-gray-800" onClick={()=>{
+                    <p className="font-medium  text-lg " onClick={()=>{
                       props.productdes(product)
                     }}>
-                     <a href="/productdescription">{product.name}</a>
+                     <a href="/productdescription" className=" text-gray-800 hover:text-orange-600 transition-all duration-200">{product.name}</a>
                     </p>
                     <div className="flex flex-col lg:flex-row items-center text-center lg:text-start mt-2">
                       <p className="text-yellow-600 text-xl">{"⭐".repeat(product.ratingNum)}</p>
