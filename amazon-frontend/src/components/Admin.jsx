@@ -29,7 +29,7 @@ function Admin(){
                 </div>
             </div>
         <div className="grid lg:grid-cols-[200px_1fr]">
-            <div className="bg-gray-700 h-full hidden lg:block">
+            <div className="bg-gray-700 min-h-full hidden lg:block">
                 <div className="flex flex-col gap-8 text-white mt-5 ">
                 <Link to="/admin" className="hover:bg-gray-600 p-2 pl-6 mx-2 rounded transition-all duration-300 cursor-pointer">Product List</Link>
                 <Link to="/admin/admin-orders" className="hover:bg-gray-600 p-2 pl-6  mx-2 rounded  transition-all duration-300 cursor-pointer">Order List</Link>
