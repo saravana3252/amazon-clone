@@ -20,6 +20,7 @@ import PaymentCancel from "./components/PaymentCancel"
 import Orders from "./components/Orders"
 import Admin from "./components/Admin"
 import PrivateAdmin from "./components/privateAdmin"
+import NotFound from "./components/NotFound"
 
 
 function App() {
@@ -150,6 +151,7 @@ function updateCartSize(itemId, newSize) {
       <Route path="/cancel" element={<Private Component={PaymentCancel}/>}/>
       <Route path="/orders" element={<Private Component={Orders} productdes={productdescription} cartLength={cart.length} searchName={searchNameFunc}/>}/>
       <Route path="/admin/*" element={<PrivateAdmin Component={Admin}></PrivateAdmin>}></Route>
+      <Route path="*" element={<NotFound></NotFound>}></Route>
    </Routes>
    </userContext.Provider>
    </BrowserRouter>
