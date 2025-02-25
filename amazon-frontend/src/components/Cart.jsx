@@ -62,7 +62,7 @@ function Cart(props) {
                                             <img
                                                 src={data.imageurl}
                                                 alt={data.name}
-                                                className="w-24 h-24 object-cover rounded-lg"
+                                                className="w-24 h-28 object-cover rounded-lg"
                                             />
                                             <div className="flex-1">
                                                 <p className="text-lg font-semibold text-gray-800 cursor-pointer" onClick={()=> props.productdes(data)}><Link to="/productdescription">{data.name}</Link></p>
