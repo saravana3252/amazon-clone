@@ -25,7 +25,7 @@ const loggedInData = useContext(userContext)
 
 useEffect(()=>{  
   auth.onAuthStateChanged((user)=>{
-    if(user && user.uid == "SVO2moOwqHeuq1tMrsGyYLRl1j52"){
+    if(user && user.uid == "buyFuqc3ukMLNoOLSmxj09gN14m1"){
         // navigate("/admin")
     }
     else{
@@ -47,7 +47,7 @@ function handleLogin(e){
         console.log(usercredentials)
         localStorage.setItem("amazon",JSON.stringify(usercredentials))
         loggedInData.setloggedUser(usercredentials)
-        if(user.uid === "SVO2moOwqHeuq1tMrsGyYLRl1j52"){
+        if(user.uid === "buyFuqc3ukMLNoOLSmxj09gN14m1"){
             navigate("/admin")
         }
         else{

@@ -12,7 +12,7 @@ function PrivateAdmin(props){
     return (
         <>
         {
-           loggedInData.loggedUser !== null && loggedInData.loggedUser.id ==="SVO2moOwqHeuq1tMrsGyYLRl1j52" ? (<Component {...rest} ></Component>):(<Navigate to="/"></Navigate>)
+           loggedInData.loggedUser !== null && loggedInData.loggedUser.id ==="buyFuqc3ukMLNoOLSmxj09gN14m1" ? (<Component {...rest} ></Component>):(<Navigate to="/"></Navigate>)
         }
         
         </>
